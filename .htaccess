@@ -1,0 +1,160 @@
+ ======================================
+
+ Enable Rewrite Engine
+
+ ======================================
+
+RewriteEngine On
+
+ ======================================
+
+ Force HTTPS
+
+ ======================================
+
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+ ======================================
+
+ Force non-www (اختياري)
+
+ ======================================
+
+RewriteCond %{HTTP_HOST} ^[www.(.+)$](http://www.%28.+%29$) [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+ ======================================
+
+ Remove index.html from URLs
+
+ ======================================
+
+RewriteCond %{THE_REQUEST} \s/+(.*/)?index.html[\s?] [NC]
+RewriteRule ^(.*/)?index.html$ /$1 [R=301,L]
+
+ ======================================
+
+ Force trailing slash for directories
+
+ ======================================
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !.[a-zA-Z0-9]{1,5}$
+RewriteCond %{REQUEST_URI} !/$
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1/ [R=301,L]
+
+ ======================================
+
+ Serve index.html inside folders
+
+ Example:
+
+ /about/ -> /about/index.html
+
+ ======================================
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+RewriteRule ^(.+?)/?$ /$1/index.html [L]
+
+ ======================================
+
+ Custom 404 Page
+
+ ======================================
+
+ErrorDocument 404 /404.html
+
+ ======================================
+
+ GZIP Compression
+
+ ======================================
+
+<IfModule mod_deflate.c>
+
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/json
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE image/svg+xml
+
+</IfModule>
+
+ ======================================
+
+ Browser Cache
+
+ ======================================
+
+<IfModule mod_expires.c>
+
+ExpiresActive On
+
+ExpiresByType text/html "access plus 1 hour"
+
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+
+ExpiresByType image/jpg "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/webp "access plus 1 year"
+ExpiresByType image/svg+xml "access plus 1 year"
+ExpiresByType image/x-icon "access plus 1 year"
+
+ExpiresDefault "access plus 7 days"
+
+</IfModule>
+
+ ======================================
+
+ MIME Types
+
+ ======================================
+
+AddType image/webp .webp
+AddType image/svg+xml .svg
+AddType application/manifest+json .webmanifest
+
+ ======================================
+
+ Security Headers
+
+ ======================================
+
+<IfModule mod_headers.c>
+
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+
+Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+Header set Cache-Control "public"
+
+</IfModule>
+
+ ======================================
+
+ Protect Sensitive Files
+
+ ======================================
+
+<FilesMatch "^(.htaccess|.htpasswd|error_log)$">
+Require all denied </FilesMatch>
+
+ ======================================
+
+ Disable Directory Browsing
+
+ ======================================
+
+Options -Indexes
