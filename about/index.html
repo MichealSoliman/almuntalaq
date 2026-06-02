@@ -225,10 +225,123 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Floating WhatsApp Button -->
-    <div class="float-whatsapp" onclick="window.open('https://wa.me/966563806459?text=مرحباً، أريد الاستفسار عن نقل العفش', '_blank')">
-        <i class="fab fa-whatsapp fa-2x text-white"></i>
-    </div>
+  <!-- Floating Call Button -->
+<div class="float-call" onclick="window.location.href='tel:+966563806459'">
+    <i class="fas fa-phone-alt fa-2x text-white"></i>
+</div>
+
+<!-- Floating WhatsApp Button -->
+<div class="float-whatsapp" onclick="window.open('https://wa.me/966563806459?text=مرحباً، أريد الاستفسار عن نقل العفش', '_blank')">
+    <i class="fab fa-whatsapp fa-2x text-white"></i>
+</div>
+<style>
+    /* Call Button */
+.float-call {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 140px; /* فوق الواتساب */
+    right: 20px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.float-call:hover {
+    transform: scale(1.1);
+}
+
+/* WhatsApp Button */
+.float-whatsapp {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 70px;
+    right: 20px;
+    background: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.float-whatsapp:hover {
+    transform: scale(1.1);
+}
+</style>
+<!-- Riyadh Floating Call Button -->
+<div class="riyadh-float-call" onclick="window.location.href='tel:+966509020072'">
+    <i class="fas fa-phone-alt fa-2x text-white"></i>
+</div>
+
+<!-- Riyadh Floating WhatsApp Button -->
+<div class="riyadh-float-whatsapp" onclick="window.open('https://wa.me/966509020072?text=مرحباً، أريد الاستفسار عن نقل العفش بالرياض', '_blank')">
+    <i class="fab fa-whatsapp fa-2x text-white"></i>
+</div>
+<style>
+    /* Riyadh Call Button */
+.riyadh-float-call {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 140px;
+    left: 20px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.riyadh-float-call:hover {
+    transform: scale(1.1);
+}
+
+/* Riyadh WhatsApp Button */
+.riyadh-float-whatsapp {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 70px;
+    left: 20px;
+    background: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.riyadh-float-whatsapp:hover {
+    transform: scale(1.1);
+}
+</style>
+
 
     <!-- Back to Top Button -->
     <div id="backToTop" class="back-to-top items-center justify-center shadow-lg">
