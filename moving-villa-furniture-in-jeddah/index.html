@@ -315,5 +315,6 @@
     if(faqContainer){ faqData.forEach((item, idx) => { const wrapper = document.createElement('div'); wrapper.className = "border-b pb-2"; wrapper.innerHTML = `<div class="faq-question font-bold text-lg py-2 flex justify-between items-center" data-idx="${idx}"><span>${idx+1}. ${item.q}</span><i class="fas fa-chevron-down text-gray-500 transition-transform"></i></div><div class="faq-answer text-gray-600 pr-4 pb-2" id="faqAns${idx}">${item.a}</div>`; faqContainer.appendChild(wrapper); }); document.querySelectorAll('.faq-question').forEach(btn => { btn.addEventListener('click', function(){ const idx = this.getAttribute('data-idx'); const ansDiv = document.getElementById(`faqAns${idx}`); const icon = this.querySelector('i'); if(ansDiv.classList.contains('show')){ ansDiv.classList.remove('show'); icon.style.transform = 'rotate(0deg)'; } else { ansDiv.classList.add('show'); icon.style.transform = 'rotate(180deg)'; } }); }); }
     document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', function(e){ e.preventDefault(); document.querySelector(this.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' }); }));
 </script>
+<script src="/assets/js/services-sidebar.js" defer></script>
 </body>
 </html>

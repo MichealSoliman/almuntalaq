@@ -748,6 +748,7 @@
         document.getElementById('menuBtn')?.addEventListener('click', () => { let m = document.getElementById('mobileMenu'); m.style.maxHeight = m.style.maxHeight ? null : m.scrollHeight + 'px'; });
         document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', function(e) { e.preventDefault(); document.querySelector(this.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' }); }));
     </script>
+<script src="/assets/js/services-sidebar.js" defer></script>
 </body>
 
 </html>
