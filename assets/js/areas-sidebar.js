@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
     { name: 'حي السلامة', path: '/areas/hayu-alsalama/' },
     { name: 'حي السامر', path: '/areas/hayu-alsamer/' },
     { name: 'حي الشاطئ', path: '/areas/hayu-alshaati/' },
-    { name: 'حي الزهراء', path: '/areas/hayu-alzahra/' }
+    { name: 'حي الزهراء', path: '/areas/hayu-alzahra/' },
+    { name: 'حي الواحة ', path: '/areas/hayu-alwaha/' }
   ];
 
   // List of intercity routes

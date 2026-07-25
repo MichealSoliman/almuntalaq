@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     { name: 'نقل أجهزة كهربائية بجدة', path: '/moving-electrical-appliances-in-jeddah/' },
     { name: 'نقل وتثبيت مكيفات بجدة', path: '/ac-relocation-in-jeddah/' },
     { name: 'نقل غرف نوم بجدة', path: '/bedroom-moving-jeddah/' },
-    { name: 'نقل المطابخ بجدة', path: '/kitchen-moving-in-jeddah/' }
+    { name: 'نقل المطابخ بجدة', path: '/kitchen-moving-in-jeddah/' },
+    { name: '  نقل أثاث الفنادق بجدة', path: '/hotel-furniture-moving-in-jeddah/' },
   ];
 
   // Helper to check if a path matches the current page
