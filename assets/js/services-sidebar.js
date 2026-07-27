@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const sidebar = document.querySelector('.lg\\:w-1\\/4 > div, aside > div');
   if (!sidebar) return;
 
-  // List of services
-  const services = [
+  // List of services (uses central window.SITE_SERVICES if loaded)
+  const services = (typeof window !== 'undefined' && window.SITE_SERVICES) ? window.SITE_SERVICES : [
     { name: 'نقل عفش بجدة', path: '/furniture-moving-in-jeddah/' },
     { name: 'شركة نقل عفش بجدة', path: '/furniture-moving-company-in-jeddah/' },
     { name: 'شركات نقل العفش بجدة', path: '/furniture-moving-companies-in-jeddah/' },
@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
     { name: 'نقل وتثبيت مكيفات بجدة', path: '/ac-relocation-in-jeddah/' },
     { name: 'نقل غرف نوم بجدة', path: '/bedroom-moving-jeddah/' },
     { name: 'نقل المطابخ بجدة', path: '/kitchen-moving-in-jeddah/' },
-    { name: '  نقل أثاث الفنادق بجدة', path: '/hotel-furniture-moving-in-jeddah/' },
+    { name: 'نقل أثاث الفنادق بجدة', path: '/hotel-furniture-moving-in-jeddah/' },
+    { name: 'نقل عفش سكني بجدة', path: '/residential-furniture-moving-in-jeddah/' }
   ];
 
   // Helper to check if a path matches the current page
