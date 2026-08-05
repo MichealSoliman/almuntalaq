@@ -2,33 +2,32 @@ document.addEventListener('DOMContentLoaded', () => {
   const sidebar = document.querySelector('.lg\\:w-1\\/4 > div, aside > div');
   if (!sidebar) return;
 
-  // List of neighborhoods
+  // List of Riyadh neighborhoods
   const neighborhoods = [
-    { name: 'حي البساتين', path: '/areas/hayu-albasateen/' },
-    { name: 'حي البوادي', path: '/areas/hayu-albawadi/' },
-    { name: 'حي العزيزية', path: '/areas/hayu-aleazizia/' },
-    { name: 'حي الفيصلية', path: '/areas/hayu-alfaysalia/' },
-    { name: 'حي الحمدانية', path: '/areas/hayu-alhamdania/' },
-    { name: 'حي المروة', path: '/areas/hayu-almarwa/' },
-    { name: 'حي النسيم', path: '/areas/hayu-alnasim/' },
-    { name: 'حي النزهة', path: '/areas/hayu-alnuzha/' },
-    { name: 'حي الروضة', path: '/areas/hayu-alrawda/' },
-    { name: 'حي الربوة', path: '/areas/hayu-alrubwa/' },
-    { name: 'حي الصفا', path: '/areas/hayu-alsafa/' },
-    { name: 'حي السلامة', path: '/areas/hayu-alsalama/' },
-    { name: 'حي السامر', path: '/areas/hayu-alsamer/' },
-    { name: 'حي الشاطئ', path: '/areas/hayu-alshaati/' },
-    { name: 'حي الزهراء', path: '/areas/hayu-alzahra/' },
-    { name: 'حي الواحة ', path: '/areas/hayu-alwaha/' }
+    { name: 'حي الملقا', path: '/areas/hayu-almalqa/' },
+    { name: 'حي الياسمين', path: '/areas/hayu-alyasmin/' },
+    { name: 'حي النرجس', path: '/areas/hayu-alnargis/' },
+    { name: 'حي حطين', path: '/areas/hayu-hittin/' },
+    { name: 'حي العقيق', path: '/areas/hayu-alaqeeq/' },
+    { name: 'حي الصحافة', path: '/areas/hayu-alsahafa/' },
+    { name: 'حي النخيل', path: '/areas/hayu-alnakhil/' },
+    { name: 'حي الروضة', path: '/areas/hayu-alrawdah-riyadh/' },
+    { name: 'حي اليرموك', path: '/areas/hayu-alyarmouk/' },
+    { name: 'حي المونسية', path: '/areas/hayu-almunsiyah/' },
+    { name: 'حي الحمراء', path: '/areas/hayu-alhamra-riyadh/' },
+    { name: 'حي الملز', path: '/areas/hayu-almalaz/' },
+    { name: 'حي الشفا', path: '/areas/hayu-alshifa/' },
+    { name: 'حي السويدي', path: '/areas/hayu-alsuwaidi/' },
+    { name: 'حي ظهرة لبن', path: '/areas/hayu-dhahrat-laban/' }
   ];
 
-  // List of intercity routes
+  // List of intercity routes from Riyadh
   const intercity = [
-    { name: 'من جدة إلى الرياض', path: '/areas/jeddah-to-riyadh/' },
-    { name: 'من جدة إلى مكة', path: '/areas/jeddah-to-makkah/' },
-    { name: 'من جدة إلى المدينة', path: '/areas/jeddah-to-madinah/' },
-    { name: 'من جدة إلى الدمام', path: '/areas/jeddah-to-dammam/' },
-    { name: 'من جدة إلى الطائف', path: '/areas/jeddah-to-taif/' }
+    { name: 'من الرياض إلى جدة', path: '/areas/riyadh-to-jeddah/' },
+    { name: 'من الرياض إلى الدمام', path: '/areas/riyadh-to-dammam/' },
+    { name: 'من الرياض إلى المدينة', path: '/areas/riyadh-to-madinah/' },
+    { name: 'من الرياض إلى مكة', path: '/areas/riyadh-to-makkah/' },
+    { name: 'من الرياض إلى القصيم', path: '/areas/riyadh-to-qassim/' }
   ];
 
   // Helper to check if a path matches the current page

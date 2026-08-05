@@ -6,95 +6,95 @@
  */
 
 (function () {
-  // قائمة الخدمات المركزية لشركة المنطلق
+  // قائمة الخدمات المركزية لشركة المنطلق بالرياض
   const SITE_SERVICES = [
     {
-      name: 'نقل عفش بجدة',
-      path: '/furniture-moving-in-jeddah/',
+      name: 'نقل عفش بالرياض',
+      path: '/furniture-moving-in-riyadh/',
       icon: 'fa-truck-moving',
-      desc: 'خدمة نقل عفش وأثاث متكاملة داخل وخارج جدة'
+      desc: 'خدمة نقل عفش وأثاث متكاملة داخل وخارج الرياض'
     },
     {
-      name: 'شركة نقل عفش بجدة',
-      path: '/furniture-moving-company-in-jeddah/',
+      name: 'شركة نقل عفش بالرياض',
+      path: '/best-furniture-moving-company-riyadh/',
       icon: 'fa-building',
-      desc: 'أفضل شركة متخصصة وموثوقة لنقل العفش'
+      desc: 'أفضل شركة متخصصة وموثوقة لنقل العفش بالرياض'
     },
     {
-      name: 'شركات نقل العفش بجدة',
-      path: '/furniture-moving-companies-in-jeddah/',
-      icon: 'fa-award',
-      desc: 'دليل ورائد شركات نقل الأثاث المعتمدة'
+      name: 'ونش رفع عفش بالرياض',
+      path: '/winch-furniture-moving-in-riyadh/',
+      icon: 'fa-truck-pickup',
+      desc: 'أونش هيدروليكية لرفع ونقل العفش للأدوار العليا'
     },
     {
-      name: 'فك وتركيب الأثاث بجدة',
-      path: '/furniture-dismantling-and-assembly-in-jeddah/',
+      name: 'فك وتركيب الأثاث بالرياض',
+      path: '/furniture-dismantling-and-assembly-in-riyadh/',
       icon: 'fa-tools',
       desc: 'نجارون متخصصون لفك وتركيب الأثاث بدقة'
     },
     {
-      name: 'تغليف الأثاث بجدة',
-      path: '/furniture-packaging-in-jaddah/',
+      name: 'تغليف الأثاث بالرياض',
+      path: '/furniture-packaging-in-riyadh/',
       icon: 'fa-box-open',
       desc: 'تغليف بحماية فائقة بمواد عالية الجودة'
     },
     {
-      name: 'تخزين العفش بجدة',
-      path: '/furniture-storage-in-jeddah/',
+      name: 'تخزين العفش بالرياض',
+      path: '/furniture-storage-in-riyadh/',
       icon: 'fa-warehouse',
       desc: 'مستودعات مؤمنة ومجهزة لتخزين العفش'
     },
     {
       name: 'نقل العفش مع التغليف',
-      path: '/furniture-moving-with-packing/',
+      path: '/furniture-moving-with-packing-riyadh/',
       icon: 'fa-boxes-packing',
       desc: 'خدمة دمج النقل والتغليف الشامل للأثاث'
     },
     {
-      name: 'نقل عفش فلل بجدة',
-      path: '/moving-villa-furniture-in-jeddah/',
+      name: 'نقل عفش فلل بالرياض',
+      path: '/moving-villa-furniture-in-riyadh/',
       icon: 'fa-house-chimney',
       desc: 'نقل أثاث الفلل والقصور بأعلى معايير الأمان'
     },
     {
-      name: 'نقل أثاث مكاتب بجدة',
-      path: '/moving-office-furniture-in-jeddah/',
+      name: 'نقل أثاث مكاتب بالرياض',
+      path: '/moving-office-furniture-in-riyadh/',
       icon: 'fa-briefcase',
       desc: 'نقل المكاتب والشركات بدون تعطيل للعمل'
     },
     {
-      name: 'نقل أجهزة كهربائية بجدة',
-      path: '/moving-electrical-appliances-in-jeddah/',
+      name: 'نقل أجهزة كهربائية بالرياض',
+      path: '/moving-electrical-appliances-in-riyadh/',
       icon: 'fa-plug',
       desc: 'عناية خاصة ونقل آمن للأجهزة الكهربائية'
     },
     {
-      name: 'نقل وتثبيت مكيفات بجدة',
-      path: '/ac-relocation-in-jeddah/',
+      name: 'نقل وتثبيت مكيفات بالرياض',
+      path: '/ac-relocation-in-riyadh/',
       icon: 'fa-snowflake',
       desc: 'فك ونقل وتنظيف وتركيب المكيفات'
     },
     {
-      name: 'نقل غرف نوم بجدة',
-      path: '/bedroom-moving-jeddah/',
+      name: 'نقل غرف نوم بالرياض',
+      path: '/bedroom-moving-riyadh/',
       icon: 'fa-bed',
       desc: 'فك ونقل وتغليف غرف النوم باحترافية'
     },
     {
-      name: 'نقل المطابخ بجدة',
-      path: '/kitchen-moving-in-jeddah/',
+      name: 'نقل المطابخ بالرياض',
+      path: '/kitchen-moving-in-riyadh/',
       icon: 'fa-kitchen-set',
       desc: 'فك ونقل وتعديل ورص المطابخ'
     },
     {
-      name: 'نقل أثاث الفنادق بجدة',
-      path: '/hotel-furniture-moving-in-jeddah/',
+      name: 'نقل أثاث الفنادق بالرياض',
+      path: '/hotel-furniture-moving-in-riyadh/',
       icon: 'fa-hotel',
       desc: 'خدمات نقل وتجهيز أثاث الفنادق والوحدات'
     },
     {
-      name: 'نقل عفش سكني بجدة',
-      path: '/residential-furniture-moving-in-jeddah/',
+      name: 'نقل عفش سكني بالرياض',
+      path: '/residential-furniture-moving-in-riyadh/',
       icon: 'fa-home',
       desc: 'نقل أثاث المنازل والشقق السكنية'
     }
