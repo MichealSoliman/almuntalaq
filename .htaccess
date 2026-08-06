@@ -7,28 +7,8 @@
 RewriteEngine On
 
 # ======================================
-# 301 Redirects: Jeddah to Riyadh Migration & Cannibalization Consolidation
+# 301 Redirects
 # ======================================
-Redirect 301 /furniture-moving-in-jeddah/ https://almontalaqmoving.com/furniture-moving-in-riyadh/
-Redirect 301 /furniture-moving-company-in-jeddah/ https://almontalaqmoving.com/best-furniture-moving-company-riyadh/
-Redirect 301 /furniture-moving-companies-in-jeddah/ https://almontalaqmoving.com/best-furniture-moving-company-riyadh/
-Redirect 301 /furniture-dismantling-and-assembly-in-jeddah/ https://almontalaqmoving.com/furniture-dismantling-and-assembly-in-riyadh/
-Redirect 301 /furniture-packaging-in-jaddah/ https://almontalaqmoving.com/furniture-packaging-in-riyadh/
-Redirect 301 /furniture-storage-in-jeddah/ https://almontalaqmoving.com/furniture-storage-in-riyadh/
-Redirect 301 /moving-villa-furniture-in-jeddah/ https://almontalaqmoving.com/moving-villa-furniture-in-riyadh/
-Redirect 301 /moving-office-furniture-in-jeddah/ https://almontalaqmoving.com/moving-office-furniture-in-riyadh/
-Redirect 301 /kitchen-moving-in-jeddah/ https://almontalaqmoving.com/kitchen-moving-in-riyadh/
-Redirect 301 /moving-electrical-appliances-in-jeddah/ https://almontalaqmoving.com/moving-electrical-appliances-in-riyadh/
-Redirect 301 /bedroom-moving-jeddah/ https://almontalaqmoving.com/bedroom-moving-riyadh/
-Redirect 301 /ac-relocation-in-jeddah/ https://almontalaqmoving.com/ac-relocation-in-riyadh/
-Redirect 301 /furniture-moving-with-packing/ https://almontalaqmoving.com/furniture-moving-with-packing-riyadh/
-Redirect 301 /residential-furniture-moving-in-jeddah/ https://almontalaqmoving.com/furniture-moving-in-riyadh/
-Redirect 301 /hotel-furniture-moving-in-jeddah/ https://almontalaqmoving.com/moving-office-furniture-in-riyadh/
-Redirect 301 /blogs/best-furniture-moving-company-jeddah/ https://almontalaqmoving.com/best-furniture-moving-company-riyadh/
-Redirect 301 /blogs/best-furniture-moving-companies-in-jeddah/ https://almontalaqmoving.com/best-furniture-moving-company-riyadh/
-Redirect 301 /blogs/furniture-moving-companies-in-jeddah/ https://almontalaqmoving.com/best-furniture-moving-company-riyadh/
-Redirect 301 /blogs/furniture-packaging-in-jeddah/ https://almontalaqmoving.com/furniture-packaging-in-riyadh/
-Redirect 301 /blogs/furniture-dismantling-and-assembly-in-jeddah/ https://almontalaqmoving.com/furniture-dismantling-and-assembly-in-riyadh/
 
  ======================================
 

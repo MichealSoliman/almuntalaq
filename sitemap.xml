@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage -->
+  <!-- الصفحات الرئيسية (Main Core Pages) -->
   <url>
     <loc>https://almontalaqmoving.com/</loc>
     <lastmod>2026-08-05T12:00:00+00:00</lastmod>
     <priority>1.00</priority>
   </url>
-
-  <!-- Core Main Pages -->
   <url>
     <loc>https://almontalaqmoving.com/about/</loc>
     <lastmod>2026-08-05T12:00:00+00:00</lastmod>
@@ -34,129 +32,257 @@
     <priority>0.80</priority>
   </url>
 
-  <!-- Target Riyadh Service Pages -->
-  <url>
-    <loc>https://almontalaqmoving.com/furniture-moving-in-riyadh/</loc>
-    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
-    <priority>0.95</priority>
-  </url>
-  <url>
-    <loc>https://almontalaqmoving.com/best-furniture-moving-company-riyadh/</loc>
-    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
-    <priority>0.95</priority>
-  </url>
-  <url>
-    <loc>https://almontalaqmoving.com/winch-furniture-moving-in-riyadh/</loc>
-    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
-    <priority>0.95</priority>
-  </url>
-  <url>
-    <loc>https://almontalaqmoving.com/furniture-dismantling-and-assembly-in-riyadh/</loc>
-    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://almontalaqmoving.com/furniture-packaging-in-riyadh/</loc>
-    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://almontalaqmoving.com/furniture-storage-in-riyadh/</loc>
-    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://almontalaqmoving.com/moving-villa-furniture-in-riyadh/</loc>
-    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://almontalaqmoving.com/moving-office-furniture-in-riyadh/</loc>
-    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://almontalaqmoving.com/kitchen-moving-in-riyadh/</loc>
-    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://almontalaqmoving.com/moving-electrical-appliances-in-riyadh/</loc>
-    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://almontalaqmoving.com/bedroom-moving-riyadh/</loc>
-    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://almontalaqmoving.com/ac-relocation-in-riyadh/</loc>
-    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://almontalaqmoving.com/furniture-moving-with-packing-riyadh/</loc>
-    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
-    <priority>0.85</priority>
-  </url>
 
-  <!-- Top Riyadh Neighborhood Pages -->
+  <!-- جميع صفحات الخدمات الموجودة فعلياً في المشروع (Existing Physical Service Pages) -->
   <url>
-    <loc>https://almontalaqmoving.com/areas/hayu-almalqa/</loc>
+    <loc>https://almontalaqmoving.com/furniture-moving-in-jeddah/</loc>
     <lastmod>2026-08-05T12:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://almontalaqmoving.com/areas/hayu-alyasmin/</loc>
+    <loc>https://almontalaqmoving.com/furniture-moving-company-in-jeddah/</loc>
     <lastmod>2026-08-05T12:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://almontalaqmoving.com/areas/hayu-alnargis/</loc>
+    <loc>https://almontalaqmoving.com/furniture-moving-companies-in-jeddah/</loc>
     <lastmod>2026-08-05T12:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://almontalaqmoving.com/areas/hayu-hittin/</loc>
+    <loc>https://almontalaqmoving.com/furniture-dismantling-and-assembly-in-jeddah/</loc>
     <lastmod>2026-08-05T12:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://almontalaqmoving.com/areas/hayu-alaqeeq/</loc>
+    <loc>https://almontalaqmoving.com/furniture-packaging-in-jaddah/</loc>
     <lastmod>2026-08-05T12:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://almontalaqmoving.com/areas/hayu-alsahafa/</loc>
+    <loc>https://almontalaqmoving.com/furniture-moving-with-packing/</loc>
     <lastmod>2026-08-05T12:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://almontalaqmoving.com/areas/hayu-alnakhil/</loc>
+    <loc>https://almontalaqmoving.com/furniture-storage-in-jeddah/</loc>
     <lastmod>2026-08-05T12:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://almontalaqmoving.com/areas/hayu-alrawdah-riyadh/</loc>
+    <loc>https://almontalaqmoving.com/moving-villa-furniture-in-jeddah/</loc>
     <lastmod>2026-08-05T12:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://almontalaqmoving.com/areas/hayu-alyarmouk/</loc>
+    <loc>https://almontalaqmoving.com/moving-office-furniture-in-jeddah/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/kitchen-moving-in-jeddah/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/moving-electrical-appliances-in-jeddah/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/bedroom-moving-jeddah/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/ac-relocation-in-jeddah/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/residential-furniture-moving-in-jeddah/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/hotel-furniture-moving-in-jeddah/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/furniture-moving-workers-in-jeddah/</loc>
     <lastmod>2026-08-05T12:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 
-  <!-- Intercity Routes From Riyadh -->
+  <!-- جميع صفحات الأحياء والمناطق الموجودة فعلياً في مجلد areas (Existing Physical Area Pages) -->
   <url>
-    <loc>https://almontalaqmoving.com/areas/riyadh-to-jeddah/</loc>
+    <loc>https://almontalaqmoving.com/areas/hayu-albasateen/</loc>
     <lastmod>2026-08-05T12:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://almontalaqmoving.com/areas/riyadh-to-dammam/</loc>
+    <loc>https://almontalaqmoving.com/areas/hayu-albawadi/</loc>
     <lastmod>2026-08-05T12:00:00+00:00</lastmod>
     <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/areas/hayu-aleazizia/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/areas/hayu-alfaysalia/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/areas/hayu-alhamdania/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/areas/hayu-almarwa/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/areas/hayu-alnasim/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/areas/hayu-alnuzha/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/areas/hayu-alrawda/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/areas/hayu-alrubwa/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/areas/hayu-alsafa/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/areas/hayu-alsalama/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/areas/hayu-alsamer/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/areas/hayu-alshaati/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/areas/hayu-alwaha/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/areas/hayu-alzahra/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- جميع طرق النقل بين المدن الموجودة فعلياً في مجلد areas (Existing Intercity Routes) -->
+  <url>
+    <loc>https://almontalaqmoving.com/areas/jeddah-to-dammam/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/areas/jeddah-to-madinah/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/areas/jeddah-to-makkah/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/areas/jeddah-to-riyadh/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/areas/jeddah-to-taif/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- جميع مقالات المدونة الموجودة فعلياً في مجلد blogs (Existing Physical Blog Pages) -->
+  <url>
+    <loc>https://almontalaqmoving.com/blogs/best-furniture-moving-companies-in-jeddah/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/blogs/best-furniture-moving-company-jeddah/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/blogs/electrical-appliance-moving-in-jeddah/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/blogs/furniture-dismantling-and-assembly-in-jeddah/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/blogs/furniture-moving-companies-in-jeddah/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/blogs/furniture-moving-mistakes-in-jeddah/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/blogs/furniture-moving-prices-in-jeddah/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/blogs/furniture-moving-trucks-in-jeddah/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/blogs/furniture-packaging-in-jeddah/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/blogs/how-to-choose-furniture-moving-company/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/blogs/how-to-pack-furniture/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/blogs/villa-furniture-moving-prices-jeddah/</loc>
+    <lastmod>2026-08-05T12:00:00+00:00</lastmod>
+    <priority>0.64</priority>
   </url>
 </urlset>
