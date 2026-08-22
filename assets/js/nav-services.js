@@ -1,8 +1,7 @@
 /**
  * nav-services.js
  * القائمة المنسدلة للخدمات في النافبار (Dropdown Menu)
- * يحتوي هذا الملف على جميع لينكات خدمات شركة المنطلق لنقل العفش بجدة.
- * تعديل أو إضافة أي خدمة هنا ينعكس تلقائياً في نافبار جميع صفحات الموقع.
+ * تحتوي هذه القائمة على جميع خدمات شركة المنطلق لنقل العفش بجدة.
  */
 
 (function () {
@@ -12,25 +11,25 @@
       name: 'نقل عفش بجدة',
       path: '/furniture-moving-in-jeddah/',
       icon: 'fa-truck-moving',
-      desc: 'خدمة نقل عفش وأثاث متكاملة داخل وخارج جدة'
+      desc: 'نقل أثاث متكامل داخل وخارج جدة'
     },
     {
       name: 'شركة نقل عفش بجدة',
       path: '/furniture-moving-company-in-jeddah/',
       icon: 'fa-building',
-      desc: 'أفضل شركة متخصصة وموثوقة لنقل العفش بجدة'
+      desc: 'أفضل شركة متخصصة وموثوقة'
     },
     {
       name: 'عمال نقل عفش بجدة',
       path: '/furniture-moving-workers-in-jeddah/',
       icon: 'fa-users',
-      desc: 'عمالة مدربة واحترافية لنقل وتنزيل الأثاث'
+      desc: 'عمالة مدربة واحترافية لنقل الأثاث'
     },
     {
       name: 'فك وتركيب الأثاث بجدة',
       path: '/furniture-dismantling-and-assembly-in-jeddah/',
       icon: 'fa-tools',
-      desc: 'نجارون متخصصون لفك وتركيب الأثاث بدقة'
+      desc: 'نجارون متخصصون لفك وتركيب الأثاث'
     },
     {
       name: 'تغليف الأثاث بجدة',
@@ -48,25 +47,25 @@
       name: 'نقل العفش مع التغليف',
       path: '/furniture-moving-with-packing/',
       icon: 'fa-boxes-packing',
-      desc: 'خدمة دمج النقل والتغليف الشامل للأثاث'
+      desc: 'خدمة دمج النقل والتغليف الشامل'
     },
     {
       name: 'نقل عفش فلل بجدة',
       path: '/moving-villa-furniture-in-jeddah/',
       icon: 'fa-house-chimney',
-      desc: 'نقل أثاث الفلل والقصور بأعلى معايير الأمان'
+      desc: 'نقل أثاث الفلل والقصور بأمان'
     },
     {
       name: 'نقل أثاث مكاتب بجدة',
       path: '/moving-office-furniture-in-jeddah/',
       icon: 'fa-briefcase',
-      desc: 'نقل المكاتب والشركات بدون تعطيل للعمل'
+      desc: 'نقل المكاتب والشركات بدون تعطيل'
     },
     {
       name: 'نقل أجهزة كهربائية بجدة',
       path: '/moving-electrical-appliances-in-jeddah/',
       icon: 'fa-plug',
-      desc: 'عناية خاصة ونقل آمن للأجهزة الكهربائية'
+      desc: 'عناية خاصة للأجهزة الكهربائية'
     },
     {
       name: 'نقل وتثبيت مكيفات بجدة',
@@ -78,7 +77,7 @@
       name: 'نقل غرف نوم بجدة',
       path: '/bedroom-moving-jeddah/',
       icon: 'fa-bed',
-      desc: 'فك ونقل وتغليف غرف النوم باحترافية'
+      desc: 'فك ونقل وتغليف غرف النوم'
     },
     {
       name: 'نقل المطابخ بجدة',
@@ -90,7 +89,7 @@
       name: 'نقل أثاث الفنادق بجدة',
       path: '/hotel-furniture-moving-in-jeddah/',
       icon: 'fa-hotel',
-      desc: 'خدمات نقل وتجهيز أثاث الفنادق والوحدات'
+      desc: 'خدمات نقل وتجهيز أثاث الفنادق'
     },
     {
       name: 'نقل عفش سكني بجدة',
@@ -99,11 +98,11 @@
       desc: 'نقل أثاث المنازل والشقق السكنية'
     },
     {
-      name: 'عمال نقل عفش بجدة ',
-      path: '/furniture-moving-workers-in-jeddah/',
-      icon: 'fa-users',
-      desc: 'عمالة مدربة واحترافية لنقل وتنزيل الأثاث'
-    },
+      name: 'شركات نقل عفش جدة',
+      path: '/furniture-moving-companies-in-jeddah/',
+      icon: 'fa-city',
+      desc: 'دليل وحساب تكاليف شركات النقل'
+    }
   ];
 
   window.SITE_SERVICES = SITE_SERVICES;
@@ -114,7 +113,9 @@
   }
 
   function setupDesktopDropdown() {
-    const desktopNav = document.querySelector('header#navbar .hidden.lg\\:flex');
+    const desktopNav = document.querySelector('header#navbar .hidden.lg\\:flex') || 
+                       document.querySelector('header .hidden.lg\\:flex') ||
+                       document.querySelector('.hidden.lg\\:flex');
     if (!desktopNav) return;
 
     const servicesLink = Array.from(desktopNav.querySelectorAll('a')).find(a => {
@@ -131,18 +132,18 @@
 
     const newServicesLink = document.createElement('a');
     newServicesLink.href = '/services/';
-    newServicesLink.className = 'nav-link relative px-4 py-2 font-semibold text-gray-700 hover:text-blue-600 transition-all duration-300 flex items-center gap-1.5 group-hover:text-blue-600';
+    newServicesLink.className = 'nav-link relative px-4 py-2 font-bold text-slate-700 hover:text-blue-600 transition-all duration-300 flex items-center gap-1.5 group-hover:text-blue-600';
     newServicesLink.innerHTML = `
       <span>خدماتنا</span>
       <i class="fas fa-chevron-down text-[11px] opacity-75 group-hover:rotate-180 transition-transform duration-300"></i>
-      <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-gradient-to-l from-blue-500 to-orange-500 group-hover:w-full transition-all duration-300 rounded-full"></span>
+      <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300 rounded-full"></span>
     `;
 
     let dropHtml = `
-      <div class="absolute right-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2 z-50 pointer-events-none group-hover:pointer-events-auto min-w-[640px]">
-        <div class="bg-[#1e3a8a] backdrop-blur-xl border border-gray-100 rounded-2xl shadow-2xl p-4 ring-1 ring-black/5">
-          <div class="flex items-center justify-between pb-3 mb-3 border-b border-gray-100 px-2">
-            <span class="text-xs font-bold text-gray-500 uppercase tracking-wider flex items-center gap-2">
+      <div class="absolute right-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2 z-[999999] pointer-events-none group-hover:pointer-events-auto" style="width: 650px; min-width: 650px;">
+        <div class="bg-white border border-slate-200/90 rounded-2xl shadow-[0_20px_50px_rgba(15,23,42,0.22)] p-4" style="background-color: #ffffff; color: #1e293b;">
+          <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-100 px-1">
+            <span class="text-xs font-bold text-slate-600 flex items-center gap-2">
               <i class="fas fa-cubes text-blue-600 text-sm"></i>
               خدمات المنطلق لنقل العفش بجدة
             </span>
@@ -151,27 +152,27 @@
             </a>
           </div>
 
-          <div class="grid grid-cols-2 gap-2 max-h-[460px] overflow-y-auto custom-scroll p-1">
+          <div class="grid grid-cols-2 gap-2 max-h-[460px] overflow-y-auto p-1" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px;">
     `;
 
     SITE_SERVICES.forEach(service => {
       const folderName = service.path.replace(/^\/|\/$/g, '');
       const isActive = folderName && currentPath.includes(folderName);
       const activeStyle = isActive
-        ? 'bg-blue-50/90 text-blue-700 font-bold border-blue-200 shadow-sm'
-        : 'hover:bg-blue-50/60 text-gray-700 hover:text-blue-600 border-transparent';
+        ? 'bg-blue-50 text-blue-700 font-bold border-blue-200 shadow-sm'
+        : 'bg-slate-50/70 hover:bg-blue-50/80 text-slate-800 hover:text-blue-600 border-slate-100 hover:border-blue-200';
 
       dropHtml += `
-        <a href="${service.path}" class="flex items-start gap-3 p-2.5 rounded-xl border transition-all duration-200 group/item ${activeStyle}">
-          <div class="w-9 h-9 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 group-hover/item:bg-blue-600 group-hover/item:text-white transition-colors duration-200 border border-blue-100">
+        <a href="${service.path}" class="flex items-center gap-3 p-2.5 rounded-xl border transition-all duration-200 group/item ${activeStyle}" style="text-decoration: none;">
+          <div class="w-9 h-9 rounded-xl bg-blue-100/70 text-blue-600 flex items-center justify-center shrink-0 group-hover/item:bg-blue-600 group-hover/item:text-white transition-all duration-200 border border-blue-200/50 shadow-sm">
             <i class="fas ${service.icon} text-sm"></i>
           </div>
           <div class="flex-1 min-w-0">
-            <div class="text-sm font-semibold leading-snug group-hover/item:text-blue-600 transition-colors flex items-center justify-between">
-              <span class="truncate">${service.name}</span>
-              <i class="fas fa-chevron-left text-[9px] opacity-0 group-hover/item:opacity-100 transform translate-x-1 group-hover/item:translate-x-0 transition-all text-blue-500"></i>
+            <div class="text-xs font-bold leading-tight group-hover/item:text-blue-600 transition-colors flex items-center justify-between">
+              <span class="truncate text-slate-800 group-hover/item:text-blue-600">${service.name}</span>
+              <i class="fas fa-chevron-left text-[9px] text-blue-500 opacity-0 group-hover/item:opacity-100 transform translate-x-1 group-hover/item:translate-x-0 transition-all"></i>
             </div>
-            <p class="text-[11px] text-gray-400 truncate mt-0.5 font-normal">${service.desc}</p>
+            <p class="text-[11px] text-slate-500 truncate mt-0.5 font-medium leading-normal">${service.desc}</p>
           </div>
         </a>
       `;
@@ -207,10 +208,10 @@
 
     const btn = document.createElement('button');
     btn.type = 'button';
-    btn.className = 'w-full nav-link-mobile font-semibold text-gray-700 hover:text-[#1e293b] hover:bg-blue-50 py-3 px-4 rounded-xl transition-all duration-300 flex items-center justify-between text-right';
+    btn.className = 'w-full nav-link-mobile font-bold text-slate-700 hover:text-blue-600 hover:bg-blue-50 py-3 px-4 rounded-xl transition-all duration-300 flex items-center justify-between text-right';
     btn.innerHTML = `
       <span class="flex items-center gap-3">
-        <i class="fas fa-cogs text-blue-400 w-5"></i>
+        <i class="fas fa-cogs text-blue-500 w-5"></i>
         خدماتنا
       </span>
       <i class="fas fa-chevron-down text-xs transition-transform duration-300" id="mobileServicesArrow"></i>
@@ -225,7 +226,7 @@
       const isActive = folderName && currentPath.includes(folderName);
       const activeStyle = isActive
         ? 'bg-blue-50 text-blue-600 font-bold'
-        : 'text-gray-600 hover:bg-gray-50 hover:text-blue-600';
+        : 'text-slate-700 hover:bg-slate-50 hover:text-blue-600';
 
       subHtml += `
         <a href="${service.path}" class="flex items-center gap-2.5 py-2 px-3 rounded-lg text-xs font-medium transition-all ${activeStyle}">
@@ -236,7 +237,7 @@
     });
 
     subHtml += `
-        <a href="/services/" class="flex items-center justify-between py-2.5 px-3 rounded-lg text-xs font-bold text-blue-600 bg-blue-50/80 mt-1">
+        <a href="/services/" class="flex items-center justify-between py-2.5 px-3 rounded-lg text-xs font-bold text-blue-600 bg-blue-50 mt-1">
           <span>عرض جميع الخدمات</span>
           <i class="fas fa-arrow-left text-[10px]"></i>
         </a>
