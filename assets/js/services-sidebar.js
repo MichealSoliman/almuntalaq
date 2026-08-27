@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { name: 'شركة نقل عفش بجدة', path: '/furniture-moving-company-in-jeddah/' },
     { name: 'عمال نقل عفش بجدة', path: '/furniture-moving-workers-in-jeddah/' },
     { name: 'فك وتركيب الأثاث بجدة', path: '/furniture-dismantling-and-assembly-in-jeddah/' },
-    { name: 'تغليف الأثاث بجدة', path: '/furniture-packaging-in-jaddah/' },
+    { name: 'تغليف الأثاث بجدة', path: '/furniture-packaging-in-jeddah/' },
     { name: 'تخزين العفش بجدة', path: '/furniture-storage-in-jeddah/' },
     { name: 'نقل العفش مع التغليف', path: '/furniture-moving-with-packing/' },
     { name: 'نقل عفش فلل بجدة', path: '/moving-villa-furniture-in-jeddah/' },

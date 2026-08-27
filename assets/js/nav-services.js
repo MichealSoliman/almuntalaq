@@ -33,7 +33,7 @@
     },
     {
       name: 'تغليف الأثاث بجدة',
-      path: '/furniture-packaging-in-jaddah/',
+      path: '/furniture-packaging-in-jeddah/',
       icon: 'fa-box-open',
       desc: 'تغليف بحماية فائقة بمواد عالية الجودة'
     },
@@ -113,9 +113,9 @@
   }
 
   function setupDesktopDropdown() {
-    const desktopNav = document.querySelector('header#navbar .hidden.lg\\:flex') || 
-                       document.querySelector('header .hidden.lg\\:flex') ||
-                       document.querySelector('.hidden.lg\\:flex');
+    const desktopNav = document.querySelector('header#navbar .hidden.lg\\:flex') ||
+      document.querySelector('header .hidden.lg\\:flex') ||
+      document.querySelector('.hidden.lg\\:flex');
     if (!desktopNav) return;
 
     const servicesLink = Array.from(desktopNav.querySelectorAll('a')).find(a => {
