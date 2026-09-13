@@ -128,19 +128,24 @@
     const currentPath = window.location.pathname;
 
     const wrapper = document.createElement('div');
-    wrapper.className = 'relative group cursor-pointer inline-block';
+    wrapper.className = 'relative inline-block';
 
     const newServicesLink = document.createElement('a');
     newServicesLink.href = '/services/';
-    newServicesLink.className = 'nav-link relative px-4 py-2 font-bold text-slate-700 hover:text-blue-600 transition-all duration-300 flex items-center gap-1.5 group-hover:text-blue-600';
+    newServicesLink.className = 'nav-link relative px-4 py-2 font-bold text-slate-700 hover:text-blue-600 transition-all duration-300 flex items-center gap-1.5';
     newServicesLink.innerHTML = `
       <span>خدماتنا</span>
-      <i class="fas fa-chevron-down text-[11px] opacity-75 group-hover:rotate-180 transition-transform duration-300"></i>
-      <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300 rounded-full"></span>
+      <i class="fas fa-chevron-down text-[11px] opacity-75 transition-transform duration-300" id="servicesChevron"></i>
+      <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 rounded-full" id="servicesLine"></span>
     `;
 
+    const dropdownMenu = document.createElement('div');
+    dropdownMenu.className = 'absolute right-0 top-full pt-2 opacity-0 invisible transition-all duration-200 transform translate-y-2 z-[999999] pointer-events-none';
+    dropdownMenu.style.width = '650px';
+    dropdownMenu.style.minWidth = '650px';
+    dropdownMenu.style.display = 'none';
+
     let dropHtml = `
-      <div class="absolute right-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2 z-[999999] pointer-events-none group-hover:pointer-events-auto" style="width: 650px; min-width: 650px;">
         <div class="bg-white border border-slate-200/90 rounded-2xl shadow-[0_20px_50px_rgba(15,23,42,0.22)] p-4" style="background-color: #ffffff; color: #1e293b;">
           <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-100 px-1">
             <span class="text-xs font-bold text-slate-600 flex items-center gap-2">
@@ -181,13 +186,72 @@
     dropHtml += `
           </div>
         </div>
-      </div>
     `;
 
+    dropdownMenu.innerHTML = dropHtml;
     wrapper.appendChild(newServicesLink);
-    wrapper.insertAdjacentHTML('beforeend', dropHtml);
+    wrapper.appendChild(dropdownMenu);
 
     servicesLink.replaceWith(wrapper);
+
+    // Strict state control: ONLY opening when user hovers directly on newServicesLink ("خدماتنا")
+    let closeTimer = null;
+    let isMenuOpen = false;
+
+    const openMenu = () => {
+      if (closeTimer) {
+        clearTimeout(closeTimer);
+        closeTimer = null;
+      }
+      isMenuOpen = true;
+      dropdownMenu.style.display = 'block';
+
+      // RAF to ensure transition happens cleanly after display: block
+      requestAnimationFrame(() => {
+        dropdownMenu.classList.remove('opacity-0', 'invisible', 'translate-y-2', 'pointer-events-none');
+        dropdownMenu.classList.add('opacity-100', 'visible', 'translate-y-0', 'pointer-events-auto');
+      });
+
+      const chevron = wrapper.querySelector('#servicesChevron');
+      const line = wrapper.querySelector('#servicesLine');
+      if (chevron) chevron.style.transform = 'rotate(180deg)';
+      if (line) line.style.width = '100%';
+      newServicesLink.classList.add('text-blue-600');
+    };
+
+    const closeMenu = () => {
+      closeTimer = setTimeout(() => {
+        isMenuOpen = false;
+        dropdownMenu.classList.remove('opacity-100', 'visible', 'translate-y-0', 'pointer-events-auto');
+        dropdownMenu.classList.add('opacity-0', 'invisible', 'translate-y-2', 'pointer-events-none');
+
+        const chevron = wrapper.querySelector('#servicesChevron');
+        const line = wrapper.querySelector('#servicesLine');
+        if (chevron) chevron.style.transform = 'rotate(0deg)';
+        if (line) line.style.width = '0';
+        newServicesLink.classList.remove('text-blue-600');
+
+        setTimeout(() => {
+          if (!isMenuOpen) {
+            dropdownMenu.style.display = 'none';
+          }
+        }, 200);
+      }, 150);
+    };
+
+    // ONLY newServicesLink opens the menu when mouse enters it
+    newServicesLink.addEventListener('mouseenter', openMenu);
+    newServicesLink.addEventListener('mouseleave', closeMenu);
+
+    // dropdownMenu ONLY maintains open state if it was already opened by hovering the link
+    dropdownMenu.addEventListener('mouseenter', () => {
+      if (isMenuOpen && closeTimer) {
+        clearTimeout(closeTimer);
+        closeTimer = null;
+      }
+    });
+
+    dropdownMenu.addEventListener('mouseleave', closeMenu);
   }
 
   function setupMobileDropdown() {
