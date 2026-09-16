@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>شركة تخزين عفش بجدة | مستودعات آمنة ومجهزة لحفظ الأثاث</title>
+    <!-- Preload Critical Fonts -->
+    <link rel="preload" href="/assets/fonts/Tajawal-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/Tajawal-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
 
     <meta name="description"
         content="شركة تخزين عفش بجدة توفر مستودعات آمنة ومكيفة لحفظ الأثاث لفترات قصيرة وطويلة، مع خدمات الفك والتركيب والتغليف الاحترافي والنقل من وإلى الموقع.">
@@ -315,7 +319,8 @@
 
     <!-- Tailwind + Fonts -->
     <link rel="stylesheet" href="../../dist/output.css">
-    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="preload" href="/assets/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/all.min.css"></noscript>
     
     <style>
         body {
@@ -432,7 +437,8 @@
             margin-bottom: 24px;
         }
     </style>
-    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="preload" href="/assets/css/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/fonts.css"></noscript>
 </head>
 
 <body class="bg-gray-50 text-gray-800">

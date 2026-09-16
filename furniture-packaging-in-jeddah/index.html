@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تغليف الاثاث بجدة | خدمة تغليف عفش احترافية قبل النقل والتخزين</title>
+    <!-- Preload Critical Fonts -->
+    <link rel="preload" href="/assets/fonts/Tajawal-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/Tajawal-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
     <meta name="description"
         content="خدمة تغليف الاثاث بجدة لحماية العفش للمنازل والشركات باستخدام أفضل مواد التغليف. تغليف احترافي قبل النقل أو التخزين للحماية من الخدوش والصدمات. اطلب الخدمة الآن.">
     <meta name="keywords"
@@ -268,7 +272,8 @@
 
     <!-- Tailwind + Fonts -->
     <link rel="stylesheet" href="../../dist/output.css">
-    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="preload" href="/assets/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/all.min.css"></noscript>
     
     <style>
         body {
@@ -340,7 +345,8 @@
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
         }
     </style>
-    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="preload" href="/assets/css/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/fonts.css"></noscript>
 </head>
 
 <body class="bg-gray-50">
@@ -362,7 +368,7 @@
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center gap-3 cursor-pointer">
                 <div class="w-12 h-12 flex items-center justify-center"><img
-                        src="https://almontalaqmoving.com/assets/img/logo.webp" alt="المنطلق" class="w-12 h-12"></div>
+                        src="https://almontalaqmoving.com/assets/img/logo.webp" alt="المنطلق" class="w-12 h-12" decoding="async"></div>
                 <div><span class="text-2xl font-extrabold text-[#1e293b]">المنطلق</span>
                     <p class="text-xs text-gray-400 hidden md:block">تغليف ونقل عفش بجدة</p>
                 </div>
@@ -456,7 +462,7 @@
                 <section id="features" class="bg-white rounded-2xl shadow-md p-8">
                     <div class="service-img-placeholder mb-4"><img
                             src="../assets/img/furniture-packaging-and-protection.webp" alt="تغليف الاثاث بجدة باستخدام مواد حماية مناسبة"
-                            class="w-[500px] h-[500px] rounded-xl object-cover" loading="eager" fetchpriority="high"></div>
+                            class="w-[500px] h-[500px] rounded-xl object-cover" loading="eager" fetchpriority="high" decoding="async"></div>
                     <h2 class="text-3xl font-bold mb-4 section-title">تغليف الاثاث بجدة لحماية العفش قبل النقل والتخزين</h2>
                     <p class="mb-4">تعتبر خطوة <strong>تغليف الاثاث بجدة</strong> من أهم المراحل التي تسبق <a href="https://almontalaqmoving.com/furniture-moving-in-jeddah/" class="text-blue-600 hover:underline">عملية نقل العفش</a> أو <a href="https://almontalaqmoving.com/furniture-storage-in-jeddah/" class="text-blue-600 hover:underline">تخزينه</a>. نحن في شركة المنطلق نوفر خدمة متخصصة تركز على حماية مقتنياتك من الخدوش، الاحتكاك، الغبار، والصدمات التي قد تحدث أثناء التحميل والتنزيل.
                     </p>
@@ -495,7 +501,7 @@
                         <li><strong>تنظيم القطع بعد التغليف:</strong> نقوم بوضع علامات واضحة (Labels) على القطع لتسهيل ترتيبها في المكان الجديد.</li>
                     </ul>
                     <div class="service-img-placeholder"><img src="https://almontalaqmoving.com/assets/img/about.webp"
-                            alt="عملية تغليف الاثاث بجدة" class="w-[300px] h-[250px] rounded-xl object-cover"></div>
+                            alt="عملية تغليف الاثاث بجدة" class="w-[300px] h-[250px] rounded-xl object-cover" loading="lazy" decoding="async"></div>
                 </section>
 
                 <!-- جدول الأسعار -->

@@ -205,7 +205,8 @@
 
   <!-- Tailwind + Fonts -->
   <link rel="stylesheet" href="../../dist/output.css">
-  <link rel="stylesheet" href="/assets/css/all.min.css">
+  <link rel="preload" href="/assets/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/all.min.css"></noscript>
   
   <style>
     body {
@@ -251,7 +252,8 @@
       margin-bottom: 1rem;
     }
   </style>
-    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="preload" href="/assets/css/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/fonts.css"></noscript>
 </head>
 
 <body class="bg-gray-50">
@@ -270,7 +272,7 @@
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
       <div class="flex items-center gap-3 cursor-pointer">
         <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full">
-          <img src="../../assets/img/logo.webp" alt="المنطلق لنقل العفش" class="w-16 h-16 object-contain">
+          <img src="../../assets/img/logo.webp" alt="المنطلق لنقل العفش" class="w-16 h-16 object-contain" decoding="async">
         </div>
         <div><span class="text-2xl font-extrabold text-[#1e293b]">المنطلق</span>
           <p class="text-xs text-gray-400 hidden md:block">أفضل شركة نقل عفش بجدة</p>
@@ -407,7 +409,7 @@
           </div>
         </section>
         <img src="../../assets/img/best-furniture-moving-company-jeddah.webp" alt="نقل عفش حي الروضة جدة "
-          class="w-[500px] h-[500px] rounded-2xl shadow-md">
+          class="w-[500px] h-[500px] rounded-2xl shadow-md" loading="lazy" decoding="async">
         <!-- H2: لماذا شركة المنطلق هي أفضل شركة نقل عفش بجدة -->
         <section id="why-choose" class="bg-white rounded-2xl shadow-md p-8">
           <h2 class="text-3xl font-bold mb-4 section-title">لماذا تعتبر شركة المنطلق أفضل شركة نقل عفش بجدة؟</h2>

@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <!-- Title -->
     <title>شركة نقل عفش جدة | فك وتركيب وتغليف بضمان – المنطلق</title>
+    <!-- Preload Critical Fonts -->
+    <link rel="preload" href="/assets/fonts/Tajawal-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/Tajawal-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
 
     <!-- SEO -->
     <meta name="description"
@@ -14,14 +18,24 @@
         content="شركة نقل عفش جدة, نقل عفش جدة, دينا نقل عفش جدة, نقل أثاث جدة, أفضل شركة نقل عفش جدة, عمال نقل عفش بجدة, فك وتركيب عفش بجدة, تغليف عفش بجدة, ونش رفع عفش بجدة, تخزين عفش بجدة, نقل مكاتب بجدة, نقل فلل بجدة, دينا نقل أثاث جدة, ارخص شركة نقل عفش جدة">
     <meta name="author" content="شركة المنطلق لنقل العفش بجدة">
     <meta name="robots" content="index, follow">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18176781201"></script>
+    <!-- Lazy load Google tag (gtag.js) -->
     <script>
+      function loadGTM() {
+        if (window.gtmLoaded) return;
+        window.gtmLoaded = true;
+        var script = document.createElement('script');
+        script.src = "https://www.googletagmanager.com/gtag/js?id=AW-18176781201";
+        script.async = true;
+        document.head.appendChild(script);
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'AW-18176781201');
+      }
+      window.addEventListener('scroll', loadGTM, { once: true, passive: true });
+      window.addEventListener('mousemove', loadGTM, { once: true, passive: true });
+      window.addEventListener('touchstart', loadGTM, { once: true, passive: true });
+      setTimeout(loadGTM, 5000); // Fallback
     </script>
 
     <!-- Canonical -->
@@ -60,7 +74,8 @@
     
     
     <link rel="stylesheet" href="../../dist/output.css">
-    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="preload" href="/assets/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/all.min.css"></noscript>
     <link rel="stylesheet" href="/assets/css/main.css">
 
     <script type="application/ld+json">
@@ -230,7 +245,8 @@
 
 
 
-    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="preload" href="/assets/css/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/fonts.css"></noscript>
 </head>
 
 <body class="bg-gray-50 text-gray-800">
@@ -268,7 +284,7 @@
                     </div>
                     <img src="./assets/img/logo.webp"
                         class="w-12 h-12 md:w-14 md:h-14 rounded-full relative z-10 border-2 border-white shadow-lg group-hover:scale-105 transition-transform duration-300"
-                        alt="لوجو شركة المنطلق لنقل العفش في جدة">
+                        alt="لوجو شركة المنطلق لنقل العفش في جدة" decoding="async">
                 </div>
                 <div>
                     <span
@@ -574,7 +590,7 @@
                     <div>
                         <img src="./assets/img/best-furniture-moving-company-jeddah.webp"
                             alt="شركة نقل عفش بجدة - فريق متخصص في نقل الأثاث والتغليف"
-                            class="rounded-2xl shadow-xl w-full h-[800px] object-" loading="lazy">
+                            class="rounded-2xl shadow-xl w-full h-[800px] object-" loading="lazy" decoding="async">
                     </div>
 
                     <!-- المحتوى -->
@@ -1184,7 +1200,7 @@
                      alt="${service.title}" 
                      class="w-full h-[260px] object-cover transition-transform duration-700 group-hover:scale-110" 
                      loading="lazy"
-                     onerror="this.src='${defaultImage}'">
+                     onerror="this.src='${defaultImage}'" decoding="async">
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 ${badgeHTML}
             </div>
@@ -3412,7 +3428,7 @@
                             <img src="https://images.unsplash.com/photo-1611834905996-b30d97dcf651?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                                 alt="كيف تحمي أثاثك أثناء النقل - نصائح احترافية لتغليف العفش"
                                 class="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110"
-                                loading="lazy">
+                                loading="lazy" decoding="async">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                             </div>
@@ -3466,7 +3482,7 @@
                             <img src="https://images.unsplash.com/photo-1582653291997-079a1c04e5a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                                 alt="دليل فك وتركيب الأثاث - خطوات احترافية لنقل الغرف والمجالس"
                                 class="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110"
-                                loading="lazy">
+                                loading="lazy" decoding="async">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                             </div>
@@ -3518,7 +3534,7 @@
                             <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                                 alt="أفضل طرق تخزين الأثاث - نصائح للحفاظ على العفش من الرطوبة والحشرات"
                                 class="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110"
-                                loading="lazy">
+                                loading="lazy" decoding="async">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                             </div>

@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>نقل أثاث مكاتب بجدة | شركة نقل مكاتب احترافية مع الفك والتركيب والتغليف</title>
+    <!-- Preload Critical Fonts -->
+    <link rel="preload" href="/assets/fonts/Tajawal-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/Tajawal-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
 
     <meta name="description"
         content="شركة نقل أثاث مكاتب بجدة تقدم خدمات نقل المكاتب والشركات والمؤسسات باحترافية عالية تشمل الفك والتركيب والتغليف ونقل الأجهزة والمستندات بأمان داخل جميع أحياء جدة وبأسعار مناسبة.">
@@ -198,7 +202,8 @@
     <!-- Tailwind + Fonts -->
     <script src="https://cdn.tailwindcss.com">
     </script>
-    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="preload" href="/assets/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/all.min.css"></noscript>
     
     <style>
         body {
@@ -270,7 +275,8 @@
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
         }
     </style>
-    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="preload" href="/assets/css/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/fonts.css"></noscript>
 </head>
 
 <body class="bg-gray-50">
@@ -292,7 +298,7 @@
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center gap-3 cursor-pointer">
                 <div class="w-12 h-12 flex items-center justify-center"><img
-                        src="https://almontalaqmoving.com/assets/img/logo.webp" alt="المنطلق" class="w-12 h-12"></div>
+                        src="https://almontalaqmoving.com/assets/img/logo.webp" alt="المنطلق" class="w-12 h-12" decoding="async"></div>
                 <div><span class="text-2xl font-extrabold text-[#1e293b]">المنطلق</span>
                     <p class="text-xs text-gray-400 hidden md:block">نقل أثاث مكاتب بجدة</p>
                 </div>
@@ -420,7 +426,7 @@
                             بجدة</strong>.</p>
                 </section>
                 <img src="../assets/img/moving-office-furniture-in-jeddah.webp" alt="نقل أثاث مكاتب بجدة"
-                    class="w-[500px ] h-[500px]">
+                    class="w-[500px ] h-[500px]" loading="lazy" decoding="async">
                 <!-- خدمات نقل المكاتب التي نقدمها -->
                 <section id="services" class="bg-white rounded-2xl shadow-md p-8">
                     <h2 class="text-3xl font-bold mb-4 section-title">خدمات نقل المكاتب التي نقدمها في جدة</h2>

@@ -15,6 +15,10 @@
 
     <!-- Title -->
     <title>من نحن | شركة المنطلق لنقل العفش بجدة</title>
+    <!-- Preload Critical Fonts -->
+    <link rel="preload" href="/assets/fonts/Tajawal-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/Tajawal-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
 
     <!-- Open Graph (Facebook) -->
     <meta property="og:title" content="من نحن | شركة المنطلق لنقل العفش بجدة">
@@ -38,7 +42,8 @@
     <!-- Customizing Tailwind for RTL and arabic fonts -->
     
     <!-- Font Awesome 6 (free) -->
-    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="preload" href="/assets/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/all.min.css"></noscript>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -246,7 +251,8 @@
             }
         }
     </style>
-    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="preload" href="/assets/css/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/fonts.css"></noscript>
 </head>
 
 <body class="bg-gray-50 text-gray-800">
@@ -389,7 +395,7 @@
                     </div>
                     <img src="../assets/img/logo.webp"
                         class="w-12 h-12 md:w-14 md:h-14 rounded-full relative z-10 border-2 border-white shadow-lg group-hover:scale-105 transition-transform duration-300"
-                        alt="لوجو شركة المنطلق لنقل العفش في جدة">
+                        alt="لوجو شركة المنطلق لنقل العفش في جدة" decoding="async">
                 </div>
                 <div>
                     <span
@@ -847,7 +853,7 @@
                             <img src="../assets/img/about.webp"
                                 alt="فريق المنطلق لنقل العفش - عمال متخصصون ومعدات حديثة"
                                 class="w-full h-auto object-cover rounded-2xl transition-transform duration-700 group-hover:scale-105"
-                                loading="lazy" style="aspect-ratio: 4/3;">
+                                loading="lazy" style="aspect-ratio: 4/3;" decoding="async">
                             <!-- overlay خفيف مع نص -->
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-transparent rounded-2xl">
@@ -1288,7 +1294,7 @@
                             <div
                                 class="w-16 h-16   flex items-center justify-center shadow-lg transform rotate-3 group-hover:rotate-0 transition-transform">
                                 <img src="../assets/img/logo.webp" alt="شعار المنطلق لنقل العفش"
-                                    class="w-16 h-16 object-contain">
+                                    class="w-16 h-16 object-contain" decoding="async">
                             </div>
                             <div>
                                 <h3
