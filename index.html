@@ -60,7 +60,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../dist/output.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
 
     <script type="application/ld+json">
 {
@@ -228,145 +229,7 @@
 </script>
 
 
-    <style>
-        * {
-            font-family: 'Tajawal', sans-serif;
-        }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            overflow-x: hidden;
-        }
-
-        /* Custom RTL spacing / adjustments */
-        .container-custom {
-            width: 100%;
-            max-width: 1280px;
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: 1rem;
-            padding-right: 1rem;
-        }
-
-        /* Fade-in animation on scroll */
-        .fade-up {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1), transform 0.7s ease;
-        }
-
-        .fade-up.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Sticky navbar custom class */
-        .navbar-sticky {
-            background-color: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(8px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
-            transition: all 0.3s;
-        }
-
-        /* Floating WhatsApp and back to top */
-        .float-whatsapp {
-            position: fixed;
-            bottom: 30px;
-            right: 25px;
-            z-index: 1000;
-            background-color: #25D366;
-            width: 58px;
-            height: 58px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
-            transition: transform 0.2s, box-shadow 0.2s;
-            cursor: pointer;
-        }
-
-        .float-whatsapp:hover {
-            transform: scale(1.08);
-            box-shadow: 0 12px 25px rgba(37, 211, 102, 0.5);
-        }
-
-        .back-to-top {
-            position: fixed;
-            bottom: 30px;
-            left: 25px;
-            z-index: 1000;
-            background-color: #1e3a8a;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            transition: all 0.2s;
-            opacity: 0;
-            visibility: hidden;
-        }
-
-        .back-to-top.show {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .back-to-top:hover {
-            background-color: #f97316;
-            transform: translateY(-5px);
-        }
-
-        /* Accordion animation */
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease-out;
-        }
-
-        .accordion-content.open {
-            max-height: 350px;
-        }
-
-        /* Card hover effect */
-        .service-card,
-        .why-card,
-        .blog-card {
-            transition: all 0.3s ease;
-        }
-
-        .service-card:hover,
-        .blog-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Lazy loading images blur effect optional */
-        img {
-            transition: opacity 0.3s;
-        }
-
-        .nav-link {
-            transition: color 0.2s;
-        }
-
-        .ham-menu-line {
-            transition: all 0.3s;
-        }
-
-        /* Hide scrollbar for mobile menu if needed */
-        @media (max-width: 768px) {
-            .mobile-menu {
-                transition: transform 0.3s ease-in-out;
-            }
-        }
-    </style>
 </head>
 
 <body class="bg-gray-50 text-gray-800">
@@ -381,56 +244,7 @@
         onclick="window.open('https://wa.me/966563806459?text=مرحباً، أريد الاستفسار عن نقل العفش', '_blank')">
         <i class="fab fa-whatsapp fa-2x text-white"></i>
     </div>
-    <style>
-        /* Call Button */
-        .float-call {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 140px;
-            /* فوق الواتساب */
-            right: 20px;
-            background: #007bff;
-            color: #fff;
-            border-radius: 50%;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            cursor: pointer;
-            z-index: 9999;
-            transition: 0.3s;
-        }
 
-        .float-call:hover {
-            transform: scale(1.1);
-        }
-
-        /* WhatsApp Button */
-        .float-whatsapp {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 70px;
-            right: 20px;
-            background: #25D366;
-            color: #fff;
-            border-radius: 50%;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            cursor: pointer;
-            z-index: 9999;
-            transition: 0.3s;
-        }
-
-        .float-whatsapp:hover {
-            transform: scale(1.1);
-        }
-    </style>
 
 
 
@@ -607,136 +421,9 @@
         </div>
     </header>
 
-    <style>
-        /* تأثيرات إضافية للهيدر */
-        .backdrop-blur-md {
-            backdrop-filter: blur(12px);
-        }
 
-        /* تخصيص شريط التمرير */
-        html {
-            scroll-padding-top: 80px;
-        }
 
-        /* تأثير للـ navbar عند التمرير */
-        .navbar-scrolled {
-            background-color: rgba(255, 255, 255, 0.98);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
-            padding-top: 0.5rem;
-            padding-bottom: 0.5rem;
-        }
 
-        /* أنيميشن للـ mobile menu */
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        #mobileMenu a {
-            animation: slideDown 0.3s ease-out forwards;
-            opacity: 0;
-        }
-
-        #mobileMenu a:nth-child(1) {
-            animation-delay: 0.05s;
-        }
-
-        #mobileMenu a:nth-child(2) {
-            animation-delay: 0.1s;
-        }
-
-        #mobileMenu a:nth-child(3) {
-            animation-delay: 0.15s;
-        }
-
-        #mobileMenu a:nth-child(4) {
-            animation-delay: 0.2s;
-        }
-
-        #mobileMenu a:nth-child(5) {
-            animation-delay: 0.25s;
-        }
-    </style>
-
-    <script>
-        // تفعيل تأثيرات الهيدر المتقدمة
-        (function () {
-            const navbar = document.getElementById('navbar');
-            const menuBtn = document.getElementById('menuBtn');
-            const mobileMenu = document.getElementById('mobileMenu');
-            const menuIcon = document.getElementById('menuIcon');
-
-            // تغيير شكل الهيدر عند التمرير
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('navbar-scrolled');
-                } else {
-                    navbar.classList.remove('navbar-scrolled');
-                }
-            });
-
-            // تفعيل قائمة الموبايل
-            if (menuBtn && mobileMenu) {
-                menuBtn.addEventListener('click', () => {
-                    if (mobileMenu.classList.contains('max-h-0')) {
-                        mobileMenu.classList.remove('max-h-0');
-                        mobileMenu.classList.add('max-h-[600px]', 'py-2');
-                        menuIcon.classList.remove('fa-bars');
-                        menuIcon.classList.add('fa-times');
-                    } else {
-                        mobileMenu.classList.add('max-h-0');
-                        mobileMenu.classList.remove('max-h-[600px]', 'py-2');
-                        menuIcon.classList.remove('fa-times');
-                        menuIcon.classList.add('fa-bars');
-                    }
-                });
-
-                // إغلاق القائمة عند النقر على أي رابط
-                document.querySelectorAll('#mobileMenu a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        mobileMenu.classList.add('max-h-0');
-                        mobileMenu.classList.remove('max-h-[600px]', 'py-2');
-                        menuIcon.classList.remove('fa-times');
-                        menuIcon.classList.add('fa-bars');
-                    });
-                });
-            }
-
-            // إضافة تأثير نشط للرابط الحالي
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.nav-link');
-
-            window.addEventListener('scroll', () => {
-                let current = '';
-                const scrollPosition = window.scrollY + 100;
-
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.offsetHeight;
-                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                        current = section.getAttribute('id');
-                    }
-                });
-
-                navLinks.forEach(link => {
-                    link.classList.remove('text-[#1e293b]');
-                    const href = link.getAttribute('href');
-                    if (href === `#${current}`) {
-                        link.classList.add('text-[#1e293b]');
-                    } else {
-                        link.classList.remove('text-[#1e293b]');
-                    }
-                });
-            });
-        })();
-    </script>
 
     <main>
         <!-- Hero Section - مطورة بشكل إبداعي واحترافي -->
@@ -746,136 +433,124 @@
             <div class="absolute inset-0 bg-gradient-to-b from-[#0f172a] to-[#1e293b]"></div>
 
             <div class="container mx-auto px-6 lg:px-20 relative z-10 py-16">
-                <div class="flex flex-col-reverse lg:flex-row items-center gap-12">
+                <div class="max-w-4xl mx-auto text-center space-y-6">
 
-                    <!-- المحتوى -->
-                    <div class="lg:w-1/2 text-center lg:text-right space-y-6">
-
-                        <!-- Badge -->
-                        <div
-                            class="inline-block bg-orange-500/20 text-orange-300 px-4 py-2 rounded-full text-sm font-bold">
-                            🚚 دينا نقل عفش جدة بأمان تام خلال 24 ساعة
-                        </div>
-
-                        <!-- H1 (معدل) -->
-                        <h1 class="text-4xl md:text-6xl font-black leading-tight text-white">
-                            شركة نقل عفش جدة | دينا نقل أثاث بجدة بالفك والتغليف والضمان
-
-                            <br>
-                            <span class="text-white/90 text-3xl md:text-4xl font-bold">
-                                أفضل خدمات نقل الأثاث والمنازل والفلل بجدة
-                            </span>
-                        </h1>
-
-                        <!-- وصف موسع وغني بالـ SEO -->
-                        <p class="text-white/80 text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                            أهلاً بك في <strong>شركة المنطلق</strong>، خيارك الأولي والموثوق لخدمات <a
-                                href="/furniture-moving-in-jeddah/"
-                                class="text-orange-400 font-bold hover:underline">نقل عفش جدة</a> و<a
-                                href="/furniture-moving-company-in-jeddah/"
-                                class="text-orange-400 font-bold hover:underline">شركة نقل عفش جدة</a> المعتمدة. نحن
-                            نقدم دليلاً متكاملاً وحلولاً شاملة لنقل الأثاث المنزلي والمكتبي بأسعار تنافسية تناسب جميع
-                            الفئات داخل كافة أحياء مدينة جدة، مع اعتمادنا التام على أسطول سيارات <a
-                                href="/furniture-moving-in-jeddah/"
-                                class="text-orange-400 font-bold hover:underline">دينا نقل عفش جدة</a> المجهزة بصناديق
-                            مغلقة ومبطنة لحماية العفش أثناء التنقل.
-                        </p>
-                        <p class="text-white/80 text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                            تتميز خدماتنا بتقديم عملية نقل سريعة وحرفية تعتمد على أفضل <a
-                                href="/furniture-moving-workers-in-jeddah/"
-                                class="text-orange-400 font-bold hover:underline">عمال نقل عفش بجدة</a> ونجارين محترفين
-                            في <a href="/furniture-dismantling-and-assembly-in-jeddah/"
-                                class="text-orange-400 font-bold hover:underline">فك وتركيب العفش بجدة</a> لغرف النوم
-                            والمطابخ والمكيفات والشاشات. كما نوفر مواد <a href="/furniture-packaging-in-jeddah/"
-                                class="text-orange-400 font-bold hover:underline">تغليف عفش جدة</a> العالية الجودة وحلول
-                            <a href="/hydraulic-winch-moving-jeddah/"
-                                class="text-orange-400 font-bold hover:underline">ونش رفع عفش بجدة</a> للأدوار العليا،
-                            بالإضافة إلى خدمات <a href="/moving-villa-furniture-in-jeddah/"
-                                class="text-orange-400 font-bold hover:underline">نقل الفلل</a> و<a
-                                href="/moving-office-furniture-in-jeddah/"
-                                class="text-orange-400 font-bold hover:underline">نقل المكاتب</a> و<a
-                                href="/furniture-storage-in-jeddah/"
-                                class="text-orange-400 font-bold hover:underline">تخزين العفش بجدة</a>.
-                        </p>
-
-                        <!-- Trust -->
-                        <div class="flex gap-6 justify-center lg:justify-start text-white text-sm font-semibold">
-                            <span>✔️ +5000 عميل راضٍ</span>
-                            <span>✔️ +10 سنوات خبرة بجدة</span>
-                            <span>✔️ خدمة طوارئ 24 ساعة</span>
-                            <span>✔️ ضمان شامل على سلامة العفش</span>
-                        </div>
-
-                        <!-- CTA -->
-                        <div class="flex flex-wrap gap-4 justify-center lg:justify-start pt-2">
-
-                            <a href="tel:0563806459"
-                                class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg transition flex items-center gap-2">
-                                📞 اتصل الآن 0563806459
-                            </a>
-
-                            <a href="https://wa.me/966563806459?text=مرحباً،%20أريد%20الاستفسار%20عن%20خدمات%20نقل%20العفش%20بجدة"
-                                target="_blank"
-                                class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg transition flex items-center gap-2">
-                                💬 احجز عبر واتساب
-                            </a>
-
-                        </div>
-                        <div class="flex flex-wrap text-white gap-3 mt-8 text-sm font-semibold">
-
-                            <a href="/furniture-moving-in-jeddah/"
-                                class="bg-white/10 hover:bg-orange-500 px-3 py-1.5 rounded-lg transition">
-                                نقل عفش جدة
-                            </a>
-
-                            <a href="/furniture-moving-company-in-jeddah/"
-                                class="bg-white/10 hover:bg-orange-500 px-3 py-1.5 rounded-lg transition">
-                                شركة نقل عفش جدة
-                            </a>
-
-                            <a href="/furniture-moving-workers-in-jeddah/"
-                                class="bg-white/10 hover:bg-orange-500 px-3 py-1.5 rounded-lg transition">
-                                عمال نقل عفش بجدة
-                            </a>
-
-                            <a href="/hydraulic-winch-moving-jeddah/"
-                                class="bg-white/10 hover:bg-orange-500 px-3 py-1.5 rounded-lg transition">
-                                ونش رفع عفش بجدة
-                            </a>
-
-                            <a href="/moving-villa-furniture-in-jeddah/"
-                                class="bg-white/10 hover:bg-orange-500 px-3 py-1.5 rounded-lg transition">
-                                نقل فلل جدة
-                            </a>
-
-                            <a href="/moving-office-furniture-in-jeddah/"
-                                class="bg-white/10 hover:bg-orange-500 px-3 py-1.5 rounded-lg transition">
-                                نقل مكاتب جدة
-                            </a>
-
-                            <a href="/furniture-storage-in-jeddah/"
-                                class="bg-white/10 hover:bg-orange-500 px-3 py-1.5 rounded-lg transition">
-                                تخزين العفش
-                            </a>
-
-                            <a href="/furniture-dismantling-and-assembly-in-jeddah/"
-                                class="bg-white/10 hover:bg-orange-500 px-3 py-1.5 rounded-lg transition">
-                                فك وتركيب العفش
-                            </a>
-
-                        </div>
-                        <!-- Offer -->
-                        <div class="text-yellow-300 font-bold text-base pt-2">
-                            🔥 خصم 20% لفترة محدودة على جميع خدمات نقل وتغليف العفش داخل وخارج جدة – اتصل الآن!
-                        </div>
-
+                    <!-- Badge -->
+                    <div
+                        class="inline-block bg-orange-500/20 text-orange-300 px-4 py-2 rounded-full text-sm font-bold">
+                        🚚 دينا نقل عفش جدة بأمان تام خلال 24 ساعة
                     </div>
 
-                    <!-- الصورة -->
-                    <div class="lg:w-1/2">
-                        <img src="./assets/img/logo.webp"
-                            alt="شركة نقل عفش جدة - أسطول دينا نقل عفش جدة وفريق عمل متخصص"
-                            class="rounded-2xl shadow-2xl w-full" loading="eager">
+                    <!-- H1 (معدل) -->
+                    <h1 class="text-4xl md:text-6xl font-black leading-tight text-white">
+                        شركة نقل عفش جدة | دينا نقل أثاث بجدة بالفك والتغليف والضمان
+
+                        <br>
+                        <span class="text-white/90 text-3xl md:text-4xl font-bold">
+                            أفضل خدمات نقل الأثاث والمنازل والفلل بجدة
+                        </span>
+                    </h1>
+
+                    <!-- وصف موسع وغني بالـ SEO -->
+                    <p class="text-white/80 text-lg leading-relaxed max-w-3xl mx-auto">
+                        أهلاً بك في <strong>شركة المنطلق</strong>، خيارك الأولي والموثوق لخدمات <a
+                            href="/furniture-moving-in-jeddah/"
+                            class="text-orange-400 font-bold hover:underline">نقل عفش جدة</a> و<a
+                            href="/furniture-moving-company-in-jeddah/"
+                            class="text-orange-400 font-bold hover:underline">شركة نقل عفش جدة</a> المعتمدة. نحن
+                        نقدم دليلاً متكاملاً وحلولاً شاملة لنقل الأثاث المنزلي والمكتبي بأسعار تنافسية تناسب جميع
+                        الفئات داخل كافة أحياء مدينة جدة، مع اعتمادنا التام على أسطول سيارات <a
+                            href="/furniture-moving-in-jeddah/"
+                            class="text-orange-400 font-bold hover:underline">دينا نقل عفش جدة</a> المجهزة بصناديق
+                        مغلقة ومبطنة لحماية العفش أثناء التنقل.
+                    </p>
+                    <p class="text-white/80 text-lg leading-relaxed max-w-3xl mx-auto">
+                        تتميز خدماتنا بتقديم عملية نقل سريعة وحرفية تعتمد على أفضل <a
+                            href="/furniture-moving-workers-in-jeddah/"
+                            class="text-orange-400 font-bold hover:underline">عمال نقل عفش بجدة</a> ونجارين محترفين
+                        في <a href="/furniture-dismantling-and-assembly-in-jeddah/"
+                            class="text-orange-400 font-bold hover:underline">فك وتركيب العفش بجدة</a> لغرف النوم
+                        والمطابخ والمكيفات والشاشات. كما نوفر مواد <a href="/furniture-packaging-in-jeddah/"
+                            class="text-orange-400 font-bold hover:underline">تغليف عفش جدة</a> العالية الجودة وحلول
+                        <a href="/hydraulic-winch-moving-jeddah/"
+                            class="text-orange-400 font-bold hover:underline">ونش رفع عفش بجدة</a> للأدوار العليا،
+                        بالإضافة إلى خدمات <a href="/moving-villa-furniture-in-jeddah/"
+                            class="text-orange-400 font-bold hover:underline">نقل الفلل</a> و<a
+                            href="/moving-office-furniture-in-jeddah/"
+                            class="text-orange-400 font-bold hover:underline">نقل المكاتب</a> و<a
+                            href="/furniture-storage-in-jeddah/"
+                            class="text-orange-400 font-bold hover:underline">تخزين العفش بجدة</a>.
+                    </p>
+
+                    <!-- Trust -->
+                    <div class="flex flex-wrap gap-6 justify-center text-white text-sm font-semibold">
+                        <span>✔️ +5000 عميل راضٍ</span>
+                        <span>✔️ +10 سنوات خبرة بجدة</span>
+                        <span>✔️ خدمة طوارئ 24 ساعة</span>
+                        <span>✔️ ضمان شامل على سلامة العفش</span>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="flex flex-wrap gap-4 justify-center pt-2">
+
+                        <a href="tel:0563806459"
+                            class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg transition flex items-center gap-2">
+                            📞 اتصل الآن 0563806459
+                        </a>
+
+                        <a href="https://wa.me/966563806459?text=مرحباً،%20أريد%20الاستفسار%20عن%20خدمات%20نقل%20العفش%20بجدة"
+                            target="_blank"
+                            class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg transition flex items-center gap-2">
+                            💬 احجز عبر واتساب
+                        </a>
+
+                    </div>
+                    <div class="flex flex-wrap justify-center text-white gap-3 mt-8 text-sm font-semibold">
+
+                        <a href="/furniture-moving-in-jeddah/"
+                            class="bg-white/10 hover:bg-orange-500 px-3 py-1.5 rounded-lg transition">
+                            نقل عفش جدة
+                        </a>
+
+                        <a href="/furniture-moving-company-in-jeddah/"
+                            class="bg-white/10 hover:bg-orange-500 px-3 py-1.5 rounded-lg transition">
+                            شركة نقل عفش جدة
+                        </a>
+
+                        <a href="/furniture-moving-workers-in-jeddah/"
+                            class="bg-white/10 hover:bg-orange-500 px-3 py-1.5 rounded-lg transition">
+                            عمال نقل عفش بجدة
+                        </a>
+
+                        <a href="/hydraulic-winch-moving-jeddah/"
+                            class="bg-white/10 hover:bg-orange-500 px-3 py-1.5 rounded-lg transition">
+                            ونش رفع عفش بجدة
+                        </a>
+
+                        <a href="/moving-villa-furniture-in-jeddah/"
+                            class="bg-white/10 hover:bg-orange-500 px-3 py-1.5 rounded-lg transition">
+                            نقل فلل جدة
+                        </a>
+
+                        <a href="/moving-office-furniture-in-jeddah/"
+                            class="bg-white/10 hover:bg-orange-500 px-3 py-1.5 rounded-lg transition">
+                            نقل مكاتب جدة
+                        </a>
+
+                        <a href="/furniture-storage-in-jeddah/"
+                            class="bg-white/10 hover:bg-orange-500 px-3 py-1.5 rounded-lg transition">
+                            تخزين العفش
+                        </a>
+
+                        <a href="/furniture-dismantling-and-assembly-in-jeddah/"
+                            class="bg-white/10 hover:bg-orange-500 px-3 py-1.5 rounded-lg transition">
+                            فك وتركيب العفش
+                        </a>
+
+                    </div>
+                    <!-- Offer -->
+                    <div class="text-yellow-300 font-bold text-base pt-2">
+                        🔥 خصم 20% لفترة محدودة على جميع خدمات نقل وتغليف العفش داخل وخارج جدة – اتصل الآن!
                     </div>
 
                 </div>
@@ -883,67 +558,9 @@
 
         </section>
 
-        <!-- إضافة أنيميشن مخصص للبطاقة العائمة -->
-        <style>
-            @keyframes bounce-slow {
 
-                0%,
-                100% {
-                    transform: translateY(0);
-                }
 
-                50% {
-                    transform: translateY(-8px);
-                }
-            }
 
-            .animate-bounce-slow {
-                animation: bounce-slow 3s ease-in-out infinite;
-            }
-
-            [data-aos] {
-                opacity: 0;
-                transform: translateY(30px);
-                transition: all 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-            }
-
-            [data-aos].aos-animate {
-                opacity: 1;
-                transform: translateY(0);
-            }
-
-            [data-aos="fade-left"] {
-                transform: translateX(-40px);
-            }
-
-            [data-aos="fade-left"].aos-animate {
-                transform: translateX(0);
-            }
-
-            [data-aos="fade-right"] {
-                transform: translateX(40px);
-            }
-
-            [data-aos="fade-right"].aos-animate {
-                transform: translateX(0);
-            }
-        </style>
-
-        <script>
-            // تفعيل AOS بشكل بسيط يدوي
-            (function () {
-                const aosElements = document.querySelectorAll('[data-aos]');
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('aos-animate');
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.1 });
-                aosElements.forEach(el => observer.observe(el));
-            })();
-        </script>
 
         <!-- About Section / من نحن -->
         <!-- About Section - مطور بشكل احترافي وجذاب -->
@@ -4367,75 +3984,7 @@
         </footer>
     </main>
 
-    <script>
-        // Sticky navbar + Back to Top
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > 20) {
-                navbar?.classList.add('navbar-sticky');
-            } else {
-                navbar?.classList.remove('navbar-sticky');
-            }
-            const backBtn = document.getElementById('backToTop');
-            if (window.scrollY > 400) {
-                backBtn?.classList.add('show');
-            } else {
-                backBtn?.classList.remove('show');
-            }
-        });
-
-        document.getElementById('backToTop')?.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // Mobile Menu Toggle
-        const menuBtn = document.getElementById('menuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const menuIcon = document.getElementById('menuIcon');
-        menuBtn?.addEventListener('click', () => {
-            if (mobileMenu.style.maxHeight && mobileMenu.style.maxHeight !== '0px') {
-                mobileMenu.style.maxHeight = '0';
-                menuIcon?.classList.remove('fa-times');
-                menuIcon?.classList.add('fa-bars');
-            } else {
-                mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
-                menuIcon?.classList.remove('fa-bars');
-                menuIcon?.classList.add('fa-times');
-            }
-        });
-
-        // FAQ Accordion
-        const faqButtons = document.querySelectorAll('.faq-question');
-        faqButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const content = btn.nextElementSibling;
-                const icon = btn.querySelector('i');
-                const isOpen = content.classList.contains('open');
-                document.querySelectorAll('.accordion-content').forEach(el => el.classList.remove('open'));
-                document.querySelectorAll('.faq-question i').forEach(ic => ic.style.transform = 'rotate(0deg)');
-                if (!isOpen) {
-                    content.classList.add('open');
-                    if (icon) icon.style.transform = 'rotate(180deg)';
-                } else {
-                    if (icon) icon.style.transform = 'rotate(0deg)';
-                }
-            });
-        });
-
-        // Consolidated single IntersectionObserver for all animations & lazy elements
-        document.addEventListener('DOMContentLoaded', () => {
-            const animatedElements = document.querySelectorAll('[data-aos], .fade-up');
-            const observer = new IntersectionObserver((entries, obs) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('aos-animate', 'visible');
-                        obs.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
-            animatedElements.forEach(el => observer.observe(el));
-        });
-    </script>
+    <script src="/assets/js/main.js" defer></script>
     <script src="/assets/js/nav-services.js" defer></script>
 </body>
 

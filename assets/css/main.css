@@ -1,0 +1,185 @@
+* {
+    font-family: 'Tajawal', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Custom RTL spacing / adjustments */
+.container-custom {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Sticky navbar custom class */
+.navbar-sticky {
+    background-color: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s;
+}
+
+/* Floating WhatsApp and Call Buttons */
+.float-whatsapp {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 70px;
+    right: 20px;
+    background: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.float-whatsapp:hover {
+    transform: scale(1.1);
+}
+
+.float-call {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 140px;
+    right: 20px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.float-call:hover {
+    transform: scale(1.1);
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    left: 25px;
+    z-index: 1000;
+    background-color: #1e3a8a;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: #f97316;
+    transform: translateY(-5px);
+}
+
+/* Accordion animation */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+.accordion-content.open {
+    max-height: 350px;
+}
+
+/* Card hover effect */
+.service-card,
+.why-card,
+.blog-card {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover,
+.blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.2);
+}
+
+img {
+    transition: opacity 0.3s;
+}
+
+.nav-link {
+    transition: color 0.2s;
+}
+
+.ham-menu-line {
+    transition: all 0.3s;
+}
+
+/* Hide scrollbar for mobile menu if needed */
+@media (max-width: 768px) {
+    .mobile-menu {
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
+/* تأثيرات إضافية للهيدر */
+.backdrop-blur-md {
+    backdrop-filter: blur(12px);
+}
+
+/* تأثير للـ navbar عند التمرير */
+.navbar-scrolled {
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/* أنيميشن للـ mobile menu */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#mobileMenu a {
+    animation: slideDown 0.3s ease-out forwards;
+    opacity: 0;
+}
+
+#mobileMenu a:nth-child(1) { animation-delay: 0.05s; }
+#mobileMenu a:nth-child(2) { animation-delay: 0.1s; }
+#mobileMenu a:nth-child(3) { animation-delay: 0.15s; }
+#mobileMenu a:nth-child(4) { animation-delay: 0.2s; }
+#mobileMenu a:nth-child(5) { animation-delay: 0.25s; }
