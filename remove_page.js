@@ -3,7 +3,7 @@ const path = require('path');
 
 const projectDir = __dirname;
 // The page to remove
-const targetPage = 'best-furniture-moving-company-riyadh';
+const targetPage = 'furniture-moving-company-in-jeddah';
 const pageDir = path.join(projectDir, targetPage);
 
 console.log(`Starting cleanup for: ${targetPage}...`);

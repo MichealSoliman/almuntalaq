@@ -7,12 +7,17 @@
 RewriteEngine On
 
 # ======================================
-# 301 Redirects
+# Redirects and Gone (410)
 # ======================================
 
-Redirect 301 /best-furniture-moving-company-riyadh/ https://almontalaqmoving.com/
+# 410 Gone - Tell Google these pages are permanently deleted
+Redirect 410 /best-furniture-moving-company-riyadh/
+Redirect 410 /furniture-moving-in-jeddah/
+Redirect 410 /furniture-moving-company-in-jeddah/
+
+# 301 Redirects
 Redirect 301 /furniture-moving-with-packing/ https://almontalaqmoving.com/furniture-packaging-in-jeddah/
-Redirect 301 /blogs/best-furniture-moving-company-jeddah/ https://almontalaqmoving.com/furniture-moving-company-in-jeddah/
+Redirect 301 /blogs/best-furniture-moving-company-jeddah/ https://almontalaqmoving.com/
 Redirect 301 /furniture-packaging-in-jeddah/ https://almontalaqmoving.com/furniture-packaging-in-jeddah/
 
  ======================================
