@@ -172,3 +172,8 @@ Require all denied </FilesMatch>
  ======================================
 
 Options -Indexes
+
+# 301 Redirects for Cannibalization
+Redirect 301 /blogs/furniture-moving-companies-in-jeddah/ https://almontalaqmoving.com/furniture-moving-companies-in-jeddah/
+Redirect 301 /blogs/best-furniture-moving-companies-in-jeddah/ https://almontalaqmoving.com/furniture-moving-companies-in-jeddah/
+Redirect 301 /blogs/best-furniture-moving-company-jeddah/ https://almontalaqmoving.com/furniture-moving-companies-in-jeddah/
