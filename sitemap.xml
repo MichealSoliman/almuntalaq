@@ -232,11 +232,7 @@
     <lastmod>2026-09-27T11:26:14+03:00</lastmod>
     <priority>0.64</priority>
   </url>
-  <url>
-    <loc>https://almontalaqmoving.com/blogs/furniture-moving-trucks-in-jeddah/</loc>
-    <lastmod>2026-09-27T11:26:14+03:00</lastmod>
-    <priority>0.64</priority>
-  </url>
+  
   
   <url>
     <loc>https://almontalaqmoving.com/blogs/how-to-choose-furniture-moving-company/</loc>
@@ -252,5 +248,24 @@
     <loc>https://almontalaqmoving.com/blogs/villa-furniture-moving-prices-jeddah/</loc>
     <lastmod>2026-09-27T11:26:14+03:00</lastmod>
     <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://almontalaqmoving.com/moving-trucks-in-jeddah/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/bride-luggage-moving-jeddah/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://almontalaqmoving.com/cheapest-furniture-moving-jeddah/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
