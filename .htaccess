@@ -184,3 +184,8 @@ Redirect 301 /blogs/furniture-dismantling-and-assembly-in-jeddah/ https://almont
 Redirect 301 /blogs/electrical-appliance-moving-in-jeddah/ https://almontalaqmoving.com/moving-electrical-appliances-in-jeddah/
 
 Redirect 301 /blogs/furniture-moving-trucks-in-jeddah/ https://almontalaqmoving.com/moving-trucks-in-jeddah/
+
+# Phase 3: Area Slugs Redirects
+Redirect 301 /areas/hayu-aleazizia/ https://almontalaqmoving.com/areas/hayu-alaziziya/
+Redirect 301 /areas/hayu-alrubwa/ https://almontalaqmoving.com/areas/hayu-alrabwa/
+Redirect 301 /areas/hayu-alshaati/ https://almontalaqmoving.com/areas/hayu-alshati/
