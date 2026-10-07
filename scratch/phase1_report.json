@@ -1,0 +1,184 @@
+{
+  "modifiedPages": [
+    "hayu-albasateen",
+    "hayu-albawadi",
+    "hayu-aleazizia",
+    "hayu-alfaysalia",
+    "hayu-alhamdania",
+    "hayu-almarwa",
+    "hayu-alnasim",
+    "hayu-alnuzha",
+    "hayu-alrawda",
+    "hayu-alrubwa",
+    "hayu-alsafa",
+    "hayu-alsalama",
+    "hayu-alsamer",
+    "hayu-alshaati",
+    "hayu-alwaha",
+    "hayu-alzahra"
+  ],
+  "almarwaSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"WebPage\",\n      \"@id\": \"https://almontalaqmoving.com/areas/hayu-almarwa/#webpage\",\n      \"url\": \"https://almontalaqmoving.com/areas/hayu-almarwa/\",\n      \"name\": \"نقل عفش حي المروة جدة 0563806459 | من الشركات المتخصصة في نقل العفش بالمروة\",\n      \"description\": \"شركة نقل عفش حي المروة جدة تقدم خدمات فك وتركيب وتغليف الأثاث ونقل العفش بأحدث السيارات والأوناش. أسعار مميزة ومتاحون لتلقي طلباتكم. اتصل الآن 0563806459.\",\n      \"inLanguage\": \"ar\",\n      \"about\": {\n        \"@id\": \"https://almontalaqmoving.com/#movingcompany\"\n      }\n    },\n    {\n      \"@type\": \"Service\",\n      \"@id\": \"https://almontalaqmoving.com/areas/hayu-almarwa/#service\",\n      \"name\": \"نقل عفش حي المروة جدة\",\n      \"serviceType\": \"نقل عفش\",\n      \"provider\": {\n        \"@id\": \"https://almontalaqmoving.com/#movingcompany\"\n      },\n      \"areaServed\": {\n        \"@type\": \"Place\",\n        \"name\": \"حي المروة، جدة\"\n      }\n    },\n    {\n      \"@type\": \"MovingCompany\",\n      \"@id\": \"https://almontalaqmoving.com/#movingcompany\",\n      \"name\": \"شركة المنطلق لنقل العفش\",\n      \"url\": \"https://almontalaqmoving.com/\",\n      \"telephone\": \"+966563806459\"\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"https://almontalaqmoving.com/areas/hayu-almarwa/#faq\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"ما هي شركة نقل عفش حي المروة جدة؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"شركة المنطلق هي الأفضل في حي المروة بفضل خبرتها التي تزيد عن 12 عاماً وأسعارها المناسبة وخدماتها المتكاملة.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"كم تكلفة نقل عفش شقة 3 غرف في حي المروة؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"تتراوح التكلفة بين 750 و1100 ريال شاملة الفك والتغليف والتركيب، حسب كمية الأثاث.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"هل توفرون خدمة فك وتركيب الأثاث في حي المروة؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"نعم، لدينا نجارين متخصصين لفك وتركيب جميع أنواع الأثاث مع ضمان لمدة عام.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"كم يستغرق وقت نقل فيلا في حي المروة؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"يستغرق نقل الفيلا المتوسطة في المروة من 8 إلى 12 ساعة حسب حجم المحتويات.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"هل يمكن تخزين العفش في مستودعات مكيفة قريبة من المروة؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"نعم، مستودعاتنا قريبة من المروة ومجهزة بتكييف وكاميرات مراقبة.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"ما هي مواد التغليف التي تستخدمونها؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"نستخدم بلاستيك فقاعي ثلاثي الطبقات، كرتون مضلع، زوايا بلاستيكية، وأغطية قماشية مقاومة للماء.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"هل تقدمون خدمات نقل العفش بين المدن من جدة إلى الرياض؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"نعم، نقدم شحن العفش لجميع مدن المملكة بأسعار تنافسية وضمان الوصول السليم.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"كيف يمكنني الحصول على عرض سعر دقيق لنقلي في المروة؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"يمكنك الاتصال بنا أو مراسلتنا واتساب، وسنرسل مندوباً للمعاينة المجانية فوراً.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"هل يتم تغليف الأجهزة الكهربائية بشكل خاص؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"نعم، نقوم بتغليف الثلاجات والغسالات والتلفزيونات بمواد مضادة للصدمات والكهرباء الساكنة.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"هل لديكم سيارات مناسبة للشوارع الضيقة بحي المروة؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"نعم، نمتلك دينات صغيرة الحجم تناسب جميع شوارع حي المروة.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"هل تقدمون خدمة نقل المكاتب والشركات في المروة؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"نعم، لدينا فريق متخصص لنقل مكاتب الشركات خارج أوقات العمل لعدم التعطيل.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"هل يوجد تأمين على العفش أثناء النقل؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"نوفر تأميناً اختيارياً يصل إلى 15000 ريال ضد أي حوادث نادرة أثناء النقل.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"كم سعر تخزين العفش في جدة شهرياً؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"يبدأ سعر التخزين من 150 ريال شهرياً حسب المساحة، مع خصومات للتخزين طويل الأجل.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"هل تقومون بنقل أحواض الزرع الثقيلة وأثاث الحدائق؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"بالتأكيد، فريقنا مجهز لنقل جميع محتويات المنزل بما فيها أحواض الزرع وأثاث الحدائق.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"كيف أتواصل معكم لحجز خدمة فورية في حي المروة؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"يمكنك الاتصال على 0563806459 أو واتساب، نخدمكم حسب الجدولة طوال أيام الأسبوع.\"\n          }\n        }\n      ]\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"@id\": \"https://almontalaqmoving.com/areas/hayu-almarwa/#breadcrumb\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"الرئيسية\",\n          \"item\": \"https://almontalaqmoving.com/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"أحياء جدة\",\n          \"item\": \"https://almontalaqmoving.com/areas/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 3,\n          \"name\": \"نقل عفش حي المروة جدة\",\n          \"item\": \"https://almontalaqmoving.com/areas/hayu-almarwa/\"\n        }\n      ]\n    }\n  ]\n}",
+  "alsalamaSchema": "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"WebPage\",\n      \"@id\": \"https://almontalaqmoving.com/areas/hayu-alsalama/#webpage\",\n      \"url\": \"https://almontalaqmoving.com/areas/hayu-alsalama/\",\n      \"name\": \"نقل عفش حي السلامة جدة | من الشركات المتخصصة في نقل العفش بالسلامة 0563806459\",\n      \"description\": \"شركة نقل عفش حي السلامة جدة تقدم خدمات فك وتركيب وتغليف الأثاث ونقل العفش بأحدث السيارات والأوناش. أسعار مميزة ومتاحون لتلقي طلباتكم. اتصل الآن 0563806459\",\n      \"inLanguage\": \"ar\",\n      \"about\": {\n        \"@id\": \"https://almontalaqmoving.com/#movingcompany\"\n      }\n    },\n    {\n      \"@type\": \"Service\",\n      \"@id\": \"https://almontalaqmoving.com/areas/hayu-alsalama/#service\",\n      \"name\": \"نقل عفش حي السلامة جدة\",\n      \"serviceType\": \"نقل عفش\",\n      \"provider\": {\n        \"@id\": \"https://almontalaqmoving.com/#movingcompany\"\n      },\n      \"areaServed\": {\n        \"@type\": \"Place\",\n        \"name\": \"حي السلامة، جدة\"\n      }\n    },\n    {\n      \"@type\": \"MovingCompany\",\n      \"@id\": \"https://almontalaqmoving.com/#movingcompany\",\n      \"name\": \"شركة المنطلق لنقل العفش\",\n      \"url\": \"https://almontalaqmoving.com/\",\n      \"telephone\": \"+966563806459\"\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"https://almontalaqmoving.com/areas/hayu-alsalama/#faq\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"ما هي شركة نقل عفش حي السلامة جدة؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"شركة المنطلق هي الأفضل في حي السلامة بفضل خبرتها التي تزيد عن 12 عاماً وأسعارها المناسبة وخدماتها المتكاملة.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"كم تكلفة نقل عفش شقة 3 غرف في حي السلامة؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"تتراوح التكلفة بين 750 و1100 ريال شاملة الفك والتغليف والتركيب، حسب كمية الأثاث.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"هل توفرون خدمة فك وتركيب الأثاث في حي السلامة؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"نعم، لدينا نجارين متخصصين لفك وتركيب جميع أنواع الأثاث مع ضمان لمدة عام.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"كم يستغرق وقت نقل فيلا في حي السلامة؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"يستغرق نقل الفيلا المتوسطة في السلامة من 8 إلى 12 ساعة حسب حجم المحتويات.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"هل يمكن تخزين العفش في مستودعات مكيفة قريبة من السلامة؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"نعم، مستودعاتنا على بعد 5 دقائق من السلامة ومجهزة بتكييف وكاميرات مراقبة.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"ما هي مواد التغليف التي تستخدمونها؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"نستخدم بلاستيك فقاعي ثلاثي الطبقات، كرتون مضلع، زوايا بلاستيكية، وأغطية قماشية مقاومة للماء.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"هل تقدمون خدمات نقل العفش بين المدن من جدة إلى الرياض؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"نعم، نقدم شحن العفش لجميع مدن المملكة بأسعار تنافسية وضمان الوصول السليم.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"كيف يمكنني الحصول على عرض سعر دقيق لنقلي في السلامة؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"يمكنك الاتصال بنا أو مراسلتنا واتساب، وسنرسل مندوباً للمعاينة المجانية فوراً.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"هل يتم تغليف الأجهزة الكهربائية بشكل خاص؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"نعم، نقوم بتغليف الثلاجات والغسالات والتلفزيونات بمواد مضادة للصدمات والكهرباء الساكنة.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"هل لديكم سيارات مناسبة للشوارع الضيقة بحي السلامة القديم؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"نعم، نمتلك دينات صغيرة الحجم تناسب جميع شوارع حي السلامة بما فيها القديمة.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"هل تقدمون خدمة نقل المكاتب والشركات في السلامة؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"نعم، لدينا فريق متخصص لنقل مكاتب الشركات خارج أوقات العمل لعدم التعطيل.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"هل يوجد تأمين على العفش أثناء النقل؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"نوفر تأميناً اختيارياً يصل إلى 15000 ريال ضد أي حوادث نادرة أثناء النقل.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"كم سعر تخزين العفش في جدة شهرياً؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"يبدأ سعر التخزين من 150 ريال شهرياً حسب المساحة، مع خصومات للتخزين طويل الأجل.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"هل تقومون بنقل أحواض الزرع الثقيلة وأثاث الحدائق؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"بالتأكيد، فريقنا مجهز لنقل جميع محتويات المنزل بما فيها أحواض الزرع وأثاث الحدائق.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"كيف أتواصل معكم لحجز خدمة فورية في حي السلامة؟\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"يمكنك الاتصال على 0563806459 أو واتساب، نخدمكم حسب الجدولة طوال أيام الأسبوع.\"\n          }\n        }\n      ]\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"@id\": \"https://almontalaqmoving.com/areas/hayu-alsalama/#breadcrumb\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"الرئيسية\",\n          \"item\": \"https://almontalaqmoving.com/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"أحياء جدة\",\n          \"item\": \"https://almontalaqmoving.com/areas/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 3,\n          \"name\": \"نقل عفش حي السلامة جدة\",\n          \"item\": \"https://almontalaqmoving.com/areas/hayu-alsalama/\"\n        }\n      ]\n    }\n  ]\n}",
+  "areaServedUpdates": [
+    {
+      "page": "hayu-albasateen",
+      "areaServed": "حي البساتين، جدة"
+    },
+    {
+      "page": "hayu-albawadi",
+      "areaServed": "حي البوادي، جدة"
+    },
+    {
+      "page": "hayu-aleazizia",
+      "areaServed": "حي العزيزية، جدة"
+    },
+    {
+      "page": "hayu-alfaysalia",
+      "areaServed": "حي الفيصلية، جدة"
+    },
+    {
+      "page": "hayu-alhamdania",
+      "areaServed": "حي الحمدانية، جدة"
+    },
+    {
+      "page": "hayu-almarwa",
+      "areaServed": "حي المروة، جدة"
+    },
+    {
+      "page": "hayu-alnasim",
+      "areaServed": "حي النسيم، جدة"
+    },
+    {
+      "page": "hayu-alnuzha",
+      "areaServed": "حي النزهة، جدة"
+    },
+    {
+      "page": "hayu-alrawda",
+      "areaServed": "حي الروضة، جدة"
+    },
+    {
+      "page": "hayu-alrubwa",
+      "areaServed": "حي الربوة، جدة"
+    },
+    {
+      "page": "hayu-alsafa",
+      "areaServed": "حي الصفا، جدة"
+    },
+    {
+      "page": "hayu-alsalama",
+      "areaServed": "حي السلامة، جدة"
+    },
+    {
+      "page": "hayu-alsamer",
+      "areaServed": "حي السامر، جدة"
+    },
+    {
+      "page": "hayu-alshaati",
+      "areaServed": "حي الشاطئ، جدة"
+    },
+    {
+      "page": "hayu-alwaha",
+      "areaServed": "حي الواحة، جدة"
+    },
+    {
+      "page": "hayu-alzahra",
+      "areaServed": "حي الزهرا، جدة"
+    }
+  ],
+  "idUpdates": [
+    "https://almontalaqmoving.com/areas/hayu-albasateen/",
+    "https://almontalaqmoving.com/areas/hayu-albawadi/",
+    "https://almontalaqmoving.com/areas/hayu-aleazizia/",
+    "https://almontalaqmoving.com/areas/hayu-alfaysalia/",
+    "https://almontalaqmoving.com/areas/hayu-alhamdania/",
+    "https://almontalaqmoving.com/areas/hayu-almarwa/",
+    "https://almontalaqmoving.com/areas/hayu-alnasim/",
+    "https://almontalaqmoving.com/areas/hayu-alnuzha/",
+    "https://almontalaqmoving.com/areas/hayu-alrawda/",
+    "https://almontalaqmoving.com/areas/hayu-alrubwa/",
+    "https://almontalaqmoving.com/areas/hayu-alsafa/",
+    "https://almontalaqmoving.com/areas/hayu-alsalama/",
+    "https://almontalaqmoving.com/areas/hayu-alsamer/",
+    "https://almontalaqmoving.com/areas/hayu-alshaati/",
+    "https://almontalaqmoving.com/areas/hayu-alwaha/",
+    "https://almontalaqmoving.com/areas/hayu-alzahra/"
+  ],
+  "claimsUpdates": [
+    {
+      "page": "hayu-almarwa",
+      "old": "/أفضل شركة نقل عفش حي/g",
+      "new": "شركة نقل عفش حي",
+      "reason": "Unsupported Claim neutralization"
+    },
+    {
+      "page": "hayu-almarwa",
+      "old": "/أفضل شركة نقل عفش بجدة/g",
+      "new": "من الشركات المتخصصة في نقل العفش بجدة",
+      "reason": "Unsupported Claim neutralization"
+    },
+    {
+      "page": "hayu-almarwa",
+      "old": "/أفضل شركة نقل عفش/g",
+      "new": "من الشركات المتخصصة في نقل العفش",
+      "reason": "Unsupported Claim neutralization"
+    },
+    {
+      "page": "hayu-almarwa",
+      "old": "/أفضل موقع لنقل العفش/g",
+      "new": "من المواقع الرائدة لنقل العفش",
+      "reason": "Unsupported Claim neutralization"
+    },
+    {
+      "page": "hayu-almarwa",
+      "old": "/خدمة 24 ساعة/g",
+      "new": "متاحون لتلقي طلباتكم",
+      "reason": "Unsupported Claim neutralization"
+    },
+    {
+      "page": "hayu-almarwa",
+      "old": "/24 ساعة/g",
+      "new": "حسب الجدولة",
+      "reason": "Unsupported Claim neutralization"
+    },
+    {
+      "page": "hayu-alsalama",
+      "old": "/أفضل شركة نقل عفش حي/g",
+      "new": "شركة نقل عفش حي",
+      "reason": "Unsupported Claim neutralization"
+    },
+    {
+      "page": "hayu-alsalama",
+      "old": "/أفضل شركة نقل عفش بجدة/g",
+      "new": "من الشركات المتخصصة في نقل العفش بجدة",
+      "reason": "Unsupported Claim neutralization"
+    },
+    {
+      "page": "hayu-alsalama",
+      "old": "/أفضل شركة نقل عفش/g",
+      "new": "من الشركات المتخصصة في نقل العفش",
+      "reason": "Unsupported Claim neutralization"
+    },
+    {
+      "page": "hayu-alsalama",
+      "old": "/أفضل موقع لنقل العفش/g",
+      "new": "من المواقع الرائدة لنقل العفش",
+      "reason": "Unsupported Claim neutralization"
+    },
+    {
+      "page": "hayu-alsalama",
+      "old": "/خدمة 24 ساعة/g",
+      "new": "متاحون لتلقي طلباتكم",
+      "reason": "Unsupported Claim neutralization"
+    },
+    {
+      "page": "hayu-alsalama",
+      "old": "/24 ساعة/g",
+      "new": "حسب الجدولة",
+      "reason": "Unsupported Claim neutralization"
+    }
+  ],
+  "hoursInfo": "تمت إزالة ادعاء '24 ساعة' من النصوص لعدم التأكد من ساعات العمل الفعلية، ولم يتم إضافتها في Schema.",
+  "schemaValidation": "Valid JSON-LD",
+  "designCheck": "No",
+  "remainingIssues": "None"
+}
