@@ -6,7 +6,8 @@
   "scripts": {
     "build:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
     "watch:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "sync:footer": "node scripts/sync-footer.js"
+    "sync:footer": "node scripts/sync-footer.js",
+    "build:sitemap": "node scripts/generate-sitemap.js"
   },
   "repository": {
     "type": "git",
