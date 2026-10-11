@@ -233,3 +233,33 @@ img {
 #mobileMenu a:nth-child(3) { animation-delay: 0.15s; }
 #mobileMenu a:nth-child(4) { animation-delay: 0.2s; }
 #mobileMenu a:nth-child(5) { animation-delay: 0.25s; }
+
+/* ===================================================
+   تنسيقات الفوتر الشامل والمطور (Al-Muntalaq Master Footer)
+   =================================================== */
+footer#contact {
+    background-color: #030712 !important;
+    background: linear-gradient(135deg, #020617 0%, #0f172a 50%, #0b1329 100%) !important;
+    color: #ffffff !important;
+    position: relative;
+    border-top: 1px solid #1e293b !important;
+}
+
+footer#contact a {
+    color: #d1d5db;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+footer#contact a:hover {
+    color: #ffffff;
+}
+
+footer#contact .footer-cta-banner {
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.75) 0%, rgba(15, 23, 42, 0.9) 50%, rgba(49, 46, 129, 0.75) 100%) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(59, 130, 246, 0.3) !important;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5) !important;
+}
+
