@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // List of services (uses central window.SITE_SERVICES if loaded)
   const services = (typeof window !== 'undefined' && window.SITE_SERVICES) ? window.SITE_SERVICES : [
-    { name: 'نقل عفش بجدة', path: '/furniture-moving-in-jeddah/' },
+    { name: 'نقل عفش بجدة', path: '/furniture-moving-companies-in-jeddah/' },
     { name: 'شركة نقل عفش بجدة', path: '/furniture-moving-company-in-jeddah/' },
     { name: 'عمال نقل عفش بجدة', path: '/furniture-moving-workers-in-jeddah/' },
     { name: 'فك وتركيب الأثاث بجدة', path: '/furniture-dismantling-and-assembly-in-jeddah/' },
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <a href="https://almontalaqmoving.com/" class="block p-2 rounded text-center transition-all bg-gray-50 hover:bg-blue-50 hover:text-blue-600 text-gray-700 border border-transparent font-medium">
           شركة نقل عفش جدة
         </a>
-        <a href="https://almontalaqmoving.com/furniture-moving-in-jeddah/" class="block p-2 rounded text-center transition-all bg-gray-50 hover:bg-blue-50 hover:text-blue-600 text-gray-700 border border-transparent font-medium">
+        <a href="https://almontalaqmoving.com/furniture-moving-companies-in-jeddah/" class="block p-2 rounded text-center transition-all bg-gray-50 hover:bg-blue-50 hover:text-blue-600 text-gray-700 border border-transparent font-medium">
           نقل عفش جدة
         </a>
         <a href="https://almontalaqmoving.com/furniture-moving-company-in-jeddah/" class="block p-2 rounded text-center transition-all bg-gray-50 hover:bg-blue-50 hover:text-blue-600 text-gray-700 border border-transparent font-medium">

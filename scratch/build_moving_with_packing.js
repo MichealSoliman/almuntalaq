@@ -1,0 +1,749 @@
+const fs = require('fs');
+
+const pageHtml = `<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <!-- Basic SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>نقل عفش شامل التغليف بجدة | باقة النقل الشاملة</title>
+    <!-- Preload Critical Fonts -->
+    <link rel="preload" href="/assets/fonts/Tajawal-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/Tajawal-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
+    <meta name="description"
+        content="باقة نقل عفش شامل التغليف بجدة من شركة المنطلق. خدمة متكاملة تشمل الفك، التغليف الاحترافي، التحميل، النقل بسيارات مجهزة، وإعادة التركيب لراحة بالك وأمان منقولاتك.">
+
+    <meta name="keywords"
+        content="نقل عفش شامل التغليف بجدة, باقة نقل العفش الشاملة, نقل وتغليف عفش جدة, شركة نقل عفش مع التغليف بجدة, نقل اثاث شامل بجدة, نقل عفش متكامل بجدة, تغليف ونقل العفش جدة, فك وتغليف ونقل عفش جدة">
+
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="شركة المنطلق لنقل العفش">
+    <meta name="language" content="Arabic">
+    <meta name="geo.region" content="SA-02">
+    <meta name="geo.placename" content="Jeddah">
+    <meta name="distribution" content="global">
+    <meta name="revisit-after" content="7 days">
+
+    <link rel="canonical" href="https://almontalaqmoving.com/furniture-moving-with-packing/">
+
+    <!-- Open Graph -->
+    <meta property="og:locale" content="ar_SA">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="نقل عفش شامل التغليف بجدة | باقة النقل الشاملة">
+    <meta property="og:description"
+        content="باقة نقل عفش شامل التغليف بجدة تجمع بين الفك والتغليف المتقن والتحميل والنقل الآمن وإعادة التركيب في وجهتك الجديدة بأعلى معايير الحماية.">
+    <meta property="og:url" content="https://almontalaqmoving.com/furniture-moving-with-packing/">
+    <meta property="og:site_name" content="شركة المنطلق لنقل العفش">
+    <meta property="og:image" content="https://almontalaqmoving.com/assets/img/furniture-moving-with-packing.webp">
+    <meta property="og:image:alt" content="نقل عفش شامل التغليف بجدة">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="نقل عفش شامل التغليف بجدة | باقة النقل الشاملة">
+    <meta name="twitter:description"
+        content="باقة نقل عفش شامل التغليف بجدة تشمل كافة المراحل من الفك والتغليف إلى النقل والتركيب بأمان وسرعة.">
+    <meta name="twitter:image" content="https://almontalaqmoving.com/assets/img/furniture-moving-with-packing.webp">
+
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#ffffff">
+    <meta name="format-detection" content="telephone=yes">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://almontalaqmoving.com/furniture-moving-with-packing/#webpage",
+          "url": "https://almontalaqmoving.com/furniture-moving-with-packing/",
+          "name": "نقل عفش شامل التغليف بجدة | باقة النقل الشاملة",
+          "description": "باقة نقل عفش شامل التغليف بجدة تشمل الفك والتغليف والتحميل والنقل والتركيب بأعلى معايير الجودة والأمان.",
+          "inLanguage": "ar",
+          "isPartOf": {
+            "@id": "https://almontalaqmoving.com/#website"
+          },
+          "about": {
+            "@id": "https://almontalaqmoving.com/#movingcompany"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://almontalaqmoving.com/assets/img/furniture-moving-with-packing.webp"
+          },
+          "breadcrumb": {
+            "@id": "https://almontalaqmoving.com/furniture-moving-with-packing/#breadcrumb"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://almontalaqmoving.com/#website",
+          "url": "https://almontalaqmoving.com/",
+          "name": "شركة المنطلق لنقل العفش",
+          "inLanguage": "ar",
+          "publisher": {
+            "@id": "https://almontalaqmoving.com/#movingcompany"
+          }
+        },
+        {
+          "@type": "MovingCompany",
+          "@id": "https://almontalaqmoving.com/#movingcompany",
+          "name": "شركة المنطلق لنقل العفش بجدة",
+          "image": "https://almontalaqmoving.com/assets/img/furniture-moving-with-packing.webp",
+          "url": "https://almontalaqmoving.com/furniture-moving-with-packing/",
+          "telephone": "+966563806459",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "جدة",
+            "addressRegion": "منطقة مكة المكرمة",
+            "addressCountry": "SA"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "21.543333",
+            "longitude": "39.172779"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "جدة"
+            }
+          ],
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Saturday",
+              "Sunday",
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "07:00",
+            "closes": "23:00"
+          }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://almontalaqmoving.com/furniture-moving-with-packing/#service",
+          "serviceType": "نقل عفش شامل التغليف",
+          "name": "باقة نقل عفش شامل التغليف بجدة",
+          "provider": {
+            "@id": "https://almontalaqmoving.com/#movingcompany"
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "جدة"
+          },
+          "description": "باقة تجارية متكاملة تشمل فك وتغليف الأثاث بالكرتون والفقاعات والنايلون، ثم التحميل والنقل بسيارات مجهزة وإعادة التركيب في المنزل الجديد."
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://almontalaqmoving.com/furniture-moving-with-packing/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "الرئيسية",
+              "item": "https://almontalaqmoving.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "خدماتنا",
+              "item": "https://almontalaqmoving.com/services/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "نقل عفش شامل التغليف بجدة",
+              "item": "https://almontalaqmoving.com/furniture-moving-with-packing/"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://almontalaqmoving.com/furniture-moving-with-packing/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "ما المقصود بنقل عفش شامل التغليف؟",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "هي باقة متكاملة تجمع بين فك الأثاث وتغليفه بمواد الحماية المناسبة وتحميله في سيارات نقل مجهزة ونقله وإعادة تركيبه في الموقع الجديد، لتوفير الوقت والجهد على العميل."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "ما الفرق بين صفحة التغليف وباقة النقل الشامل؟",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "خدمة التغليف المستقلة تقتصر على تجهيز وتغليف الأثاث فقط (للتخزين أو النقل الذاتي)، بينما باقة النقل الشامل تغطي كامل دورة الانتقال من الفك والتغليف إلى النقل وإعادة التركيب."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "هل تشمل الباقة فك وتركيب المطابخ وغرف النوم؟",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "نعم، تتضمن الباقة فنيين ونجارين محترفين لفك غرف النوم والمطابخ والستائر وإعادة تركيبها وتثبيتها بدقة في الوجهة الجديدة."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "كيف يتم تحديد تكلفة باقة النقل الشاملة؟",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "تعتمد التكلفة على حجم وكمية الأثاث المنقول، كمية ونوع مواد التغليف المطلوبة، أدوار المبنى ووجود مصعد، والمسافة الجغرافية بين موقع الانطلاق والوصول."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Tailwind + Fonts -->
+    <link rel="stylesheet" href="../../dist/output.css">
+    <link rel="preload" href="/assets/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/all.min.css"></noscript>
+    
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        .section-title {
+            border-right: 4px solid #2563eb;
+            padding-right: 15px;
+        }
+
+        .floating-buttons {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .floating-buttons a {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .floating-buttons a:hover {
+            transform: scale(1.1);
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.2);
+            transition: all 0.3s;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .service-img-placeholder {
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1rem;
+            background: #f8fafc;
+        }
+
+        .hero-pattern {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        }
+    </style>
+    <link rel="preload" href="/assets/css/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/fonts.css"></noscript>
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="tel:0563806459"
+            class="bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg hover:shadow-blue-500/50">
+            <i class="fas fa-phone-alt text-2xl"></i>
+        </a>
+        <a href="https://wa.me/966563806459" target="_blank"
+            class="bg-gradient-to-r from-green-500 to-green-600 text-white shadow-lg hover:shadow-green-500/50">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+    <!-- Navbar -->
+    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 shadow-md border-b">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3 cursor-pointer">
+                <div class="w-12 h-12 flex items-center justify-center"><img
+                        src="https://almontalaqmoving.com/assets/img/logo.webp" alt="المنطلق" class="w-12 h-12" decoding="async"></div>
+                <div><span class="text-2xl font-extrabold text-[#1e293b]">المنطلق</span>
+                    <p class="text-xs text-gray-400 hidden md:block">نقل وتغليف عفش بجدة</p>
+                </div>
+            </div>
+            <div class="hidden lg:flex space-x-1">
+                <a href="https://almontalaqmoving.com/"
+                    class="nav-link px-4 py-2 font-semibold text-gray-700">الرئيسية</a>
+                <a href="https://almontalaqmoving.com/about/" class="nav-link px-4 py-2 font-semibold text-gray-700">من
+                    نحن</a>
+                <a href="https://almontalaqmoving.com/services/"
+                    class="nav-link px-4 py-2 font-semibold text-gray-700">خدماتنا</a>
+                <a href="https://almontalaqmoving.com/contact/"
+                    class="nav-link px-4 py-2 font-semibold text-gray-700">اتصل بنا</a>
+            </div>
+            <div class="hidden lg:flex gap-3">
+                <a href="tel:0563806459"
+                    class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-5 py-2.5 rounded-xl font-semibold flex items-center gap-2"><i
+                        class="fas fa-phone-alt"></i>اتصل الآن</a>
+                <a href="https://wa.me/966563806459" target="_blank"
+                    class="bg-gradient-to-r from-green-500 to-green-600 text-white px-5 py-2.5 rounded-xl font-semibold flex items-center gap-2"><i
+                        class="fab fa-whatsapp"></i>واتساب</a>
+            </div>
+            <button id="menuBtn" class="lg:hidden text-gray-700 text-2xl"><i class="fas fa-bars"></i></button>
+        </div>
+        <div id="mobileMenu" class="lg:hidden bg-white border-t max-h-0 overflow-hidden transition-all duration-300">
+            <div class="p-5 flex flex-col space-y-3">
+                <a href="https://almontalaqmoving.com/" class="py-2 font-semibold">الرئيسية</a>
+                <a href="https://almontalaqmoving.com/about/" class="py-2 font-semibold">من نحن</a>
+                <a href="https://almontalaqmoving.com/services/" class="py-2 font-semibold">خدماتنا</a>
+                <a href="https://almontalaqmoving.com/contact/" class="py-2 font-semibold">اتصل بنا</a>
+                <div class="flex gap-3 pt-3"><a href="tel:0563806459"
+                        class="bg-blue-600 text-white px-4 py-2 rounded-lg flex-1 text-center">اتصل</a><a
+                        href="https://wa.me/966563806459"
+                        class="bg-green-500 text-white px-4 py-2 rounded-lg flex-1 text-center">واتساب</a></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl fade-up">
+                <div class="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-400/30 text-blue-200 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
+                    <i class="fas fa-box-check text-blue-400"></i> خدمة تجارية متكاملة
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">نقل عفش شامل التغليف بجدة</h1>
+                <p class="text-lg mb-4 text-gray-200">
+                    نقدم لك <strong>باقة نقل العفش الشاملة</strong> في جدة، والمصممة لتمنحك راحة بال تامة عبر تنسيق كافة مراحل النقل في خدمة واحدة متكاملة: من فك الأثاث وتغليفه بأجود المواد، إلى التحميل في شاحنات مجهزة، والنقل الآمن، وإعادة التركيب والترتيب في منزلك الجديد.
+                </p>
+                <p class="text-lg mb-6 text-gray-300">
+                    فريق من النجارين وفنيي التغليف وعمال التحميل يتولون كافة التفاصيل بأعلى درجات العناية والاحترافية لحماية مقتنياتك الثمينة.
+                </p>
+                <div class="flex space-x-4 space-x-reverse">
+                    <a href="https://wa.me/966563806459"
+                        class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-bold flex items-center shadow-lg"><i
+                            class="fab fa-whatsapp ml-2"></i>احصل على عرض سعر للباقة</a>
+                    <a href="tel:0563806459"
+                        class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-bold flex items-center shadow-lg"><i
+                            class="fas fa-phone ml-2"></i>اتصل الآن 0563806459</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-12">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Sidebar -->
+            <div class="lg:w-1/4">
+                <div class="bg-white rounded-2xl shadow-md p-6 sticky top-24 border border-gray-100">
+                    <h3 class="text-xl font-bold mb-4 text-blue-600 border-b pb-2">باقة النقل الشاملة</h3>
+                    <ul class="space-y-2 text-sm font-semibold text-gray-700">
+                        <li><a href="#concept" class="block py-2 px-3 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition">ما هو النقل الشامل؟</a></li>
+                        <li><a href="#package-details" class="block py-2 px-3 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition">محتويات الباقة</a></li>
+                        <li><a href="#preparation" class="block py-2 px-3 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition">تجهيز الأثاث قبل النقل</a></li>
+                        <li><a href="#packing-transport" class="block py-2 px-3 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition">العلاقة بين التغليف والنقل</a></li>
+                        <li><a href="#extra-services" class="block py-2 px-3 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition">الخدمات الإضافية</a></li>
+                        <li><a href="#when-to-choose" class="block py-2 px-3 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition">متى تختار الباقة؟</a></li>
+                        <li><a href="#pricing-factors" class="block py-2 px-3 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition">عوامل تحديد التكلفة</a></li>
+                        <li><a href="#how-to-order" class="block py-2 px-3 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition">طريقة طلب الخدمة</a></li>
+                        <li><a href="#faq" class="block py-2 px-3 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition">أسئلة شائعة</a></li>
+                    </ul>
+                    <div class="mt-6 bg-blue-50 p-4 rounded-xl border border-blue-100">
+                        <h4 class="font-bold text-gray-900">خدمة مخصصة لاحتياجاتك</h4>
+                        <p class="text-xs text-gray-600 mt-1">تواصل معنا لمعاينة حجم العفش والحصول على تقدير دقيق</p>
+                        <a href="tel:0563806459" class="block mt-3 bg-blue-600 text-white text-center py-2 rounded-lg text-sm font-bold shadow hover:bg-blue-700 transition">اتصل بنا الآن</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Content -->
+            <div class="lg:w-3/4 space-y-8">
+
+                <!-- 1. Concept: ما المقصود بالنقل الشامل مع التغليف؟ -->
+                <section id="concept" class="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
+                    <div class="service-img-placeholder mb-6">
+                        <img src="https://almontalaqmoving.com/assets/img/furniture-moving-with-packing.webp"
+                            alt="نقل عفش شامل التغليف بجدة" class="w-full max-w-lg h-auto rounded-xl object-cover shadow-sm" loading="lazy" decoding="async">
+                    </div>
+                    <h2 class="text-3xl font-bold mb-4 section-title text-gray-900">ما المقصود بنقل عفش شامل التغليف؟</h2>
+                    <p class="mb-4 text-gray-700 leading-relaxed text-lg">
+                        <strong>نقل عفش شامل التغليف بجدة</strong> هو باقة تجارية متكاملة تقدمها شركة المنطلق للعملاء الراغبين في تفويض كامل مسؤولية عملية الانتقال إلى فريق محترف ومجهز، بدلاً من تجزئة المهمة بين جهات متعددة أو تحمل مشقة التجهيز والتغليف الذاتي.
+                    </p>
+                    <p class="mb-4 text-gray-700 leading-relaxed">
+                        تختلف هذه الباقة جوهرياً عن خدمة التغليف المستقل؛ فبينما تركز <a href="https://almontalaqmoving.com/furniture-packaging-in-jeddah/" class="text-blue-600 font-bold hover:underline">خدمة تغليف العفش بجدة</a> المستقلة على توفير مواد الحماية وتغليف الأثاث في موقعه فقط (للعملاء الراغبين في التخزين طويل الأمد أو نقل أثاثهم بأنفسهم)، فإن <strong>باقة النقل الشاملة</strong> تغطي دورة الانتقال كاملة من نقطة البداية وحتى الاستقرار في المسكن الجديد.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                        <div class="p-4 rounded-xl bg-blue-50 border border-blue-100">
+                            <h3 class="font-bold text-blue-900 mb-2 flex items-center gap-2">
+                                <i class="fas fa-boxes-packing text-blue-600"></i> خدمة التغليف المستقلة
+                            </h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">مخصصة لمن يحتاج فقط إلى تغليف الأثاث ومقتنياته لحمايتها من الغبار أو الرطوبة بهدف التخزين أو الشحن المستقل، دون شمول النقل والتركيب.</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-green-50 border border-green-100">
+                            <h3 class="font-bold text-green-900 mb-2 flex items-center gap-2">
+                                <i class="fas fa-truck-ramp-box text-green-600"></i> باقة النقل الشاملة
+                            </h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">تجمع بين الفك المتقن، التغليف الاحترافي، التحميل بالسيارات، النقل، وإعادة التركيب والترتيب النهائي في المسكن الجديد في عملية متناسقة واحدة.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2. Package Details: ما الخدمات التي تشملها الباقة؟ -->
+                <section id="package-details" class="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
+                    <h2 class="text-3xl font-bold mb-4 section-title text-gray-900">ما الخدمات التي تشملها باقة نقل العفش الشاملة؟</h2>
+                    <p class="mb-6 text-gray-700 leading-relaxed">
+                        تشمل الباقة كافة المراحل الأساسية التي تضمن وصول منقولاتكم بسلام ودون أي مجهود من جانبكم، وذلك وفق المعايير التالية:
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="p-5 rounded-xl border border-gray-200 bg-gray-50 flex gap-4">
+                            <div class="w-10 h-10 bg-blue-600 text-white rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 mb-1">فك الأثاث بواسطة فنيين</h3>
+                                <p class="text-sm text-gray-600 leading-relaxed">فك غرف النوم، الدواليب، الطاولات، والمطابخ بأيدي نجارين متخصصين مع ترقيم وتوثيق القطع لحمايتها.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-5 rounded-xl border border-gray-200 bg-gray-50 flex gap-4">
+                            <div class="w-10 h-10 bg-blue-600 text-white rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 mb-1">توفير مواد التغليف وتطبيقها</h3>
+                                <p class="text-sm text-gray-600 leading-relaxed">استخدام البلاستيك الفقاعي، الكرتون المقوى، الفوم، والنايلون المطاطي لتغطية كافة الأسطح والزوايا الحساسة.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-5 rounded-xl border border-gray-200 bg-gray-50 flex gap-4">
+                            <div class="w-10 h-10 bg-blue-600 text-white rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-truck-moving"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 mb-1">التحميل والنقل بشاحنات مجهزة</h3>
+                                <p class="text-sm text-gray-600 leading-relaxed">نقل المنقولات عبر <a href="https://almontalaqmoving.com/moving-trucks-in-jeddah/" class="text-blue-600 hover:underline">دينا نقل عفش مجهزة بجدة</a> ومبطنة من الداخل لمنع الاحتكاك.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-5 rounded-xl border border-gray-200 bg-gray-50 flex gap-4">
+                            <div class="w-10 h-10 bg-blue-600 text-white rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-couch"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 mb-1">التنزيل وإعادة التركيب</h3>
+                                <p class="text-sm text-gray-600 leading-relaxed">إعادة تركيب الأثاث في الغرف المحددة والتأكد من ثبات المفصلات والدواليب وجاهزيتها التامة للاستخدام.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3. Preparation: كيفية تجهيز الأثاث قبل النقل -->
+                <section id="preparation" class="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
+                    <h2 class="text-3xl font-bold mb-4 section-title text-gray-900">كيفية تجهيز الأثاث قبل موعد النقل الشامل</h2>
+                    <p class="mb-4 text-gray-700 leading-relaxed">
+                        على الرغم من أن فريقنا يتولى مهمة الفك والتغليف بالكامل، إلا أن هناك خطوات بسيطة يُفضل أن يقوم بها العميل قبل وصول الفريق لضمان أعلى مستوى من الكفاءة والتنظيم:
+                    </p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-600 mt-1"></i>
+                            <span><strong>فرز المقتنيات الشخصية والوثائق:</strong> يوصى بجمع الوثائق الرسمية، المجوهرات، والمقتنيات شديدة الخصوصية ونقلها بشكل شخصي.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-600 mt-1"></i>
+                            <span><strong>إفراغ محتويات الدواليب والأدراج:</strong> إفراغ الملابس والأدوات الشخصية من الأدراج يسهل تفكيك الأثاث ويمنع زيادة ثقل القطع أثناء الرفع.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-600 mt-1"></i>
+                            <span><strong>تفريغ الأجهزة الكهربائية:</strong> فصل الثلاجة قبل النقل بـ 6 إلى 12 ساعة على الأقل وتفريغ محتوياتها من الأطعمة والسوائل.</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- 4. Relationship: العلاقة بين التغليف والتحميل والنقل -->
+                <section id="packing-transport" class="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
+                    <h2 class="text-3xl font-bold mb-4 section-title text-gray-900">العلاقة بين التغليف المتقن وسلامة النقل</h2>
+                    <p class="mb-4 text-gray-700 leading-relaxed">
+                        التغليف ليس خطوة منفصلة عن عملية النقل، بل هو خط الدفاع الأول عن الأثاث طوال مسار الحركة. أثناء نقل العفش في شوارع جدة، يتعرض الأثاث لاهتزازات وحركات طبيعية داخل السيارة، كما يمر بممرات وسلالم ومصاعد ضيقة.
+                    </p>
+                    <p class="mb-4 text-gray-700 leading-relaxed">
+                        عندما يتولى نفس الفريق عمليتي التغليف والتحميل، يتم تطبيق التغليف بما يخدم خطة الرص والتربيط داخل الشاحنة؛ حيث يتم وضع زوايا حماية إضافية للقطع المعرضة للضغط، واستخدام خامات تثبيت تمنع انزلاق القطع المغلفة بالنايلون فوق بعضها البعض أثناء السير.
+                    </p>
+                </section>
+
+                <!-- 5. Extra Services: الخدمات الإضافية المتاحة -->
+                <section id="extra-services" class="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
+                    <h2 class="text-3xl font-bold mb-4 section-title text-gray-900">الخدمات الإضافية المتاحة ضمن الباقة</h2>
+                    <p class="mb-4 text-gray-700 leading-relaxed">
+                        يمكن للعميل تخصيص باقة النقل الشاملة بإضافة خدمات متخصصة تلائم طبيعة مسكنه ونوعية مقتنياته:
+                    </p>
+                    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+                        <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+                            <h3 class="font-bold text-gray-900 mb-1"><i class="fas fa-snowflake text-blue-600 ml-1"></i> فك وتركيب المكيفات</h3>
+                            <p class="text-xs text-gray-600">خدمة فك مكيفات الاسبليت والشباك وتجهيزها ونقلها بأمان.</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+                            <h3 class="font-bold text-gray-900 mb-1"><i class="fas fa-elevator text-blue-600 ml-1"></i> ونش رفع الأثاث</h3>
+                            <p class="text-xs text-gray-600">استخدام <a href="https://almontalaqmoving.com/hydraulic-winch-moving-jeddah/" class="text-blue-600 hover:underline">الونش الهيدروليكي</a> لرفع وتنزيل القطع الكبيرة للأدوار المرتفعة.</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+                            <h3 class="font-bold text-gray-900 mb-1"><i class="fas fa-tv text-blue-600 ml-1"></i> نقل الأجهزة الحساسة</h3>
+                            <p class="text-xs text-gray-600">تغليف خاص للشاشات الكبيرة والأجهزة المنزلية عبر <a href="https://almontalaqmoving.com/moving-electrical-appliances-in-jeddah/" class="text-blue-600 hover:underline">خدمة نقل الأجهزة الكهربائية</a>.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 6. When to Choose: الحالات المناسبة لاختيار الباقة -->
+                <section id="when-to-choose" class="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
+                    <h2 class="text-3xl font-bold mb-4 section-title text-gray-900">متى تكون باقة النقل الشاملة هي الخيار الأمثل؟</h2>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-home text-blue-600 mt-1"></i>
+                            <span><strong>نقل الشقق الكاملة والفلل:</strong> عندما يحتوي المنزل على غرف نوم متعددة ومطابخ ومجالس تتطلب عملاً منظماً ومنسقاً.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-clock text-blue-600 mt-1"></i>
+                            <span><strong>ضيق الوقت والالتزامات الوظيفية:</strong> عندما لا يملك أفراد الأسرة الوقت الكافي للتفرغ لأعمال الفك والتعبئة التي قد تستغرق أياماً.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-shield-alt text-blue-600 mt-1"></i>
+                            <span><strong>وجود أثاث ثمين وعصري:</strong> الأثاث الحديث من خامات حساسة أو قطع ايكيا تتطلب نجارين مدربين وأدوات دقيقة لحمايتها.</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- 7. Pricing Factors: العوامل التي تؤثر على التكلفة -->
+                <section id="pricing-factors" class="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
+                    <h2 class="text-3xl font-bold mb-4 section-title text-gray-900">العوامل التي تحدد تكلفة باقة النقل الشاملة</h2>
+                    <p class="mb-4 text-gray-700 leading-relaxed">
+                        نحرص في شركة المنطلق على تقديم تسعير واضح وشفاف مبني على متطلبات عمل كل عميل دون رسوم غير مبررة. تتحدد التكلفة الفعلية بناءً على:
+                    </p>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white border border-gray-200 rounded-xl">
+                            <thead class="bg-blue-600 text-white">
+                                <tr>
+                                    <th class="p-3 text-right">عامل التسعير</th>
+                                    <th class="p-3 text-right">تأثيره على التكلفة</th>
+                                    <th class="p-3 text-right">ملاحظات</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-700">
+                                <tr class="border-b">
+                                    <td class="p-3 font-semibold">حجم وكمية المنقولات</td>
+                                    <td class="p-3">يحدد حجم الشاحنات وعدد العمالة اللازمة</td>
+                                    <td class="p-3 text-sm">عدد الغرف، المجالس، والأجهزة</td>
+                                </tr>
+                                <tr class="border-b bg-gray-50">
+                                    <td class="p-3 font-semibold">كمية ونوعية مواد التغليف</td>
+                                    <td class="p-3">تتفاوت حسب كمية الكرتون، الفقاعات، والفوم المستخدم</td>
+                                    <td class="p-3 text-sm">التغليف الإضافي للزجاج والتحف</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-3 font-semibold">طبيعة المبنى والأدوار</td>
+                                    <td class="p-3">تؤثر سهولة الوصول والمصاعد على المجهود والوقت</td>
+                                    <td class="p-3 text-sm">استخدام السلالم أو الحاجة إلى ونش خارجي</td>
+                                </tr>
+                                <tr class="border-b bg-gray-50">
+                                    <td class="p-3 font-semibold">مسافة النقل</td>
+                                    <td class="p-3">المسافة بين الموقع القديم والجديد داخل جدة أو خارجها</td>
+                                    <td class="p-3 text-sm">نخدم جميع أحياء جدة ونوفر نقلاً للمدن المجاورة</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- 8. How to Order: طريقة طلب الخدمة -->
+                <section id="how-to-order" class="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
+                    <h2 class="text-3xl font-bold mb-4 section-title text-gray-900">طريقة طلب باقة نقل العفش الشاملة</h2>
+                    <p class="mb-4 text-gray-700 leading-relaxed">
+                        يمكنك حجز الباقة بسهولة عبر الخطوات التالية:
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                        <div class="p-4 bg-blue-50 rounded-xl border border-blue-100">
+                            <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-2 font-bold">1</div>
+                            <h3 class="font-bold text-gray-900 mb-1">التواصل المبدئي</h3>
+                            <p class="text-xs text-gray-600">اتصل بنا أو راسلنا عبر واتساب لتوضيح حجم الأثاث ومواقع النقل.</p>
+                        </div>
+                        <div class="p-4 bg-blue-50 rounded-xl border border-blue-100">
+                            <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-2 font-bold">2</div>
+                            <h3 class="font-bold text-gray-900 mb-1">عرض السعر والاتفاق</h3>
+                            <p class="text-xs text-gray-600">نقدم لك عرض سعر واضح يشمل كافة تفاصيل الفك والتغليف والنقل والتركيب.</p>
+                        </div>
+                        <div class="p-4 bg-blue-50 rounded-xl border border-blue-100">
+                            <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-2 font-bold">3</div>
+                            <h3 class="font-bold text-gray-900 mb-1">التنفيذ في الموعد</h3>
+                            <p class="text-xs text-gray-600">يصل الفريق في الموعد المحدد لإنجاز النقل باحترافية وتسليم المسكن مرتباً.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 9. FAQ -->
+                <section id="faq" class="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
+                    <h2 class="text-3xl font-bold mb-6 section-title text-gray-900">الأسئلة الشائعة حول نقل عفش شامل التغليف</h2>
+                    <div class="space-y-4">
+                        <div class="border-b pb-4">
+                            <h3 class="font-bold text-lg text-gray-900 mb-1">ما المقصود بنقل عفش شامل التغليف بجدة؟</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">هي خدمة متكاملة تشمل فك وتجهيز الأثاث وتغليفه بكافة المواد الواقية ونقله بشاحنات مجهزة ثم إعادة تركيبه وترتيبه في المسكن الجديد.</p>
+                        </div>
+                        <div class="border-b pb-4">
+                            <h3 class="font-bold text-lg text-gray-900 mb-1">ما الفرق بين هذه الصفحة وصفحة تغليف العفش المستقل؟</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">صفحة تغليف العفش تستهدف من يريد خدمة التغليف فقط (لأغراض التخزين أو النقل الذاتي)، بينما باقة النقل الشامل تتضمن التغليف كجزء من عملية النقل الكاملة مع الفك والتحميل والتركيب.</p>
+                        </div>
+                        <div class="border-b pb-4">
+                            <h3 class="font-bold text-lg text-gray-900 mb-1">هل توفر الشركة مواد التغليف ضمن الباقة؟</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">نعم، تشمل الباقة كافة مواد التغليف المطلوبة من كرتون مقوى وبلاستيك فقاعي ونايلون لاصق وفوم حسب طبيعة الأثاث المتفق عليه.</p>
+                        </div>
+                        <div class="border-b pb-4">
+                            <h3 class="font-bold text-lg text-gray-900 mb-1">هل يمكن طلب فك وتركيب المطابخ والمكيفات ضمن الباقة؟</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">نعم، يتوفر لدينا فنيون لفك وتركيب المطابخ والمكيفات والستائر كخدمات إضافية يمكن تنسيقها بسلاسة ضمن خطة النقل.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA -->
+                <section class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-2xl p-8 text-center shadow-lg">
+                    <h3 class="text-2xl font-bold">احصل على باقة نقل عفش شامل التغليف الآن</h3>
+                    <p class="my-3 text-blue-100">تواصل معنا اليوم لتحديد موعد المعاينة وتلقي عرض سعر مفصل يناسب منزلك.</p>
+                    <div class="flex justify-center gap-4 mt-6">
+                        <a href="tel:0563806459" class="bg-white text-blue-700 px-6 py-3 rounded-xl font-bold shadow hover:bg-gray-100 transition flex items-center gap-2">
+                            <i class="fas fa-phone-alt"></i> اتصل: 0563806459
+                        </a>
+                        <a href="https://wa.me/966563806459" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-bold shadow transition flex items-center gap-2">
+                            <i class="fab fa-whatsapp"></i> واتساب مباشر
+                        </a>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact"
+        class="bg-gradient-to-br from-gray-900 via-gray-900 to-gray-800 text-white pt-20 pb-6 relative overflow-hidden">
+        <div class="container mx-auto px-5 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12 pb-8 border-b border-white/10">
+
+                <div class="space-y-5">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg">
+                            <i class="fas fa-truck-moving text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-extrabold text-white">المنطلق</h3>
+                            <span class="text-xs text-blue-400">✦ نقل عفش بجدة ✦</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                        شركة متخصصة في خدمات نقل وتغليف وتخزين العفش بجدة، نوفر حلولاً متكاملة تشمل الفك والتركيب والتغليف الاحترافي.
+                    </p>
+                </div>
+
+                <div class="space-y-5">
+                    <h4 class="text-lg font-bold flex items-center gap-2">
+                        <span class="w-2 h-7 bg-gradient-to-b from-blue-400 to-indigo-500 rounded-full"></span>
+                        روابط سريعة
+                    </h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="https://almontalaqmoving.com/" class="text-gray-300 hover:text-white transition">الرئيسية</a></li>
+                        <li><a href="https://almontalaqmoving.com/about/" class="text-gray-300 hover:text-white transition">من نحن</a></li>
+                        <li><a href="https://almontalaqmoving.com/services/" class="text-gray-300 hover:text-white transition">خدماتنا</a></li>
+                        <li><a href="https://almontalaqmoving.com/contact/" class="text-gray-300 hover:text-white transition">اتصل بنا</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-5">
+                    <h4 class="text-lg font-bold flex items-center gap-2">
+                        <span class="w-2 h-7 bg-gradient-to-b from-blue-400 to-indigo-500 rounded-full"></span>
+                        خدماتنا ذات الصلة
+                    </h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="https://almontalaqmoving.com/furniture-packaging-in-jeddah/" class="text-gray-300 hover:text-white transition">تغليف العفش بجدة</a></li>
+                        <li><a href="https://almontalaqmoving.com/furniture-dismantling-and-assembly-in-jeddah/" class="text-gray-300 hover:text-white transition">فك وتركيب العفش بجدة</a></li>
+                        <li><a href="https://almontalaqmoving.com/moving-trucks-in-jeddah/" class="text-gray-300 hover:text-white transition">دينا نقل عفش بجدة</a></li>
+                        <li><a href="https://almontalaqmoving.com/hydraulic-winch-moving-jeddah/" class="text-gray-300 hover:text-white transition">ونش رفع عفش بجدة</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-5">
+                    <h4 class="text-lg font-bold flex items-center gap-2">
+                        <span class="w-2 h-7 bg-gradient-to-b from-blue-400 to-indigo-500 rounded-full"></span>
+                        تواصل معنا
+                    </h4>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="text-xs text-gray-400">📞 الهاتف المباشر</div>
+                            <a href="tel:0563806459" class="text-white font-bold text-lg hover:text-blue-300 transition">+966563806459</a>
+                        </div>
+                        <div>
+                            <div class="text-xs text-gray-400">💬 واتساب</div>
+                            <a href="https://wa.me/966563806459" class="text-white font-bold text-lg hover:text-green-300 transition">0563806459</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="text-center text-xs text-gray-500 pt-4">
+                جميع الحقوق محفوظة © شركة المنطلق لنقل العفش بجدة 2026
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('max-h-0');
+                mobileMenu.classList.toggle('max-h-96');
+            });
+        }
+    </script>
+</body>
+</html>
+`;
+
+fs.writeFileSync('furniture-moving-with-packing/index.html', pageHtml, 'utf8');
+console.log('Successfully wrote furniture-moving-with-packing/index.html');

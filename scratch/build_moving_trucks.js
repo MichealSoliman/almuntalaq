@@ -1,0 +1,682 @@
+const fs = require('fs');
+
+const pageHtml = `<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دينا نقل عفش بجدة | دينا نقل أثاث وسيارات مجهزة بجدة</title>
+    <!-- Preload Critical Fonts -->
+    <link rel="preload" href="/assets/fonts/Tajawal-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/Tajawal-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
+    <meta name="description"
+        content="خدمة دينا نقل عفش بجدة وسيارات نقل أثاث مجهزة ومقفلة بأحجام مختلفة لنقل العفش والمنازل والمكاتب بأمان وسرعة في جميع أحياء جدة مع سائقين محترفين. اتصل الآن 0563806459.">
+    <meta name="keywords"
+        content="دينا نقل عفش بجدة, دينا نقل اثاث جدة, سيارة نقل عفش جدة, دينا نقل عفش في جدة, دباب نقل عفش جدة, شاحنات نقل عفش جدة, دينا مقفلة نقل عفش جدة, دينا توصيل عفش جدة, نقل عفش بدينا جدة">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://almontalaqmoving.com/moving-trucks-in-jeddah/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="دينا نقل عفش بجدة | دينا نقل أثاث وسيارات مجهزة بجدة">
+    <meta property="og:description"
+        content="خدمة دينا نقل عفش بجدة وسيارات مجهزة لنقل الأثاث والمنازل والمكاتب بأمان وسرعة في كافة أحياء جدة. اتصل الآن على 0563806459.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://almontalaqmoving.com/moving-trucks-in-jeddah/">
+    <meta property="og:image" content="https://almontalaqmoving.com/assets/img/furniture-moving-trucks-in-jeddah.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="دينا نقل عفش بجدة | سيارات نقل أثاث مجهزة">
+    <meta name="twitter:description"
+        content="خدمة دينا نقل عفش بجدة وسيارات مجهزة لنقل الأثاث والمنازل والمكاتب بأمان وسرعة في كافة أحياء جدة.">
+    <meta name="twitter:image" content="https://almontalaqmoving.com/assets/img/furniture-moving-trucks-in-jeddah.webp">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://almontalaqmoving.com/moving-trucks-in-jeddah/#webpage",
+          "url": "https://almontalaqmoving.com/moving-trucks-in-jeddah/",
+          "name": "دينا نقل عفش بجدة | دينا نقل أثاث وسيارات مجهزة بجدة",
+          "description": "خدمة دينا نقل عفش بجدة وسيارات مجهزة لنقل الأثاث والمنازل والمكاتب في كافة أحياء جدة.",
+          "inLanguage": "ar",
+          "isPartOf": {
+            "@id": "https://almontalaqmoving.com/#website"
+          },
+          "about": {
+            "@id": "https://almontalaqmoving.com/#movingcompany"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://almontalaqmoving.com/assets/img/furniture-moving-trucks-in-jeddah.webp"
+          },
+          "breadcrumb": {
+            "@id": "https://almontalaqmoving.com/moving-trucks-in-jeddah/#breadcrumb"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://almontalaqmoving.com/#website",
+          "url": "https://almontalaqmoving.com/",
+          "name": "شركة المنطلق لنقل العفش",
+          "inLanguage": "ar",
+          "publisher": {
+            "@id": "https://almontalaqmoving.com/#movingcompany"
+          }
+        },
+        {
+          "@type": "MovingCompany",
+          "@id": "https://almontalaqmoving.com/#movingcompany",
+          "name": "شركة المنطلق لنقل العفش بجدة",
+          "image": "https://almontalaqmoving.com/assets/img/furniture-moving-trucks-in-jeddah.webp",
+          "url": "https://almontalaqmoving.com/",
+          "telephone": "+966563806459",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "جدة",
+            "addressRegion": "منطقة مكة المكرمة",
+            "addressCountry": "SA"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "جدة"
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://almontalaqmoving.com/moving-trucks-in-jeddah/#service",
+          "serviceType": "دينا نقل عفش",
+          "name": "دينا نقل عفش بجدة",
+          "provider": {
+            "@id": "https://almontalaqmoving.com/#movingcompany"
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "جدة"
+          },
+          "description": "توفير سيارات دينا نقل عفش مجهزة ومقفلة بأحجام مختلفة مع سائقين محترفين لنقل الأثاث والمنازل والمكاتب بأمان وسرعة في جميع أحياء جدة."
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://almontalaqmoving.com/moving-trucks-in-jeddah/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "الرئيسية",
+              "item": "https://almontalaqmoving.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "خدماتنا",
+              "item": "https://almontalaqmoving.com/services/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "دينا نقل عفش بجدة",
+              "item": "https://almontalaqmoving.com/moving-trucks-in-jeddah/"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://almontalaqmoving.com/moving-trucks-in-jeddah/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "ما هي أحجام دينا نقل العفش المتوفرة في جدة؟",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "نوفر سيارات دينا مقفلة بأحجام مختلفة تناسب نقل شقق كاملة أو غرف مفردة، بالإضافة إلى دباب نقل عفش للمشاوير السريعة والأحمال الخفيفة."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "هل تشمل خدمة الدينا عمال التحميل والفك والتركيب؟",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "يمكنك طلب الدينا فقط مع السائق، أو طلب باقة متكاملة تشمل عمال تحميل وتنزيل وفنيين نجارين لفك وتركيب الأثاث حسب رغبتك."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "هل تغطي خدمة دينا نقل العفش جميع أحياء جدة؟",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "نعم، نخدم جميع أحياء شمال وجنوب وشرق ووسط جدة (مثل الروضة، الحمدانية، الصفا، المروة، أبحر، السامر، البلد وغيرها) بسرعة وكفاءة."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "كيف يتم تحديد تكلفة استئجار دينا نقل العفش؟",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "تعتمد التكلفة على مسافة المشوار بين نقطتي النقل، حجم الحمولة، وما إذا كان العميل يطلب عمالة إضافية للتحميل والتنزيل أو فك وتركيب وتغليف."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Tailwind + Fonts -->
+    <link rel="stylesheet" href="../../dist/output.css">
+    <link rel="preload" href="/assets/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/all.min.css"></noscript>
+    
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        .section-title {
+            border-right: 4px solid #2563eb;
+            padding-right: 15px;
+        }
+
+        .floating-buttons {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .floating-buttons a {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .floating-buttons a:hover {
+            transform: scale(1.1);
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.2);
+            transition: all 0.3s;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .service-img-placeholder {
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1rem;
+            background: #f8fafc;
+        }
+
+        .hero-pattern {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        }
+    </style>
+    <link rel="preload" href="/assets/css/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/fonts.css"></noscript>
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="tel:0563806459"
+            class="bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg hover:shadow-blue-500/50">
+            <i class="fas fa-phone-alt text-2xl"></i>
+        </a>
+        <a href="https://wa.me/966563806459" target="_blank"
+            class="bg-gradient-to-r from-green-500 to-green-600 text-white shadow-lg hover:shadow-green-500/50">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+    <!-- Navbar -->
+    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 shadow-md border-b">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3 cursor-pointer">
+                <div class="w-12 h-12 flex items-center justify-center"><img
+                        src="https://almontalaqmoving.com/assets/img/logo.webp" alt="المنطلق" class="w-12 h-12" decoding="async"></div>
+                <div><span class="text-2xl font-extrabold text-[#1e293b]">المنطلق</span>
+                    <p class="text-xs text-gray-400 hidden md:block">نقل وتغليف عفش بجدة</p>
+                </div>
+            </div>
+            <div class="hidden lg:flex space-x-1">
+                <a href="https://almontalaqmoving.com/"
+                    class="nav-link px-4 py-2 font-semibold text-gray-700">الرئيسية</a>
+                <a href="https://almontalaqmoving.com/about/" class="nav-link px-4 py-2 font-semibold text-gray-700">من
+                    نحن</a>
+                <a href="https://almontalaqmoving.com/services/"
+                    class="nav-link px-4 py-2 font-semibold text-gray-700">خدماتنا</a>
+                <a href="https://almontalaqmoving.com/contact/"
+                    class="nav-link px-4 py-2 font-semibold text-gray-700">اتصل بنا</a>
+            </div>
+            <div class="hidden lg:flex gap-3">
+                <a href="tel:0563806459"
+                    class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-5 py-2.5 rounded-xl font-semibold flex items-center gap-2"><i
+                        class="fas fa-phone-alt"></i>اتصل الآن</a>
+                <a href="https://wa.me/966563806459" target="_blank"
+                    class="bg-gradient-to-r from-green-500 to-green-600 text-white px-5 py-2.5 rounded-xl font-semibold flex items-center gap-2"><i
+                        class="fab fa-whatsapp"></i>واتساب</a>
+            </div>
+            <button id="menuBtn" class="lg:hidden text-gray-700 text-2xl"><i class="fas fa-bars"></i></button>
+        </div>
+        <div id="mobileMenu" class="lg:hidden bg-white border-t max-h-0 overflow-hidden transition-all duration-300">
+            <div class="p-5 flex flex-col space-y-3">
+                <a href="https://almontalaqmoving.com/" class="py-2 font-semibold">الرئيسية</a>
+                <a href="https://almontalaqmoving.com/about/" class="py-2 font-semibold">من نحن</a>
+                <a href="https://almontalaqmoving.com/services/" class="py-2 font-semibold">خدماتنا</a>
+                <a href="https://almontalaqmoving.com/contact/" class="py-2 font-semibold">اتصل بنا</a>
+                <div class="flex gap-3 pt-3"><a href="tel:0563806459"
+                        class="bg-blue-600 text-white px-4 py-2 rounded-lg flex-1 text-center">اتصل</a><a
+                        href="https://wa.me/966563806459"
+                        class="bg-green-500 text-white px-4 py-2 rounded-lg flex-1 text-center">واتساب</a></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl fade-up">
+                <div class="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-400/30 text-blue-200 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
+                    <i class="fas fa-truck text-yellow-400"></i> أسطول شاحنات وسيارات مجهزة
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">دينا نقل عفش بجدة</h1>
+                <p class="text-lg mb-4 text-gray-200">
+                    نوفر أسطولاً من سيارات <strong>دينا نقل عفش بجدة</strong> المجهزة والمقفلة لنقل الأثاث والبضائع والمقتنيات بأعلى مستويات الأمان. سيارات حديثة بسعات مختلفة وسائقون محترفون على دراية كاملة بجميع شوارع ومسارات أحياء جدة.
+                </p>
+                <p class="text-lg mb-6 text-gray-300">
+                    سواء كنت بحاجة إلى نقل أثاث منزل كامل أو نقل غرف مفردة وبضائع تجارية، نوفر لك السيارة المناسبة مع إمكانية توفير عمالة التحميل وفنيي الفك والتغليف.
+                </p>
+                <div class="flex space-x-4 space-x-reverse">
+                    <a href="tel:0563806459"
+                        class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-bold flex items-center shadow-lg"><i
+                            class="fas fa-phone ml-2"></i>اطلب دينا نقل العفش الآن</a>
+                    <a href="https://wa.me/966563806459"
+                        class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-bold flex items-center shadow-lg"><i
+                            class="fab fa-whatsapp ml-2"></i>تواصل عبر واتساب</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-12">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Sidebar -->
+            <div class="lg:w-1/4">
+                <div class="bg-white rounded-2xl shadow-md p-6 sticky top-24 border border-gray-100">
+                    <h3 class="text-xl font-bold mb-4 text-blue-600 border-b pb-2">خدمة دينا نقل العفش</h3>
+                    <ul class="space-y-2 text-sm font-semibold text-gray-700">
+                        <li><a href="#intro" class="block py-2 px-3 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition">مقدمة الخدمة</a></li>
+                        <li><a href="#when-needed" class="block py-2 px-3 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition">متى تحتاج إلى دينا؟</a></li>
+                        <li><a href="#truck-types" class="block py-2 px-3 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition">أنواع وأحجام السيارات</a></li>
+                        <li><a href="#items" class="block py-2 px-3 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition">الأغراض المنقولة</a></li>
+                        <li><a href="#coverage" class="block py-2 px-3 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition">نطاق الخدمة بجدة</a></li>
+                        <li><a href="#additional-services" class="block py-2 px-3 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition">خدمات مساندة</a></li>
+                        <li><a href="#cost-factors" class="block py-2 px-3 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition">عوامل التكلفة</a></li>
+                        <li><a href="#how-to-book" class="block py-2 px-3 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition">طريقة حجز الدينا</a></li>
+                        <li><a href="#faq" class="block py-2 px-3 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition">أسئلة شائعة</a></li>
+                    </ul>
+                    <div class="mt-6 bg-blue-50 p-4 rounded-xl border border-blue-100">
+                        <h4 class="font-bold text-gray-900">جاهزية وسرعة استجابة</h4>
+                        <p class="text-xs text-gray-600 mt-1">سيارات متمركزة في مختلف مناطق جدة لخدمتك في أسرع وقت</p>
+                        <a href="tel:0563806459" class="block mt-3 bg-blue-600 text-white text-center py-2 rounded-lg text-sm font-bold shadow hover:bg-blue-700 transition">اتصل بنا: 0563806459</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Content -->
+            <div class="lg:w-3/4 space-y-8">
+
+                <!-- 1. Intro -->
+                <section id="intro" class="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
+                    <div class="service-img-placeholder mb-6">
+                        <img src="https://almontalaqmoving.com/assets/img/furniture-moving-trucks-in-jeddah.webp"
+                            alt="دينا نقل عفش بجدة" class="w-full max-w-lg h-auto rounded-xl object-cover shadow-sm" loading="lazy" decoding="async">
+                    </div>
+                    <h2 class="text-3xl font-bold mb-4 section-title text-gray-900">دينا نقل عفش بجدة – حلول نقل سريعة وموثوقة</h2>
+                    <p class="mb-4 text-gray-700 leading-relaxed text-lg">
+                        تعد خدمة <strong>دينا نقل عفش بجدة</strong> العمود الفقري لأي عملية انتقال ناجحة، حيث تضمن وصول الأثاث والمنقولات بحالتها الأصلية دون تعرضها لعوامل الطقس أو مخاطر الطريق. نوفر في شركة المنطلق سيارات دينا مخصصة لنقل الأثاث، ومجهزة من الداخل بأحزمة ربط وفرش عازل لتثبيت القطع وحمايتها من الاحتكاك والصدمات.
+                    </p>
+                    <p class="mb-4 text-gray-700 leading-relaxed">
+                        يقود شاحناتنا سائقون محترفون على معرفة دقيقة بكافة أحياء جدة وطرقها السريعة والشوارع الفرعية، مما يتيح الالتزام بالمواعيد المحددة وتجنب الازدحامات المرورية وتقديم خدمة انتقال سلسة ومريحة للعميل.
+                    </p>
+                </section>
+
+                <!-- 2. When Needed -->
+                <section id="when-needed" class="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
+                    <h2 class="text-3xl font-bold mb-4 section-title text-gray-900">متى تحتاج إلى دينا نقل عفش بجدة؟</h2>
+                    <p class="mb-4 text-gray-700 leading-relaxed">
+                        تتعدد احتياجات العملاء لخدمة الدينا بحسب حجم المنقولات وظروف النقل، وتشمل أبرز الحالات:
+                    </p>
+                    <div class="grid sm:grid-cols-2 gap-4 text-gray-700">
+                        <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+                            <h3 class="font-bold text-gray-900 mb-2 flex items-center gap-2">
+                                <i class="fas fa-home text-blue-600"></i> الانتقال إلى مسكن جديد
+                            </h3>
+                            <p class="text-sm text-gray-600">نقل أثاث الشقق والمنازل والفلل بما تشمله من غرف نوم ومطابخ ومجالس وأجهزة.</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+                            <h3 class="font-bold text-gray-900 mb-2 flex items-center gap-2">
+                                <i class="fas fa-building text-blue-600"></i> نقل المكاتب والشركات
+                            </h3>
+                            <p class="text-sm text-gray-600">نقل المكاتب، المقاعد، الخزائن، والأجهزة الإلكترونية للشركات والمؤسسات.</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+                            <h3 class="font-bold text-gray-900 mb-2 flex items-center gap-2">
+                                <i class="fas fa-shopping-cart text-blue-600"></i> توصيل مشتريات الأثاث
+                            </h3>
+                            <p class="text-sm text-gray-600">نقل وتوصيل قطع الأثاث الجديدة والمستعملة من معارض الأثاث والأسواق إلى المنازل.</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+                            <h3 class="font-bold text-gray-900 mb-2 flex items-center gap-2">
+                                <i class="fas fa-box text-blue-600"></i> نقل الأغراض المتفرقة والبضائع
+                            </h3>
+                            <p class="text-sm text-gray-600">توصيل الكراتين، البضائع الخفيفة، والأغراض الشخصية بين أحياء جدة بسرعة وأمان.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3. Truck Types -->
+                <section id="truck-types" class="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
+                    <h2 class="text-3xl font-bold mb-4 section-title text-gray-900">أنواع سيارات وشاحنات النقل المتاحة</h2>
+                    <p class="mb-4 text-gray-700 leading-relaxed">
+                        نوفر خيارات متنوعة من المركبات لتلائم طبيعة وحجم كل شحنة بدقة:
+                    </p>
+                    <div class="space-y-4">
+                        <div class="p-5 rounded-xl border border-gray-200 bg-gray-50 flex items-start gap-4">
+                            <div class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center flex-shrink-0 text-xl">
+                                <i class="fas fa-truck-front"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-900 mb-1">دينا صندوق مقفل (مغلقة)</h3>
+                                <p class="text-sm text-gray-600 leading-relaxed">الخيار الأمثل والأنسب لنقل الأثاث المنزلي؛ حيث يوفر الصندوق المغلق حماية كاملة للمقتنيات من الغبار وأشعة الشمس والحرارة والأمطار والرياح أثناء السير في شوارع جدة.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-5 rounded-xl border border-gray-200 bg-gray-50 flex items-start gap-4">
+                            <div class="w-12 h-12 bg-indigo-600 text-white rounded-xl flex items-center justify-center flex-shrink-0 text-xl">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-900 mb-1">دينا شاص طويل وكبيرة</h3>
+                                <p class="text-sm text-gray-600 leading-relaxed">مخصصة لنقل الأثاث ذي الأطوال والارتفاعات الكبيرة والمنازل ذات الغرف المتعددة، مما يتيح نقل العفش في رحلة واحدة وتقليل الجهد والوقت.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-5 rounded-xl border border-gray-200 bg-gray-50 flex items-start gap-4">
+                            <div class="w-12 h-12 bg-green-600 text-white rounded-xl flex items-center justify-center flex-shrink-0 text-xl">
+                                <i class="fas fa-truck-pickup"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-900 mb-1">دباب نقل عفش للمشاوير السريعة</h3>
+                                <p class="text-sm text-gray-600 leading-relaxed">حل عملي واقتصادي لنقل القطع المفردة، مثل غسالة، ثلاجة، طاولة، كنب مفرد، أو عدة كراتين صغيرة بحاجة إلى توصيل سريع داخل الحي.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 4. Items -->
+                <section id="items" class="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
+                    <h2 class="text-3xl font-bold mb-4 section-title text-gray-900">أنواع الأغراض التي نقوم بنقلها بالدينا</h2>
+                    <p class="mb-4 text-gray-700 leading-relaxed">
+                        تتسع سيارات الدينا لمختلف مكونات الأثاث والتجهيزات:
+                    </p>
+                    <ul class="grid grid-cols-2 md:grid-cols-3 gap-3 text-gray-700 text-sm">
+                        <li class="p-3 bg-gray-50 rounded-lg border border-gray-200 flex items-center gap-2"><i class="fas fa-bed text-blue-600"></i> غرف النوم والأسرّة</li>
+                        <li class="p-3 bg-gray-50 rounded-lg border border-gray-200 flex items-center gap-2"><i class="fas fa-couch text-blue-600"></i> الكنب والمجالس</li>
+                        <li class="p-3 bg-gray-50 rounded-lg border border-gray-200 flex items-center gap-2"><i class="fas fa-utensils text-blue-600"></i> خزائن ومطابخ كاملة</li>
+                        <li class="p-3 bg-gray-50 rounded-lg border border-gray-200 flex items-center gap-2"><i class="fas fa-tv text-blue-600"></i> الأجهزة الكهربائية</li>
+                        <li class="p-3 bg-gray-50 rounded-lg border border-gray-200 flex items-center gap-2"><i class="fas fa-briefcase text-blue-600"></i> أثاث وتجهيزات المكاتب</li>
+                        <li class="p-3 bg-gray-50 rounded-lg border border-gray-200 flex items-center gap-2"><i class="fas fa-boxes text-blue-600"></i> كراتين وحقائب الملابس</li>
+                    </ul>
+                </section>
+
+                <!-- 5. Coverage -->
+                <section id="coverage" class="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
+                    <h2 class="text-3xl font-bold mb-4 section-title text-gray-900">نطاق خدمة دينا نقل العفش في جدة</h2>
+                    <p class="mb-4 text-gray-700 leading-relaxed">
+                        تغطي سياراتنا كافة أحياء جدة الرئيسية والفرعية، بما يضمن سرعة الوصول لموقعك:
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-700">
+                        <div class="p-4 bg-blue-50 rounded-xl border border-blue-100">
+                            <h3 class="font-bold text-blue-900 mb-2">أحياء شمال ووسط جدة</h3>
+                            <p class="text-gray-600">أبحر الشمالية والجنوبية، المحمدية، البساتين، المرجان، النعيم، الروضة، الزهراء، السلامة، الحمراء، والفيصلية.</p>
+                        </div>
+                        <div class="p-4 bg-blue-50 rounded-xl border border-blue-100">
+                            <h3 class="font-bold text-blue-900 mb-2">أحياء شرق وجنوب جدة</h3>
+                            <p class="text-gray-600">الصفا، المروة، السامر، الربوة، العزيزية، النسيم، السنابل، الأجاويد، والوزيرية، مع إمكانية النقل إلى مكة والمدينة والرياض.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 6. Additional Services -->
+                <section id="additional-services" class="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
+                    <h2 class="text-3xl font-bold mb-4 section-title text-gray-900">خدمات مساندة يمكنك طلبها مع الدينا</h2>
+                    <p class="mb-4 text-gray-700 leading-relaxed">
+                        لا تقتصر خدمتنا على توفير السيارة والسائق فقط؛ بل يمكنك تخصيص طلبك بإضافة خدمات متكاملة:
+                    </p>
+                    <div class="grid sm:grid-cols-2 gap-4 text-gray-700">
+                        <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+                            <h3 class="font-bold text-gray-900 mb-1"><a href="https://almontalaqmoving.com/furniture-moving-workers-in-jeddah/" class="text-blue-600 hover:underline">عمال نقل عفش بجدة</a></h3>
+                            <p class="text-xs text-gray-600">توفير عمالة مدربة لتحميل وتنزيل العفش ورصه بأمان داخل الصندوق.</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+                            <h3 class="font-bold text-gray-900 mb-1"><a href="https://almontalaqmoving.com/furniture-dismantling-and-assembly-in-jeddah/" class="text-blue-600 hover:underline">فك وتركيب العفش بجدة</a></h3>
+                            <p class="text-xs text-gray-600">نجارون متخصصون لفك غرف النوم والمطابخ والستائر وتركيبها.</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+                            <h3 class="font-bold text-gray-900 mb-1"><a href="https://almontalaqmoving.com/furniture-packaging-in-jeddah/" class="text-blue-600 hover:underline">تغليف العفش بجدة</a></h3>
+                            <p class="text-xs text-gray-600">مواد تغليف متخصصة (فقاعات، كرتون، نايلون) لحماية الأثاث الحساس.</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+                            <h3 class="font-bold text-gray-900 mb-1"><a href="https://almontalaqmoving.com/furniture-moving-with-packing/" class="text-blue-600 hover:underline">باقة النقل الشامل مع التغليف</a></h3>
+                            <p class="text-xs text-gray-600">خدمة متكاملة تجمع بين الدينا والعمالة والتغليف والفك والتركيب.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 7. Cost Factors -->
+                <section id="cost-factors" class="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
+                    <h2 class="text-3xl font-bold mb-4 section-title text-gray-900">العوامل التي تحدد تكلفة دينا نقل العفش</h2>
+                    <p class="mb-4 text-gray-700 leading-relaxed">
+                        تتسم أسعارنا بالشفافية وتعتمد على محددات واضحة يتم توضيحها للعميل قبل بدء التنفيذ:
+                    </p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-route text-blue-600 mt-1"></i>
+                            <span><strong>مسافة المشوار:</strong> تختلف التكلفة عند النقل بين أحياء متجاورة مقارنة بالنقل بين أطراف جدة أو خارج المدينة.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-weight-hanging text-blue-600 mt-1"></i>
+                            <span><strong>حجم السيارة والحمولة:</strong> تختلف تكلفة الدينا الكبيرة أو المشاوير المتعددة عن الدباب الصغير للقطع المفردة.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-users text-blue-600 mt-1"></i>
+                            <span><strong>طلب عمالة مساعدة:</strong> في حال رغبة العميل في استئجار السيارة فقط أو طلب عمال لتحميل وتنزيل العفش.</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- 8. How to Book -->
+                <section id="how-to-book" class="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
+                    <h2 class="text-3xl font-bold mb-4 section-title text-gray-900">طريقة طلب وحجز دينا نقل عفش بجدة</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                        <div class="p-4 bg-blue-50 rounded-xl border border-blue-100">
+                            <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-2 font-bold">1</div>
+                            <h3 class="font-bold text-gray-900 mb-1">الاتصال وتحديد التفاصيل</h3>
+                            <p class="text-xs text-gray-600">اتصل على 0563806459 وحدد نوع الأثاث وموقعي التحميل والتنزيل.</p>
+                        </div>
+                        <div class="p-4 bg-blue-50 rounded-xl border border-blue-100">
+                            <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-2 font-bold">2</div>
+                            <h3 class="font-bold text-gray-900 mb-1">تأكيد الموعد المناسب</h3>
+                            <p class="text-xs text-gray-600">نؤكد معك وقت وصول الدينا المناسب لجدولك اليومي.</p>
+                        </div>
+                        <div class="p-4 bg-blue-50 rounded-xl border border-blue-100">
+                            <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-2 font-bold">3</div>
+                            <h3 class="font-bold text-gray-900 mb-1">النقل الآمن والتسليم</h3>
+                            <p class="text-xs text-gray-600">يصل السائق في الموعد ويتم تحميل ونقل مقتنياتك إلى وجهتها بأمان.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 9. FAQ -->
+                <section id="faq" class="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
+                    <h2 class="text-3xl font-bold mb-6 section-title text-gray-900">أسئلة شائعة حول دينا نقل العفش بجدة</h2>
+                    <div class="space-y-4">
+                        <div class="border-b pb-4">
+                            <h3 class="font-bold text-lg text-gray-900 mb-1">ما هي سعة دينا نقل العفش؟</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">تتسع سيارات الدينا الكبيرة لشقة متوسطة (2-3 غرف)، كما تتوفر أحجام مختلفة تلائم مختلف أحجام الشحنات.</p>
+                        </div>
+                        <div class="border-b pb-4">
+                            <h3 class="font-bold text-lg text-gray-900 mb-1">هل سيارات الدينا مقفلة لحماية الأثاث؟</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">نعم، نوفر دينا بصندوق مقفل ومجهز لحماية الأثاث من أشعة الشمس، الغبار، والأمطار أثناء التنقل داخل وخارج جدة.</p>
+                        </div>
+                        <div class="border-b pb-4">
+                            <h3 class="font-bold text-lg text-gray-900 mb-1">هل يمكن حجز الدينا لنقل قطعة واحدة فقط؟</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">نعم، يمكنك حجز دباب أو دينا لنقل قطعة واحدة مثل ثلاجة أو غرفة أو جلسة، ونوفر لك السعر المناسب لحجم الحمولة.</p>
+                        </div>
+                        <div class="border-b pb-4">
+                            <h3 class="font-bold text-lg text-gray-900 mb-1">هل توفرون النقل خارج جدة بالدينا؟</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">نعم، نوفر رحلات نقل عفش بالدينا من جدة إلى مكة المكرمة، المدينة المنورة، الطائف، الرياض، وينبع وباقي مدن المملكة.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA -->
+                <section class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-2xl p-8 text-center shadow-lg">
+                    <h3 class="text-2xl font-bold">احجز دينا نقل عفش بجدة الآن</h3>
+                    <p class="my-3 text-blue-100">سيارات حديثة وسائقون محترفون لخدمتك في جميع أحياء جدة.</p>
+                    <div class="flex justify-center gap-4 mt-6">
+                        <a href="tel:0563806459" class="bg-white text-blue-700 px-6 py-3 rounded-xl font-bold shadow hover:bg-gray-100 transition flex items-center gap-2">
+                            <i class="fas fa-phone-alt"></i> اتصل: 0563806459
+                        </a>
+                        <a href="https://wa.me/966563806459" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-bold shadow transition flex items-center gap-2">
+                            <i class="fab fa-whatsapp"></i> حجز عبر واتساب
+                        </a>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact"
+        class="bg-gradient-to-br from-gray-900 via-gray-900 to-gray-800 text-white pt-20 pb-6 relative overflow-hidden">
+        <div class="container mx-auto px-5 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12 pb-8 border-b border-white/10">
+
+                <div class="space-y-5">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg">
+                            <i class="fas fa-truck-moving text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-extrabold text-white">المنطلق</h3>
+                            <span class="text-xs text-blue-400">✦ دينا نقل عفش بجدة ✦</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                        خدمات نقل وتغليف العفش بجدة بواسطة أسطول سيارات دينا مجهزة وأيدي فنيين محترفين.
+                    </p>
+                </div>
+
+                <div class="space-y-5">
+                    <h4 class="text-lg font-bold flex items-center gap-2">
+                        <span class="w-2 h-7 bg-gradient-to-b from-blue-400 to-indigo-500 rounded-full"></span>
+                        روابط سريعة
+                    </h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="https://almontalaqmoving.com/" class="text-gray-300 hover:text-white transition">الرئيسية</a></li>
+                        <li><a href="https://almontalaqmoving.com/about/" class="text-gray-300 hover:text-white transition">من نحن</a></li>
+                        <li><a href="https://almontalaqmoving.com/services/" class="text-gray-300 hover:text-white transition">خدماتنا</a></li>
+                        <li><a href="https://almontalaqmoving.com/contact/" class="text-gray-300 hover:text-white transition">اتصل بنا</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-5">
+                    <h4 class="text-lg font-bold flex items-center gap-2">
+                        <span class="w-2 h-7 bg-gradient-to-b from-blue-400 to-indigo-500 rounded-full"></span>
+                        خدمات ذات صلة
+                    </h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="https://almontalaqmoving.com/furniture-moving-with-packing/" class="text-gray-300 hover:text-white transition">نقل عفش شامل التغليف</a></li>
+                        <li><a href="https://almontalaqmoving.com/furniture-packaging-in-jeddah/" class="text-gray-300 hover:text-white transition">تغليف العفش بجدة</a></li>
+                        <li><a href="https://almontalaqmoving.com/furniture-dismantling-and-assembly-in-jeddah/" class="text-gray-300 hover:text-white transition">فك وتركيب العفش بجدة</a></li>
+                        <li><a href="https://almontalaqmoving.com/furniture-moving-workers-in-jeddah/" class="text-gray-300 hover:text-white transition">عمال نقل عفش بجدة</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-5">
+                    <h4 class="text-lg font-bold flex items-center gap-2">
+                        <span class="w-2 h-7 bg-gradient-to-b from-blue-400 to-indigo-500 rounded-full"></span>
+                        تواصل معنا
+                    </h4>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="text-xs text-gray-400">📞 الهاتف المباشر</div>
+                            <a href="tel:0563806459" class="text-white font-bold text-lg hover:text-blue-300 transition">+966563806459</a>
+                        </div>
+                        <div>
+                            <div class="text-xs text-gray-400">💬 واتساب</div>
+                            <a href="https://wa.me/966563806459" class="text-white font-bold text-lg hover:text-green-300 transition">0563806459</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="text-center text-xs text-gray-500 pt-4">
+                جميع الحقوق محفوظة © شركة المنطلق لنقل العفش بجدة 2026
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('max-h-0');
+                mobileMenu.classList.toggle('max-h-96');
+            });
+        }
+    </script>
+</body>
+</html>
+`;
+
+fs.writeFileSync('moving-trucks-in-jeddah/index.html', pageHtml, 'utf8');
+console.log('Successfully wrote moving-trucks-in-jeddah/index.html');

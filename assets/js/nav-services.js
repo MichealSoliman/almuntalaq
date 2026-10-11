@@ -9,7 +9,7 @@
   const SITE_SERVICES = [
     {
       name: 'نقل عفش بجدة',
-      path: '/furniture-moving-in-jeddah/',
+      path: '/furniture-moving-companies-in-jeddah/',
       icon: 'fa-truck-moving',
       desc: 'نقل أثاث متكامل داخل وخارج جدة'
     },
