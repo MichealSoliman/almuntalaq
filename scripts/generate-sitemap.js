@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const root = path.join(__dirname, '..');
-const TODAY = '2026-10-11';
+const TODAY = '2026-10-18';
 const DOMAIN = 'https://almontalaqmoving.com';
 
 // صفحات الموقع مع تحديد الأولويات وتكرار التحديث المناسب لكل نوع صفحة
