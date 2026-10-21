@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const root = path.join(__dirname, '..');
-const TODAY = '2026-10-18';
+const TODAY = '2026-10-21';
 const DOMAIN = 'https://almontalaqmoving.com';
 
 // صفحات الموقع مع تحديد الأولويات وتكرار التحديث المناسب لكل نوع صفحة
@@ -43,6 +43,10 @@ const sitemapStructure = [
   { path: '/areas/jeddah-to-madinah/', priority: '0.80', changefreq: 'weekly' },
   { path: '/areas/jeddah-to-taif/', priority: '0.80', changefreq: 'weekly' },
   { path: '/areas/jeddah-to-dammam/', priority: '0.80', changefreq: 'weekly' },
+  { path: '/areas/jeddah-to-yanbu/', priority: '0.80', changefreq: 'weekly' },
+  { path: '/areas/jeddah-to-jizan/', priority: '0.80', changefreq: 'weekly' },
+  { path: '/areas/jeddah-to-tabuk/', priority: '0.80', changefreq: 'weekly' },
+  { path: '/areas/jeddah-to-qassim/', priority: '0.80', changefreq: 'weekly' },
 
   // 5. مقالات المدونة (Blog Posts - Informational & Supporting Content)
   { path: '/blogs/furniture-moving-mistakes-in-jeddah/', priority: '0.70', changefreq: 'monthly' },

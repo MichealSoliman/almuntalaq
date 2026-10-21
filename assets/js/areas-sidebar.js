@@ -28,7 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
     { name: 'من جدة إلى مكة', path: '/areas/jeddah-to-makkah/' },
     { name: 'من جدة إلى المدينة المنورة', path: '/areas/jeddah-to-madinah/' },
     { name: 'من جدة إلى الطائف', path: '/areas/jeddah-to-taif/' },
-    { name: 'من جدة إلى الدمام', path: '/areas/jeddah-to-dammam/' }
+    { name: 'من جدة إلى الدمام', path: '/areas/jeddah-to-dammam/' },
+    { name: 'من جدة إلى ينبع', path: '/areas/jeddah-to-yanbu/' },
+    { name: 'من جدة إلى جازان', path: '/areas/jeddah-to-jizan/' },
+    { name: 'من جدة إلى تبوك', path: '/areas/jeddah-to-tabuk/' },
+    { name: 'من جدة إلى القصيم', path: '/areas/jeddah-to-qassim/' }
   ];
 
   // Helper to check if a path matches the current page
