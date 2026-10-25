@@ -40,6 +40,8 @@
 
     <!-- Canonical -->
     <link rel="canonical" href="https://almontalaqmoving.com/">
+    <link rel="alternate" hreflang="ar" href="https://almontalaqmoving.com/">
+    <link rel="alternate" hreflang="x-default" href="https://almontalaqmoving.com/">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <!-- Open Graph (Facebook & WhatsApp) -->
     <meta property="og:title" content="شركة نقل عفش جدة 0563806459 | دينا نقل أثاث بجدة بالفك والتغليف | المنطلق">
@@ -73,7 +75,6 @@
     <meta name="google-site-verification" content="MZp9dcNduAmI7PybFWpbQVBNzvnzz_Rz_KE6VW0jJ1A" />
     
     
-    <link rel="stylesheet" href="./dist/output.css">
     <link rel="stylesheet" href="/dist/output.css">
     <link rel="preload" href="/assets/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/assets/css/all.min.css"></noscript>
@@ -86,15 +87,27 @@
 
     {
       "@type":"Organization",
-      "@id":"https://almontalaqmoving.com/#movingcompany",
+      "@id":"https://almontalaqmoving.com/#organization",
       "name":"شركة المنطلق لنقل العفش بجدة",
       "alternateName":"المنطلق",
       "url":"https://almontalaqmoving.com/",
       "logo":{
         "@type":"ImageObject",
-        "url":"https://almontalaqmoving.com/assets/img/logo.webp"
+        "url":"https://almontalaqmoving.com/assets/img/logo.webp",
+        "width":200,
+        "height":200
       },
-      "telephone":"+966563806459"
+      "telephone":"+966563806459",
+      "sameAs":[
+        "https://wa.me/966563806459"
+      ],
+      "contactPoint":{
+        "@type":"ContactPoint",
+        "telephone":"+966563806459",
+        "contactType":"customer service",
+        "areaServed":"SA",
+        "availableLanguage":"Arabic"
+      }
     },
 
     {
@@ -128,7 +141,15 @@
       },
       "openingHours":"Mo-Su 00:00-23:59",
       "parentOrganization":{
-        "@id":"https://almontalaqmoving.com/#movingcompany"
+        "@id":"https://almontalaqmoving.com/#organization"
+      },
+      "aggregateRating":{
+        "@type":"AggregateRating",
+        "ratingValue":"4.9",
+        "bestRating":"5",
+        "worstRating":"1",
+        "ratingCount":"5000",
+        "reviewCount":"3200"
       }
     },
 
@@ -139,7 +160,7 @@
       "name":"شركة المنطلق لنقل العفش بجدة",
       "inLanguage":"ar-SA",
       "publisher":{
-        "@id":"https://almontalaqmoving.com/#movingcompany"
+        "@id":"https://almontalaqmoving.com/#organization"
       }
     },
 
@@ -237,6 +258,18 @@
             "name":"نقل مكاتب بجدة",
             "url":"https://almontalaqmoving.com/moving-office-furniture-in-jeddah/"
           }
+        }
+      ]
+    }
+    ,{
+      "@type":"BreadcrumbList",
+      "@id":"https://almontalaqmoving.com/#breadcrumb",
+      "itemListElement":[
+        {
+          "@type":"ListItem",
+          "position":1,
+          "name":"الرئيسية",
+          "item":"https://almontalaqmoving.com/"
         }
       ]
     }
@@ -392,6 +425,12 @@
                     <span
                         class="absolute bottom-0 right-0 w-0 h-0.5 bg-gradient-to-l from-blue-500 to-orange-500 group-hover:w-full transition-all duration-300 rounded-full"></span>
                 </a>
+                <a href="#pricing"
+                    class="nav-link relative px-4 py-2 font-semibold text-gray-700 hover:text-[#1e293b] transition-all duration-300 group">
+                    الأسعار
+                    <span
+                        class="absolute bottom-0 right-0 w-0 h-0.5 bg-gradient-to-l from-blue-500 to-orange-500 group-hover:w-full transition-all duration-300 rounded-full"></span>
+                </a>
                 <a href="./contact/"
                     class="nav-link relative px-4 py-2 font-semibold text-gray-700 hover:text-[#1e293b] transition-all duration-300 group">
                     تواصل معنا
@@ -483,6 +522,11 @@
                     class="nav-link-mobile font-semibold text-gray-700 hover:text-[#1e293b] hover:bg-blue-50 py-3 px-4 rounded-xl transition-all duration-300 flex items-center gap-3">
                     <i class="fas fa-map-marker-alt text-blue-400 w-5"></i>
                     المناطق
+                </a>
+                <a href="#pricing"
+                    class="nav-link-mobile font-semibold text-gray-700 hover:text-[#1e293b] hover:bg-blue-50 py-3 px-4 rounded-xl transition-all duration-300 flex items-center gap-3">
+                    <i class="fas fa-tags text-blue-400 w-5"></i>
+                    الأسعار
                 </a>
                 <a href="/contact/"
                     class="nav-link-mobile font-semibold text-gray-700 hover:text-[#1e293b] hover:bg-blue-50 py-3 px-4 rounded-xl transition-all duration-300 flex items-center gap-3">
@@ -585,13 +629,13 @@
                     </div>
                     <div class="flex flex-wrap justify-center text-white gap-3 mt-8 text-sm font-semibold">
 
-                        
+                        <span class="bg-white/10 px-3 py-1.5 rounded-lg">
                             نقل عفش جدة
-                        
+                        </span>
 
-                        
+                        <span class="bg-white/10 px-3 py-1.5 rounded-lg">
                             شركة نقل عفش جدة
-                        
+                        </span>
 
                         <a href="/furniture-moving-workers-in-jeddah/"
                             class="bg-white/10 hover:bg-orange-500 px-3 py-1.5 rounded-lg transition">
@@ -668,15 +712,15 @@
                         <!-- الفقرة الأولى - موسعة وشاملة -->
                         <p class="text-gray-700 leading-9 text-lg">
                             إذا كنت تبحث عن
-                            
+                            <strong>
                                 شركة نقل عفش في جدة
-                            
+                            </strong>
                             تجمع بين الخبرة الطويلة الجودة العالية، والأسعار المناسبة لجميع الفئات، فإن
                             <strong>شركة المنطلق</strong>
                             تعد الرمز الأول والوجهة الموثوقة لخدمات
-                            
+                            <strong>
                                 نقل عفش جدة
-                            
+                            </strong>
                             وخدمات <strong>نقل أثاث جدة</strong>. نحن لا نقدم مجرد عملية نقل عادية، بل نوفر منظومة نقل
                             ذكية ومتكاملة تبدأ من التخطيط والمعاينة المجانية، وتمر عبر استدعاء شاحنات دينا نقل عفش جدة المجهزة والمغلقة،
                             وتستند على طاقم عمل متخصص من <a href="/furniture-moving-workers-in-jeddah/"
@@ -931,7 +975,7 @@
                                 </div>
                             </div>
                             <p class="text-slate-500 leading-relaxed mb-4">خدمة نقل سريعة وآمنة لجميع أنواع الأثاث مع عمالة مدربة وشاحنات دينا مجهزة بأحدث أنظمة التثبيت والتبطين الداخلي لحماية المنقولات.</p>
-                            قراءة المزيد ←
+                            <a href="./furniture-moving-companies-in-jeddah/" class="inline-block text-blue-600 hover:text-blue-800 text-sm font-semibold mb-4 transition">قراءة المزيد ←</a>
                             <div class="flex items-center gap-2 mb-4 text-sm text-slate-400">
                                 <span class="flex items-center gap-1"><i class="fas fa-clock text-blue-400 text-xs"></i> 24 ساعة</span>
                                 <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
@@ -994,7 +1038,7 @@
                     <!-- Card 4 -->
                     <div class="service-card group bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 transition-all duration-500 hover:shadow-xl hover:-translate-y-2" data-aos="fade-up" data-aos-delay="0">
                         <div class="relative overflow-hidden">
-                            <img src="./assets/img/hydraulic-winch-moving-jeddah.webp" alt="ونش رفع عفش بجدة" class="w-full h-[260px] object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async">
+                            <img src="./assets/img/furniture-moving-trucks-in-jeddah.webp" alt="ونش رفع عفش بجدة" class="w-full h-[260px] object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                             <div class="absolute top-4 left-4 bg-orange-500 text-white backdrop-blur-sm rounded-full px-3 py-1 text-xs font-semibold shadow-md z-10">
                                 <i class="fas fa-truck-pickup text-white ml-1"></i> ونش هيدروليكي
@@ -1054,7 +1098,7 @@
                                 <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center group-hover:bg-blue-100 transition-colors"><i class="fas fa-truck-moving text-blue-500 text-lg"></i></div>
                             </div>
                             <p class="text-slate-500 leading-relaxed mb-4">نقدم خدمات نقل العفش في جدة باحترافية عالية تشمل فك وتركيب الأثاث، والتغليف، والنقل بسيارات دينا مغلقة وسريعة مع الضمان.</p>
-                            قراءة المزيد ←
+                            <a href="./furniture-moving-companies-in-jeddah/" class="inline-block text-blue-600 hover:text-blue-800 text-sm font-semibold mb-4 transition">قراءة المزيد ←</a>
                             <div class="flex items-center gap-2 mb-4 text-sm text-slate-400">
                                 <span class="flex items-center gap-1"><i class="fas fa-shipping-fast text-blue-400 text-xs"></i> نقل سريع</span>
                                 <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
@@ -1069,7 +1113,7 @@
                     <!-- Card 7 -->
                     <div class="service-card group bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 transition-all duration-500 hover:shadow-xl hover:-translate-y-2" data-aos="fade-up" data-aos-delay="0">
                         <div class="relative overflow-hidden">
-                            <img src="./assets/img/furniture-moving-workers-in-jeddah.webp" alt="عمال نقل عفش بجدة" class="w-full h-[260px] object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async">
+                            <img src="./assets/img/best-furniture-moving-company-jeddah.webp" alt="عمال نقل عفش بجدة" class="w-full h-[260px] object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         </div>
                         <div class="p-6">
@@ -1645,8 +1689,7 @@
                 observer.observe(servicesGrid, { childList: true });
             });
         </script>
-
-        <section class="py-16 bg-gray-50">
+        <section id="why-us" class="py-16 bg-gray-50">
 
             <div class="container mx-auto px-6 lg:px-20">
 
@@ -1706,13 +1749,13 @@
                         </p>
                     </a>
 
-                    
+                    <div class="block bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition border border-gray-100">
                         <div class="text-4xl mb-3">⚡</div>
                         <h3 class="font-bold text-xl mb-2 text-gray-900">خدمة سريعة على مدار 24 ساعة</h3>
                         <p class="text-gray-600 text-base leading-relaxed">
                             استجابة فورية ونقل العفش في نفس اليوم أو خلال 24 ساعة بكل احترافية وانضباط.
                         </p>
-                    
+                    </div>
 
                     <a href="/furniture-moving-with-packing/"
                         class="block bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition border border-gray-100">
@@ -1725,10 +1768,10 @@
 
                 </div>
                 <div class="grid md:grid-cols-3 gap-4 mt-12 text-base font-bold">
-
-                    
+                    <a href="/moving-trucks-in-jeddah/"
+                        class="bg-orange-50 p-5 rounded-xl text-center hover:bg-orange-500 hover:text-white transition shadow-sm border border-orange-100">
                         🚚 خدمات دينا نقل عفش جدة
-                    
+                    </a>
 
                     <a href="/moving-villa-furniture-in-jeddah/"
                         class="bg-orange-50 p-5 rounded-xl text-center hover:bg-orange-500 hover:text-white transition shadow-sm border border-orange-100">
@@ -2393,29 +2436,7 @@
                     </h2>
 
                     <p class="mt-8 text-lg text-gray-600 leading-9">
-
-                        تقدم
-                        <strong>شركة المنطلق</strong>
-                        أفضل خدمات
-
-                        
-
-                            نقل عفش جدة
-
-                        
-
-                        و
-
-                        
-
-                            شركة نقل عفش جدة
-
-                        
-
-                        لجميع المنازل والفلل والشركات داخل مدينة جدة، حيث نعتمد على فريق عمل متخصص في
-                        فك وتركيب الأثاث وتغليف جميع المنقولات باستخدام أفضل خامات التغليف الحديثة لضمان
-                        وصول العفش بدون أي خدوش أو كسور.
-
+                        تقدم <strong>شركة المنطلق</strong> أفضل خدمات <a href="/" class="text-orange-600 font-bold hover:underline">نقل عفش جدة</a> المعتمدة لكافة المنازل والفلل والشركات داخل مدينة جدة، حيث نعتمد على فريق عمل متخصص في فك وتركيب الأثاث وتغليف جميع المنقولات بأجود الخامات الحديثة لضمان وصول العفش بدون أي خدوش أو كسور.
                     </p>
 
                     <p class="mt-6 text-lg text-gray-600 leading-9">
@@ -2676,18 +2697,7 @@
                             </h3>
 
                             <p class="mt-6 text-gray-600 leading-9">
-
-                                لا تقتصر خدماتنا على حي واحد فقط، بل نوفر
-                                
-
-                                    نقل عفش جدة
-
-                                
-
-                                في جميع أحياء المدينة، مع توفير سيارات حديثة مجهزة وطاقم عمل متخصص في فك وتركيب وتغليف
-                                الأثاث، بالإضافة إلى خدمات نقل الفلل والمكاتب ونقل الأجهزة الكهربائية بأعلى معايير
-                                الجودة.
-
+                                لا تقتصر خدماتنا على حي واحد فقط، بل نوفر أسرع خدمات <a href="/" class="text-orange-600 font-bold hover:underline">نقل عفش بجدة</a> في جميع أحياء ومناطق المدينة، مع توفير أسطول سيارات دينا مجهزة وطاقم عمل متمرس في الفك والتغليف والتركيب ونقل الفلل والمكاتب والأجهزة بأعلى معايير الأمان.
                             </p>
 
                             <p class="mt-5 text-gray-600 leading-9">
@@ -3134,8 +3144,266 @@
                     </div>
                 </div>
             </div>
+        </section>        <!-- =========================================================
+             [قسم جديد احترافي] أسعار نقل العفش بجدة وحاسبة التكلفة التفاعلية
+        ========================================================= -->
+        <section id="pricing" class="py-20 bg-gradient-to-b from-slate-50 via-white to-slate-50 relative overflow-hidden border-t border-slate-200/60">
+            <!-- خلفيات زخرفية -->
+            <div class="absolute top-0 right-0 w-80 h-80 bg-orange-100/50 rounded-full filter blur-3xl opacity-50 pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-80 h-80 bg-blue-100/50 rounded-full filter blur-3xl opacity-50 pointer-events-none"></div>
+
+            <div class="container mx-auto px-6 lg:px-20 relative z-10">
+                <!-- عنوان القسم -->
+                <div class="text-center max-w-4xl mx-auto mb-16" data-aos="fade-up">
+                    <span class="inline-flex items-center gap-2 bg-orange-100 text-orange-700 border border-orange-200 px-5 py-2 rounded-full font-bold text-sm mb-4">
+                        💰 أسعار شفافة بدون رسوم خفية مع خصم 20%
+                    </span>
+                    <h2 class="text-3xl md:text-5xl font-black text-gray-900 leading-tight mb-4">
+                        أسعار نقل العفش في جدة | جدول باقات التكلفة التقديرية وحاسبة الأسعار
+                    </h2>
+                    <p class="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+                        نقدم في <strong class="text-orange-600">شركة المنطلق</strong> أفضل معادلة تجمع بين السعر الاقتصادي المناسب وأعلى جودة ممكنة في فك وتركيب وتغليف الأثاث، مع ضمان رسمي مكتوب يحمي كافة المنقولات.
+                    </p>
+                </div>
+
+                <!-- جدول باقات الأسعار (4 باقات تنافسية) -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                    
+                    <!-- باقة 1: غرفة واحدة / استوديو -->
+                    <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="0">
+                        <div>
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-xs font-bold bg-gray-100 text-gray-700 px-3 py-1 rounded-full">استوديو / غرفة</span>
+                                <span class="text-2xl">📦</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">باقة النقل الاقتصادي</h3>
+                            <div class="my-4">
+                                <span class="text-3xl font-black text-gray-900">250 - 390</span>
+                                <span class="text-xs text-gray-500 font-bold">ريال سعودي</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mb-6">مثالية لنقل أثاث غرفة نوم فردية أو استوديو صغير داخل أي حي بجدة.</p>
+                            <ul class="space-y-3 text-sm text-gray-700 mb-6 border-t border-gray-100 pt-4">
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> دينا نقل عفش مجهزة ومغلقة</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> عمالة مدربة للتحميل والرص</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> فك وتركيب سرير ودولاب</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> تغليف نايلون وستريتش أساسي</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> ضمان سلامة المنقولات</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/966563806459?text=مرحباً،%20أريد%20حجز%20باقة%20النقل%20الاقتصادي%20(غرفة%20واحدة)" target="_blank"
+                            class="w-full text-center bg-gray-100 hover:bg-orange-500 hover:text-white text-gray-800 font-bold py-3 rounded-xl transition text-sm">
+                            طلب باقة الغرفة ←
+                        </a>
+                    </div>
+
+                    <!-- باقة 2: شقة 2 إلى 3 غرف (الأكثر طلباً) -->
+                    <div class="bg-gradient-to-b from-orange-50/60 to-white rounded-2xl p-6 border-2 border-orange-500 shadow-xl relative flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                        <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-orange-500 to-amber-500 text-white text-xs font-bold px-4 py-1 rounded-full shadow-md">
+                            ⭐ الأكثر طلباً بجدة
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-4 pt-1">
+                                <span class="text-xs font-bold bg-orange-100 text-orange-700 px-3 py-1 rounded-full">شقة 2 - 3 غرف</span>
+                                <span class="text-2xl">🏡</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">باقة الشقق العائلية</h3>
+                            <div class="my-4">
+                                <span class="text-3xl font-black text-orange-600">490 - 750</span>
+                                <span class="text-xs text-gray-500 font-bold">ريال سعودي</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mb-6">الباقة المتكاملة الأكثر شمولاً لنقل شقق العوائل بجدة بأمان تام.</p>
+                            <ul class="space-y-3 text-sm text-gray-700 mb-6 border-t border-orange-100 pt-4">
+                                <li class="flex items-center gap-2"><i class="fas fa-check-circle text-orange-500 text-xs"></i> دينا جامبو 6 متر صندوق مقفل</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check-circle text-orange-500 text-xs"></i> طاقم نجارين وعمالة محترفة</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check-circle text-orange-500 text-xs"></i> فك وتركيب غرف النوم والمجالس</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check-circle text-orange-500 text-xs"></i> تغليف فقاعي للزجاج والأجهزة</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check-circle text-orange-500 text-xs"></i> فك الشاشات والستائر والمكيفات</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check-circle text-orange-500 text-xs"></i> ضمان كتابي شامل 100%</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/966563806459?text=مرحباً،%20أريد%20حجز%20باقة%20الشقق%20العائلية%20(2%20إلى%203%20غرف)" target="_blank"
+                            class="w-full text-center bg-orange-500 hover:bg-orange-600 text-white font-bold py-3.5 rounded-xl shadow-lg transition text-sm">
+                            حجز باقة الشقة الآن 📞
+                        </a>
+                    </div>
+
+                    <!-- باقة 3: فلل ومنازل كبيرة -->
+                    <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                        <div>
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-xs font-bold bg-blue-100 text-blue-700 px-3 py-1 rounded-full">فيلا / دور كامل</span>
+                                <span class="text-2xl">🏰</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">باقة الفلل الفاخرة VIP</h3>
+                            <div class="my-4">
+                                <span class="text-3xl font-black text-gray-900">950 - 1,600</span>
+                                <span class="text-xs text-gray-500 font-bold">ريال سعودي</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mb-6">مخصصة لنقل الفلل والقصور والتحف والأثاث الفاخر بعناية فائقة.</p>
+                            <ul class="space-y-3 text-sm text-gray-700 mb-6 border-t border-gray-100 pt-4">
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> شاحنات دينا متعددة حسب الحاجة</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> طاقم كامل من الفنيين والنجارين</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> تغليف VIP شامل من الفوم والفقاعات</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> إمكانية إضافة ونش رفع هيدروليكي</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> مشرف فني لمتابعة كل مراحل النقل</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> وثيقة تأمين وضمان شامل</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/966563806459?text=مرحباً،%20أريد%20معاينة%20وحجز%20باقة%20الفلل%20الفاخرة%20VIP" target="_blank"
+                            class="w-full text-center bg-gray-100 hover:bg-orange-500 hover:text-white text-gray-800 font-bold py-3 rounded-xl transition text-sm">
+                            طلب باقة الفلل ←
+                        </a>
+                    </div>
+
+                    <!-- باقة 4: دينا نقل فقط -->
+                    <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
+                        <div>
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-xs font-bold bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full">دينا فقط / شحن</span>
+                                <span class="text-2xl">🚚</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">استئجار دينا مع السائق</h3>
+                            <div class="my-4">
+                                <span class="text-3xl font-black text-gray-900">تبدأ من 150</span>
+                                <span class="text-xs text-gray-500 font-bold">ريال سعودي</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mb-6">مناسبة لمن لديه عمالته الخاصة ويريد شاحنة دينا مغلقة وسريعة فقط.</p>
+                            <ul class="space-y-3 text-sm text-gray-700 mb-6 border-t border-gray-100 pt-4">
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> دينا نقل عفش نظيفة ومبطنة</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> سائق محترف ملم بكافة أحياء جدة</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> وصول سريع خلال 30 دقيقة</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> أشرطة وأحزمة تثبيت داخل الصندوق</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> متوفرة 24 ساعة يومياً</li>
+                            </ul>
+                        </div>
+                        <a href="tel:0563806459"
+                            class="w-full text-center bg-gray-100 hover:bg-orange-500 hover:text-white text-gray-800 font-bold py-3 rounded-xl transition text-sm">
+                            اتصل لطلب دينا: 0563806459
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- حاسبة تكلفة نقل العفش التفاعلية السريعة -->
+                <div class="bg-gradient-to-br from-slate-900 via-[#1e293b] to-slate-900 text-white rounded-3xl p-8 lg:p-12 shadow-2xl border border-slate-700 max-w-5xl mx-auto" data-aos="fade-up">
+                    <div class="text-center max-w-2xl mx-auto mb-10">
+                        <span class="inline-flex items-center gap-2 bg-orange-500/20 text-orange-400 border border-orange-500/30 px-4 py-1.5 rounded-full text-xs font-bold mb-3">
+                            <i class="fas fa-calculator"></i> حاسبة الأسعار الفورية التفاعلية
+                        </span>
+                        <h3 class="text-2xl md:text-3xl font-black text-white">احسب تكلفة نقل عفشك بجدة في ثوانٍ</h3>
+                        <p class="text-gray-300 text-sm mt-2">حدد تفاصيل نقلك واكتشف السعر التقديري الفوري مع إمكانية تثبيته مباشرة عبر واتساب</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-6 mb-8 text-right">
+                        <!-- الخيار 1: حجم السكن -->
+                        <div>
+                            <label class="block text-xs font-bold text-gray-300 mb-2">1. حجم السكن / كمية العفش:</label>
+                            <select id="calcSize" onchange="calculateMovingCost()" class="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white text-sm focus:border-orange-500 focus:outline-none">
+                                <option value="250">غرفة نوم واحدة / استوديو (250 - 390 ريال)</option>
+                                <option value="550" selected>شقة عائلية 2 إلى 3 غرف (490 - 750 ريال)</option>
+                                <option value="850">شقة كبيرة 4 غرف فأكثر (790 - 1100 ريال)</option>
+                                <option value="1250">فيلا دوبلكس / دور كامل (1200 - 1800 ريال)</option>
+                            </select>
+                        </div>
+
+                        <!-- الخيار 2: نوع الخدمة والتغليف -->
+                        <div>
+                            <label class="block text-xs font-bold text-gray-300 mb-2">2. الفك والتركيب والتغليف:</label>
+                            <select id="calcPacking" onchange="calculateMovingCost()" class="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white text-sm focus:border-orange-500 focus:outline-none">
+                                <option value="0">نقل فقط (بدون فك أو تغليف إضافي)</option>
+                                <option value="100" selected>نقل + فك وتركيب نجارين متخصصين</option>
+                                <option value="200">نقل + فك وتركيب + تغليف فقاعي VIP وكرتون</option>
+                            </select>
+                        </div>
+
+                        <!-- الخيار 3: ونش هيدروليكي للأدوار العليا -->
+                        <div>
+                            <label class="block text-xs font-bold text-gray-300 mb-2">3. ونش رفع هيدروليكي (أدوار عليا):</label>
+                            <select id="calcWinch" onchange="calculateMovingCost()" class="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white text-sm focus:border-orange-500 focus:outline-none">
+                                <option value="0" selected>لا أحتاج ونش (طابق أرضي / يوجد مصعد)</option>
+                                <option value="250">نعم، أحتاج ونش رفع عفش هيدروليكي</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- صندوق النتيجة التقديرية -->
+                    <div class="bg-slate-800/90 rounded-2xl p-6 border border-slate-700 flex flex-col md:flex-row items-center justify-between gap-6">
+                        <div class="text-center md:text-right">
+                            <div class="text-xs text-gray-400 font-semibold mb-1">السعر التقديري الإجمالي لنقلتك:</div>
+                            <div class="flex items-baseline gap-2 justify-center md:justify-start">
+                                <span id="calcTotal" class="text-4xl font-black text-orange-400 font-mono">550 - 750</span>
+                                <span class="text-sm font-bold text-white">ريال سعودي</span>
+                                <span class="text-xs bg-green-500/20 text-green-300 px-2.5 py-0.5 rounded-full font-bold border border-green-500/30 mr-2">شامل الضمان والخصم</span>
+                            </div>
+                            <div class="text-[11px] text-gray-400 mt-1">الأسعار استرشادية وتخضع للمعاينة الفعلية وكمية الأجهزة والمسافة.</div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-3 w-full md:w-auto justify-center">
+                            <a id="calcWhatsappBtn" href="https://wa.me/966563806459?text=مرحباً،%20قمت%20بحساب%20تكلفة%20النقل%20في%20موقعكم:%20السعر%20التقديري%20(550%20-%20750%20ريال)%20وأريد%20تأكيد%20الحجز%20بالخصم." target="_blank"
+                                class="flex-1 md:flex-initial inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg transition text-sm">
+                                <i class="fab fa-whatsapp text-lg"></i>
+                                <span>تأكيد الحجز بهذا السعر عبر واتساب</span>
+                            </a>
+                            <a href="tel:0563806459"
+                                class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg transition text-sm">
+                                <i class="fas fa-phone-alt"></i>
+                                <span>0563806459</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- شريط معايير وضمانات الثقة الأربعة -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+                    <div class="bg-white p-4 rounded-xl border border-gray-100 text-center shadow-sm">
+                        <div class="text-2xl mb-1 text-orange-500"><i class="fas fa-file-contract"></i></div>
+                        <div class="font-bold text-sm text-gray-900">عقد رسمي موثق</div>
+                        <div class="text-xs text-gray-500 mt-0.5">يحفظ حقوق العميل بالكامل</div>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-gray-100 text-center shadow-sm">
+                        <div class="text-2xl mb-1 text-green-500"><i class="fas fa-shield-halved"></i></div>
+                        <div class="font-bold text-sm text-gray-900">تعويض مالي فوري</div>
+                        <div class="text-xs text-gray-500 mt-0.5">ضد أي خدوش أو تلفيات</div>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-gray-100 text-center shadow-sm">
+                        <div class="text-2xl mb-1 text-blue-500"><i class="fas fa-user-check"></i></div>
+                        <div class="font-bold text-sm text-gray-900">فنيون نظاميون 100%</div>
+                        <div class="text-xs text-gray-500 mt-0.5">عمالة ونجارون على كفالة الشركة</div>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-gray-100 text-center shadow-sm">
+                        <div class="text-2xl mb-1 text-amber-500"><i class="fas fa-receipt"></i></div>
+                        <div class="font-bold text-sm text-gray-900">فاتورة إلكترونية معتمدة</div>
+                        <div class="text-xs text-gray-500 mt-0.5">متوافقة مع هيئة الزكاة والضريبة</div>
+                    </div>
+                </div>
+            </div>
         </section>
 
+        <script>
+            // كود حاسبة تكلفة النقل التفاعلية
+            function calculateMovingCost() {
+                const baseSize = parseInt(document.getElementById('calcSize').value) || 250;
+                const packingCost = parseInt(document.getElementById('calcPacking').value) || 0;
+                const winchCost = parseInt(document.getElementById('calcWinch').value) || 0;
+
+                const minTotal = baseSize + packingCost + winchCost;
+                const maxTotal = Math.round(minTotal * 1.35);
+
+                const sizeSelect = document.getElementById('calcSize');
+                const sizeText = sizeSelect.options[sizeSelect.selectedIndex].text.split('(')[0].trim();
+
+                const packingSelect = document.getElementById('calcPacking');
+                const packingText = packingSelect.options[packingSelect.selectedIndex].text;
+
+                const winchSelect = document.getElementById('calcWinch');
+                const hasWinch = winchCost > 0 ? 'مع ونش هيدروليكي' : 'بدون ونش';
+
+                document.getElementById('calcTotal').innerText = `${minTotal} - ${maxTotal}`;
+
+                const message = encodeURIComponent(`مرحباً شركة المنطلق، قمت بحساب تكلفة النقل التقديرية عبر موقعكم:\n- حجم السكن: ${sizeText}\n- الخدمة: ${packingText}\n- الونش: ${hasWinch}\n- السعر التقديري: ${minTotal} - ${maxTotal} ريال.\nأرغب بتأكيد الحجز والاستفادة من خصم الـ 20%.`);
+                document.getElementById('calcWhatsappBtn').href = `https://wa.me/966563806459?text=${message}`;
+            }
+        </script>
 
         <!-- Testimonials Section - آراء العملاء الموثقة بالأسماء والتاريخ -->
         <section id="testimonials" class="py-16 bg-white relative overflow-hidden border-t border-slate-100">
@@ -4298,10 +4566,27 @@
                             مرخصة من وزارة التجارة والاستثمار والمركز السعودي للأعمال
                         </span>
                     </div>
-                    <p class="text-[10px] text-gray-400">نلتزم بأعلى معايير السلامة والجودة لنقل الأثاث المنزلي والمكتبي والتجاري داخل وخارج جدة.</p>
                 </div>
             </div>
         </footer>
+
+    <!-- شريط الاتصال السريع السفلي الثابت للجوال (Mobile Sticky Bottom Bar) -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-md px-4 py-2.5 border-t border-slate-700/80 shadow-2xl flex items-center justify-between gap-3"
+         style="padding-bottom: max(0.625rem, env(safe-area-inset-bottom));">
+        <a href="tel:0563806459"
+           class="flex-1 bg-gradient-to-r from-orange-500 to-amber-600 active:scale-95 text-white font-bold py-2.5 px-3 rounded-xl text-center text-sm flex items-center justify-center gap-2 shadow-lg">
+            <i class="fas fa-phone-alt animate-bounce"></i>
+            <span>اتصل الآن</span>
+        </a>
+        <a href="https://wa.me/966563806459?text=مرحباً،%20أريد%20الاستفسار%20عن%20خدمة%20نقل%20العفش%20بجدة" target="_blank" rel="noopener noreferrer"
+           class="flex-1 bg-gradient-to-r from-green-500 to-emerald-600 active:scale-95 text-white font-bold py-2.5 px-3 rounded-xl text-center text-sm flex items-center justify-center gap-2 shadow-lg">
+            <i class="fab fa-whatsapp text-lg"></i>
+            <span>واتساب فوري</span>
+        </a>
+        <div class="text-[10px] text-yellow-300 font-bold bg-white/10 px-2 py-2 rounded-lg text-center leading-tight shrink-0 border border-yellow-300/20">
+            خصم<br><span class="text-xs font-black">20%</span>
+        </div>
+    </div>
     </main>
 
     <script src="/assets/js/main.js" defer></script>
