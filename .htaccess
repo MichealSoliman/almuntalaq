@@ -1,8 +1,6 @@
- ======================================
-
- Enable Rewrite Engine
-
- ======================================
+# ======================================
+# Enable Rewrite Engine
+# ======================================
 
 RewriteEngine On
 
@@ -15,77 +13,56 @@ Redirect 410 /best-furniture-moving-company-riyadh/
 Redirect 410 /furniture-moving-in-jeddah/
 Redirect 410 /furniture-moving-company-in-jeddah/
 
-# 301 Redirects
-
- ======================================
-
- Force HTTPS
-
- ======================================
+# ======================================
+# Force HTTPS
+# ======================================
 
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
- ======================================
-
- Force non-www (اختياري)
-
- ======================================
+# ======================================
+# Force non-www
+# ======================================
 
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
 
- ======================================
-
- Remove index.html from URLs
-
- ======================================
+# ======================================
+# Remove index.html from URLs
+# ======================================
 
 RewriteCond %{THE_REQUEST} \s/+(.*/)?index.html[\s?] [NC]
 RewriteRule ^(.*/)?index.html$ /$1 [R=301,L]
 
- ======================================
-
- Force trailing slash for directories
-
- ======================================
+# ======================================
+# Force trailing slash for directories
+# ======================================
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_URI} !.[a-zA-Z0-9]{1,5}$
 RewriteCond %{REQUEST_URI} !/$
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1/ [R=301,L]
 
- ======================================
-
- Serve index.html inside folders
-
- Example:
-
- /about/ -> /about/index.html
-
- ======================================
+# ======================================
+# Serve index.html inside folders
+# ======================================
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
 RewriteRule ^(.+?)/?$ /$1/index.html [L]
 
- ======================================
-
- Custom 404 Page
-
- ======================================
+# ======================================
+# Custom 404 Page
+# ======================================
 
 ErrorDocument 404 /404.html
 
- ======================================
-
- GZIP Compression
-
- ======================================
+# ======================================
+# GZIP Compression
+# ======================================
 
 <IfModule mod_deflate.c>
-
 AddOutputFilterByType DEFLATE text/html
 AddOutputFilterByType DEFLATE text/plain
 AddOutputFilterByType DEFLATE text/xml
@@ -95,82 +72,65 @@ AddOutputFilterByType DEFLATE application/javascript
 AddOutputFilterByType DEFLATE application/json
 AddOutputFilterByType DEFLATE application/xml
 AddOutputFilterByType DEFLATE image/svg+xml
-
 </IfModule>
 
- ======================================
-
- Browser Cache
-
- ======================================
+# ======================================
+# Browser Cache
+# ======================================
 
 <IfModule mod_expires.c>
-
 ExpiresActive On
-
 ExpiresByType text/html "access plus 1 hour"
-
 ExpiresByType text/css "access plus 1 month"
 ExpiresByType application/javascript "access plus 1 month"
-
 ExpiresByType image/jpg "access plus 1 year"
 ExpiresByType image/jpeg "access plus 1 year"
 ExpiresByType image/png "access plus 1 year"
 ExpiresByType image/webp "access plus 1 year"
 ExpiresByType image/svg+xml "access plus 1 year"
 ExpiresByType image/x-icon "access plus 1 year"
-
 ExpiresDefault "access plus 7 days"
-
 </IfModule>
 
- ======================================
-
- MIME Types
-
- ======================================
+# ======================================
+# MIME Types
+# ======================================
 
 AddType image/webp .webp
 AddType image/svg+xml .svg
 AddType application/manifest+json .webmanifest
 
- ======================================
-
- Security Headers
-
- ======================================
+# ======================================
+# Security Headers
+# ======================================
 
 <IfModule mod_headers.c>
-
 Header always set X-Frame-Options "SAMEORIGIN"
 Header always set X-Content-Type-Options "nosniff"
 Header always set Referrer-Policy "strict-origin-when-cross-origin"
 Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
-
 Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
-
 Header set Cache-Control "public"
-
 </IfModule>
 
- ======================================
+# ======================================
+# Protect Sensitive Files
+# ======================================
 
- Protect Sensitive Files
+<FilesMatch "^(\.htaccess|\.htpasswd|error_log)$">
+Require all denied
+</FilesMatch>
 
- ======================================
-
-<FilesMatch "^(.htaccess|.htpasswd|error_log)$">
-Require all denied </FilesMatch>
-
- ======================================
-
- Disable Directory Browsing
-
- ======================================
+# ======================================
+# Disable Directory Browsing
+# ======================================
 
 Options -Indexes
 
+# ======================================
 # 301 Redirects for Cannibalization
+# ======================================
+
 Redirect 301 /blogs/furniture-moving-companies-in-jeddah/ https://almontalaqmoving.com/furniture-moving-companies-in-jeddah/
 Redirect 301 /blogs/best-furniture-moving-companies-in-jeddah/ https://almontalaqmoving.com/furniture-moving-companies-in-jeddah/
 Redirect 301 /blogs/best-furniture-moving-company-jeddah/ https://almontalaqmoving.com/furniture-moving-companies-in-jeddah/
@@ -180,10 +140,9 @@ Redirect 301 /bride-luggage-moving-jeddah/ https://almontalaqmoving.com/bridal-t
 Redirect 301 /blogs/furniture-packaging-in-jeddah/ https://almontalaqmoving.com/furniture-packaging-in-jeddah/
 Redirect 301 /blogs/furniture-dismantling-and-assembly-in-jeddah/ https://almontalaqmoving.com/furniture-dismantling-and-assembly-in-jeddah/
 Redirect 301 /blogs/electrical-appliance-moving-in-jeddah/ https://almontalaqmoving.com/moving-electrical-appliances-in-jeddah/
-
 Redirect 301 /blogs/furniture-moving-trucks-in-jeddah/ https://almontalaqmoving.com/moving-trucks-in-jeddah/
 
-# Phase 3: Area Slugs Redirects
+# Area Slugs Redirects
 Redirect 301 /areas/hayu-aleazizia/ https://almontalaqmoving.com/areas/hayu-alaziziya/
 Redirect 301 /areas/hayu-alrubwa/ https://almontalaqmoving.com/areas/hayu-alrabwa/
 Redirect 301 /areas/hayu-alshaati/ https://almontalaqmoving.com/areas/hayu-alshati/
