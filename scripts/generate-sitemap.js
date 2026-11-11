@@ -1,117 +1,134 @@
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 const root = path.join(__dirname, '..');
-const TODAY = '2026-10-21';
 const DOMAIN = 'https://almontalaqmoving.com';
 
-// صفحات الموقع مع تحديد الأولويات وتكرار التحديث المناسب لكل نوع صفحة
-const sitemapStructure = [
-  // 1. الصفحة الرئيسية والصفحات المحورية
-  { path: '/', priority: '1.00', changefreq: 'daily' },
-  { path: '/services/', priority: '0.90', changefreq: 'weekly' },
-  { path: '/areas/', priority: '0.85', changefreq: 'weekly' },
-  { path: '/blogs/', priority: '0.80', changefreq: 'weekly' },
-  { path: '/about/', priority: '0.80', changefreq: 'monthly' },
-  { path: '/contact/', priority: '0.80', changefreq: 'monthly' },
+function getAllHtmlFiles(dir) {
+  let results = [];
+  const list = fs.readdirSync(dir);
+  for (const file of list) {
+    const fullPath = path.join(dir, file);
+    const relFromRoot = path.relative(root, fullPath).replace(/\\/g, '/');
+    const stat = fs.statSync(fullPath);
 
-  // 2. الخدمات الأساسية التجارية ذات الأولوية القصوى (Core Commercial Services)
-  { path: '/furniture-moving-companies-in-jeddah/', priority: '0.90', changefreq: 'weekly' },
-  { path: '/furniture-moving-with-packing/', priority: '0.90', changefreq: 'weekly' },
-  { path: '/furniture-packaging-in-jeddah/', priority: '0.90', changefreq: 'weekly' },
-  { path: '/furniture-dismantling-and-assembly-in-jeddah/', priority: '0.90', changefreq: 'weekly' },
-  { path: '/moving-trucks-in-jeddah/', priority: '0.90', changefreq: 'weekly' },
-  { path: '/bridal-trousseau-moving-jeddah/', priority: '0.90', changefreq: 'weekly' },
-  { path: '/cheapest-furniture-moving-jeddah/', priority: '0.90', changefreq: 'weekly' },
-  { path: '/furniture-moving-workers-in-jeddah/', priority: '0.85', changefreq: 'weekly' },
-  { path: '/hydraulic-winch-moving-jeddah/', priority: '0.85', changefreq: 'weekly' },
-  { path: '/furniture-storage-in-jeddah/', priority: '0.85', changefreq: 'weekly' },
-
-  // 3. الخدمات المتخصصة والسكنية والتجارية (Specialized & Property Moving)
-  { path: '/ac-relocation-in-jeddah/', priority: '0.85', changefreq: 'weekly' },
-  { path: '/bedroom-moving-jeddah/', priority: '0.85', changefreq: 'weekly' },
-  { path: '/moving-villa-furniture-in-jeddah/', priority: '0.85', changefreq: 'weekly' },
-  { path: '/moving-office-furniture-in-jeddah/', priority: '0.85', changefreq: 'weekly' },
-  { path: '/moving-electrical-appliances-in-jeddah/', priority: '0.85', changefreq: 'weekly' },
-  { path: '/kitchen-moving-in-jeddah/', priority: '0.85', changefreq: 'weekly' },
-  { path: '/hotel-furniture-moving-in-jeddah/', priority: '0.85', changefreq: 'weekly' },
-  { path: '/residential-furniture-moving-in-jeddah/', priority: '0.85', changefreq: 'weekly' },
-
-  // 4. خطوط النقل بين المدن (Intercity Moving Routes)
-  { path: '/areas/jeddah-to-riyadh/', priority: '0.80', changefreq: 'weekly' },
-  { path: '/areas/jeddah-to-makkah/', priority: '0.80', changefreq: 'weekly' },
-  { path: '/areas/jeddah-to-madinah/', priority: '0.80', changefreq: 'weekly' },
-  { path: '/areas/jeddah-to-taif/', priority: '0.80', changefreq: 'weekly' },
-  { path: '/areas/jeddah-to-dammam/', priority: '0.80', changefreq: 'weekly' },
-  { path: '/areas/jeddah-to-yanbu/', priority: '0.80', changefreq: 'weekly' },
-  { path: '/areas/jeddah-to-jizan/', priority: '0.80', changefreq: 'weekly' },
-  { path: '/areas/jeddah-to-tabuk/', priority: '0.80', changefreq: 'weekly' },
-  { path: '/areas/jeddah-to-qassim/', priority: '0.80', changefreq: 'weekly' },
-
-  // 5. مقالات المدونة (Blog Posts - Informational & Supporting Content)
-  { path: '/blogs/furniture-moving-mistakes-in-jeddah/', priority: '0.70', changefreq: 'monthly' },
-  { path: '/blogs/furniture-moving-prices-in-jeddah/', priority: '0.70', changefreq: 'monthly' },
-  { path: '/blogs/how-to-choose-furniture-moving-company/', priority: '0.70', changefreq: 'monthly' },
-  { path: '/blogs/how-to-pack-furniture/', priority: '0.70', changefreq: 'monthly' },
-  { path: '/blogs/villa-furniture-moving-prices-jeddah/', priority: '0.70', changefreq: 'monthly' },
-
-  // 6. صفحات أحياء ومناطق جدة (Jeddah Local Districts)
-  { path: '/areas/hayu-alrawda/', priority: '0.65', changefreq: 'monthly' },
-  { path: '/areas/hayu-alsafa/', priority: '0.65', changefreq: 'monthly' },
-  { path: '/areas/hayu-almarwa/', priority: '0.65', changefreq: 'monthly' },
-  { path: '/areas/hayu-alzahra/', priority: '0.65', changefreq: 'monthly' },
-  { path: '/areas/hayu-alsalama/', priority: '0.65', changefreq: 'monthly' },
-  { path: '/areas/hayu-alshati/', priority: '0.65', changefreq: 'monthly' },
-  { path: '/areas/hayu-alsamer/', priority: '0.65', changefreq: 'monthly' },
-  { path: '/areas/hayu-alhamdania/', priority: '0.65', changefreq: 'monthly' },
-  { path: '/areas/hayu-albasateen/', priority: '0.65', changefreq: 'monthly' },
-  { path: '/areas/hayu-alaziziya/', priority: '0.65', changefreq: 'monthly' },
-  { path: '/areas/hayu-alrabwa/', priority: '0.65', changefreq: 'monthly' },
-  { path: '/areas/hayu-alwaha/', priority: '0.65', changefreq: 'monthly' },
-  { path: '/areas/hayu-alnasim/', priority: '0.65', changefreq: 'monthly' },
-  { path: '/areas/hayu-alnuzha/', priority: '0.65', changefreq: 'monthly' },
-  { path: '/areas/hayu-albawadi/', priority: '0.65', changefreq: 'monthly' },
-  { path: '/areas/hayu-alfaysalia/', priority: '0.65', changefreq: 'monthly' },
-  { path: '/areas/hayu-almuhammadiyah/', priority: '0.65', changefreq: 'monthly' },
-  { path: '/areas/hayu-alkhalidiya/', priority: '0.65', changefreq: 'monthly' },
-  { path: '/areas/hayu-alajawid/', priority: '0.65', changefreq: 'monthly' },
-  { path: '/areas/hayu-alsanabel/', priority: '0.65', changefreq: 'monthly' }
-];
-
-console.log(`Configured ${sitemapStructure.length} pages in sitemap.`);
-
-// التحقق من أن كل صفحة لها ملف index.html حقيقي في المشروع
-for (const item of sitemapStructure) {
-  let localFile;
-  if (item.path === '/') {
-    localFile = path.join(root, 'index.html');
-  } else {
-    const cleanPath = item.path.replace(/^\//, '').replace(/\/$/, '');
-    localFile = path.join(root, cleanPath, 'index.html');
+    if (stat.isDirectory()) {
+      if (!['node_modules', '.git', '.vscode', 'dist', 'scratch', 'scripts'].includes(file)) {
+        results = results.concat(getAllHtmlFiles(fullPath));
+      }
+    } else if (file === 'index.html' || (dir === root && file.endsWith('.html'))) {
+      results.push({ fullPath, relPath: relFromRoot });
+    }
   }
-  if (!fs.existsSync(localFile)) {
-    console.error(`ERROR: File does not exist for path: ${item.path} -> ${localFile}`);
+  return results;
+}
+
+// 1. مسح جميع صفحات HTML في المشروع
+const allFiles = getAllHtmlFiles(root);
+console.log(`Found ${allFiles.length} candidate HTML files.`);
+
+const validPages = [];
+const skippedPages = [];
+
+for (const { fullPath, relPath } of allFiles) {
+  let pageUrlPath = '';
+  if (relPath === 'index.html') {
+    pageUrlPath = '/';
+  } else if (relPath.endsWith('/index.html')) {
+    pageUrlPath = '/' + relPath.replace(/\/index\.html$/, '') + '/';
+  } else {
+    pageUrlPath = '/' + relPath;
+  }
+
+  const expectedCanonical = `${DOMAIN}${pageUrlPath}`;
+  const content = fs.readFileSync(fullPath, 'utf8');
+
+  // robots meta
+  const robotsMatch = content.match(/<meta\s+[^>]*name=["']robots["'][^>]*content=["']([^"']*)["']/i) ||
+                      content.match(/<meta\s+[^>]*content=["']([^"']*)["'][^>]*name=["']robots["']/i);
+  const robotsContent = robotsMatch ? robotsMatch[1].toLowerCase() : '';
+
+  if (robotsContent.includes('noindex')) {
+    skippedPages.push({ relPath, reason: `noindex found (${robotsContent})` });
+    continue;
+  }
+
+  // Canonical
+  const canonicalMatch = content.match(/<link\s+[^>]*rel=["']canonical["'][^>]*href=["']([^"']*)["']/i) ||
+                         content.match(/<link\s+[^>]*href=["']([^"']*)["'][^>]*rel=["']canonical["']/i);
+  const canonicalHref = canonicalMatch ? canonicalMatch[1] : '';
+
+  if (!canonicalHref) {
+    skippedPages.push({ relPath, reason: 'missing canonical' });
+    continue;
+  }
+
+  if (canonicalHref !== expectedCanonical) {
+    skippedPages.push({ relPath, reason: `canonical mismatch (expected: ${expectedCanonical}, got: ${canonicalHref})` });
+    continue;
+  }
+
+  // استخراج تاريخ آخر commit من Git مع استبعاد [no-lastmod]
+  let lastmod = '';
+  try {
+    const gitCmd = `git log -1 --format=%cI --invert-grep --grep="\\[no-lastmod\\]" -- "${fullPath}"`;
+    const gitDate = execSync(gitCmd, { cwd: root, encoding: 'utf8' }).trim();
+    if (gitDate) {
+      lastmod = gitDate.split('T')[0];
+    }
+  } catch (e) {
+    console.warn(`Warning: Could not get git date for ${relPath}: ${e.message}`);
+  }
+
+  if (!lastmod) {
+    const stat = fs.statSync(fullPath);
+    lastmod = stat.mtime.toISOString().split('T')[0];
+  }
+
+  validPages.push({
+    url: expectedCanonical,
+    relPath,
+    lastmod
+  });
+}
+
+console.log(`Skipped ${skippedPages.length} non-indexable files.`);
+console.log(`Included ${validPages.length} indexable pages in sitemap.`);
+
+// فحص أمان صارم: التأكد من عدم وجود روابط مكررة أو تتبع redirects
+const seenUrls = new Set();
+for (const page of validPages) {
+  if (seenUrls.has(page.url)) {
+    console.error(`FATAL: Duplicate URL in sitemap: ${page.url}`);
+    process.exit(1);
+  }
+  seenUrls.add(page.url);
+
+  if (page.url.includes('/hayu-alrabwa/')) {
+    console.error(`FATAL: Redirected slug found in sitemap: ${page.url}`);
     process.exit(1);
   }
 }
 
-// بناء محتوى XML
-let xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-`;
+// بناء XML
+let xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
 
-for (const item of sitemapStructure) {
-  xml += `  <url>
-    <loc>${DOMAIN}${item.path}</loc>
-    <lastmod>${TODAY}</lastmod>
-    <changefreq>${item.changefreq}</changefreq>
-    <priority>${item.priority}</priority>
-  </url>
-`;
+validPages.sort((a, b) => {
+  if (a.url === `${DOMAIN}/`) return -1;
+  if (b.url === `${DOMAIN}/`) return 1;
+  return a.url.localeCompare(b.url);
+});
+
+for (const page of validPages) {
+  xml += `  <url>\n`;
+  xml += `    <loc>${page.url}</loc>\n`;
+  xml += `    <lastmod>${page.lastmod}</lastmod>\n`;
+  xml += `  </url>\n`;
 }
 
-xml += `</urlset>
-`;
+xml += `</urlset>\n`;
 
-fs.writeFileSync(path.join(root, 'sitemap.xml'), xml, 'utf8');
-console.log(`✅ sitemap.xml updated successfully with ${sitemapStructure.length} URLs (lastmod: ${TODAY})!`);
+const sitemapPath = path.join(root, 'sitemap.xml');
+fs.writeFileSync(sitemapPath, xml, 'utf8');
+console.log(`✅ sitemap.xml generated successfully with ${validPages.length} URLs!`);

@@ -1,0 +1,5 @@
+# للحصول على قائمة الملفات المعدلة بدقة منذ آخر commit منشور على السيرفر:
+git diff --name-only origin/main..HEAD
+# أو لتصديرها مباشرة إلى ملف نصي:
+git diff --name-only origin/main..HEAD > changed_files_to_deploy.txt
+

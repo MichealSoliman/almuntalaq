@@ -5,37 +5,24 @@
 RewriteEngine On
 
 # ======================================
-# Redirects and Gone (410)
+# 1. Force HTTPS and non-www (Single-step 301)
+# Must execute before any other rules
 # ======================================
 
-# 410 Gone - Tell Google these pages are permanently deleted
-Redirect 410 /best-furniture-moving-company-riyadh/
-Redirect 410 /furniture-moving-in-jeddah/
-Redirect 410 /furniture-moving-company-in-jeddah/
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
 # ======================================
-# Force HTTPS
-# ======================================
-
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
-
-# ======================================
-# Force non-www
-# ======================================
-
-RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
-
-# ======================================
-# Remove index.html from URLs
+# 2. Remove index.html from URLs
 # ======================================
 
 RewriteCond %{THE_REQUEST} \s/+(.*/)?index.html[\s?] [NC]
 RewriteRule ^(.*/)?index.html$ /$1 [R=301,L]
 
 # ======================================
-# Force trailing slash for directories
+# 3. Force trailing slash for directories
 # ======================================
 
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -44,7 +31,7 @@ RewriteCond %{REQUEST_URI} !/$
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1/ [R=301,L]
 
 # ======================================
-# Serve index.html inside folders
+# 4. Serve index.html inside folders
 # ======================================
 
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -53,14 +40,47 @@ RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
 RewriteRule ^(.+?)/?$ /$1/index.html [L]
 
 # ======================================
-# Custom 404 Page
+# 5. 301 Redirects Table
+# ======================================
+
+# Redirects to Homepage
+Redirect 301 /furniture-moving-in-jeddah/ https://almontalaqmoving.com/
+Redirect 301 /furniture-moving-company-in-jeddah/ https://almontalaqmoving.com/
+
+# 410 Gone - Permanently deleted pages
+Redirect 410 /best-furniture-moving-company-riyadh/
+
+# Redirects for Blogs Cannibalization to Core Services
+Redirect 301 /blogs/furniture-moving-companies-in-jeddah/ https://almontalaqmoving.com/furniture-moving-companies-in-jeddah/
+Redirect 301 /blogs/best-furniture-moving-companies-in-jeddah/ https://almontalaqmoving.com/furniture-moving-companies-in-jeddah/
+Redirect 301 /blogs/best-furniture-moving-company-jeddah/ https://almontalaqmoving.com/furniture-moving-companies-in-jeddah/
+Redirect 301 /blogs/furniture-packaging-in-jeddah/ https://almontalaqmoving.com/furniture-packaging-in-jeddah/
+Redirect 301 /blogs/furniture-dismantling-and-assembly-in-jeddah/ https://almontalaqmoving.com/furniture-dismantling-and-assembly-in-jeddah/
+Redirect 301 /blogs/electrical-appliance-moving-in-jeddah/ https://almontalaqmoving.com/moving-electrical-appliances-in-jeddah/
+Redirect 301 /blogs/furniture-moving-trucks-in-jeddah/ https://almontalaqmoving.com/moving-trucks-in-jeddah/
+
+# Redirects for Packaging, Luggage, and Typo Slugs
+Redirect 301 /furniture-packaging-in-jaddah/ https://almontalaqmoving.com/furniture-packaging-in-jeddah/
+Redirect 301 /bride-luggage-moving-jeddah/ https://almontalaqmoving.com/bridal-trousseau-moving-jeddah/
+
+# Area Slugs Redirects
+Redirect 301 /areas/hayu-aleazizia/ https://almontalaqmoving.com/areas/hayu-alaziziya/
+Redirect 301 /areas/hayu-alrabwa/ https://almontalaqmoving.com/areas/hayu-alrubwa/
+Redirect 301 /areas/hayu-alshaati/ https://almontalaqmoving.com/areas/hayu-alshati/
+
+# ======================================
+# 6. Custom 404 Page
 # ======================================
 
 ErrorDocument 404 /404.html
 
 # ======================================
-# GZIP Compression
+# 7. Compression (Brotli & Gzip)
 # ======================================
+
+<IfModule mod_brotli.c>
+AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/xml text/css text/javascript application/javascript application/json application/xml image/svg+xml
+</IfModule>
 
 <IfModule mod_deflate.c>
 AddOutputFilterByType DEFLATE text/html
@@ -75,25 +95,25 @@ AddOutputFilterByType DEFLATE image/svg+xml
 </IfModule>
 
 # ======================================
-# Browser Cache
+# 8. Cache-Control & Headers (no-cache for instant updates)
 # ======================================
 
-<IfModule mod_expires.c>
-ExpiresActive On
-ExpiresByType text/html "access plus 1 hour"
-ExpiresByType text/css "access plus 1 month"
-ExpiresByType application/javascript "access plus 1 month"
-ExpiresByType image/jpg "access plus 1 year"
-ExpiresByType image/jpeg "access plus 1 year"
-ExpiresByType image/png "access plus 1 year"
-ExpiresByType image/webp "access plus 1 year"
-ExpiresByType image/svg+xml "access plus 1 year"
-ExpiresByType image/x-icon "access plus 1 year"
-ExpiresDefault "access plus 7 days"
+<IfModule mod_headers.c>
+# Force revalidation on all assets & pages so updates appear immediately
+<FilesMatch "\.(html|htm|css|js|woff2|woff|ttf|webp|png|jpg|jpeg|svg|ico)$">
+Header set Cache-Control "no-cache"
+</FilesMatch>
+
+# Security Headers
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+Header always set Strict-Transport-Security "max-age=31536000"
 </IfModule>
 
 # ======================================
-# MIME Types
+# 10. MIME Types
 # ======================================
 
 AddType image/webp .webp
@@ -101,48 +121,11 @@ AddType image/svg+xml .svg
 AddType application/manifest+json .webmanifest
 
 # ======================================
-# Security Headers
-# ======================================
-
-<IfModule mod_headers.c>
-Header always set X-Frame-Options "SAMEORIGIN"
-Header always set X-Content-Type-Options "nosniff"
-Header always set Referrer-Policy "strict-origin-when-cross-origin"
-Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
-Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
-Header set Cache-Control "public"
-</IfModule>
-
-# ======================================
-# Protect Sensitive Files
+# 11. Security & Protections
 # ======================================
 
 <FilesMatch "^(\.htaccess|\.htpasswd|error_log)$">
 Require all denied
 </FilesMatch>
 
-# ======================================
-# Disable Directory Browsing
-# ======================================
-
 Options -Indexes
-
-# ======================================
-# 301 Redirects for Cannibalization
-# ======================================
-
-Redirect 301 /blogs/furniture-moving-companies-in-jeddah/ https://almontalaqmoving.com/furniture-moving-companies-in-jeddah/
-Redirect 301 /blogs/best-furniture-moving-companies-in-jeddah/ https://almontalaqmoving.com/furniture-moving-companies-in-jeddah/
-Redirect 301 /blogs/best-furniture-moving-company-jeddah/ https://almontalaqmoving.com/furniture-moving-companies-in-jeddah/
-
-# Redirects for Packaging, Dismantling, Appliances, Trucks and Luggage
-Redirect 301 /bride-luggage-moving-jeddah/ https://almontalaqmoving.com/bridal-trousseau-moving-jeddah/
-Redirect 301 /blogs/furniture-packaging-in-jeddah/ https://almontalaqmoving.com/furniture-packaging-in-jeddah/
-Redirect 301 /blogs/furniture-dismantling-and-assembly-in-jeddah/ https://almontalaqmoving.com/furniture-dismantling-and-assembly-in-jeddah/
-Redirect 301 /blogs/electrical-appliance-moving-in-jeddah/ https://almontalaqmoving.com/moving-electrical-appliances-in-jeddah/
-Redirect 301 /blogs/furniture-moving-trucks-in-jeddah/ https://almontalaqmoving.com/moving-trucks-in-jeddah/
-
-# Area Slugs Redirects
-Redirect 301 /areas/hayu-aleazizia/ https://almontalaqmoving.com/areas/hayu-alaziziya/
-Redirect 301 /areas/hayu-alrubwa/ https://almontalaqmoving.com/areas/hayu-alrabwa/
-Redirect 301 /areas/hayu-alshaati/ https://almontalaqmoving.com/areas/hayu-alshati/
