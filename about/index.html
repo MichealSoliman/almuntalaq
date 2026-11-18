@@ -38,7 +38,7 @@
     <!-- Canonical -->
     <link rel="canonical" href="https://almontalaqmoving.com/about/">
     <!-- Tailwind CSS CDN + Font Awesome (any icons) -->
-    <link rel="stylesheet" href="../../dist/output.css">
+    <link rel="stylesheet" href="/dist/output.css">
     <!-- Customizing Tailwind for RTL and arabic fonts -->
     
     <!-- Font Awesome 6 (free) -->
@@ -47,69 +47,46 @@
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "MovingCompany",
-  "name": "شركة المنطلق لنقل العفش بجدة",
-  "url": "https://almontalaqmoving.com",
-  "logo": "https://almontalaqmoving.com/assets/img/logo.webp",
-  "image": "https://almontalaqmoving.com/assets/img/about.webp",
-    "addressRegion": "Riyadh Province",
-    "postalCode": "11564",
-    "addressCountry": "SA"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "24.7135517",
-    "longitude": "46.6752957"
-  },
-  "areaServed": {
-    "@type": "City",
-    "name": "الرياض"
-  }
-}
-</script>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "AboutPage",
-  "name": "من نحن - شركة المنطلق لنقل العفش بالرياض",
-  "url": "https://almontalaqmoving.com/about/",
-  "description": "تعرف على شركة المنطلق لنقل العفش بالرياض وخبرتها الممتدة في نقل الأثاث."
-}
-</script>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
+  "@graph": [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "الرئيسية",
-      "item": "https://almontalaqmoving.com/"
+      "@type": "AboutPage",
+      "@id": "https://almontalaqmoving.com/about/#webpage",
+      "url": "https://almontalaqmoving.com/about/",
+      "name": "من نحن - شركة المنطلق لنقل العفش بجدة",
+      "description": "تعرف على شركة المنطلق لنقل العفش بجدة وخبرتها في نقل وفك وتركيب وتغليف الأثاث منذ 2014.",
+      "inLanguage": "ar-SA",
+      "isPartOf": { "@id": "https://almontalaqmoving.com/#website" },
+      "about": { "@id": "https://almontalaqmoving.com/#movingcompany" },
+      "primaryImageOfPage": { "@type": "ImageObject", "url": "https://almontalaqmoving.com/assets/img/about.webp" }
     },
     {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "من نحن",
-      "item": "https://almontalaqmoving.com/about/"
+      "@type": "MovingCompany",
+      "@id": "https://almontalaqmoving.com/#movingcompany",
+      "name": "شركة المنطلق لنقل العفش بجدة",
+      "url": "https://almontalaqmoving.com/",
+      "logo": "https://almontalaqmoving.com/assets/img/logo.webp",
+      "image": "https://almontalaqmoving.com/assets/img/about.webp",
+      "telephone": "+966563806459",
+      "priceRange": "250 SAR",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "شارع فلسطين، حي الروضة",
+        "addressLocality": "Jeddah",
+        "addressRegion": "Makkah Province",
+        "postalCode": "21421",
+        "addressCountry": "SA"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": "21.543333", "longitude": "39.172778" },
+      "areaServed": { "@type": "City", "name": "جدة" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://almontalaqmoving.com/" },
+        { "@type": "ListItem", "position": 2, "name": "من نحن", "item": "https://almontalaqmoving.com/about/" }
+      ]
     }
   ]
-}
-</script>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "شركة المنطلق لنقل العفش",
-  "image": "https://almontalaqmoving.com/assets/img/about.webp",
-  "telephone": "+966563806459",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "جدة",
-    "addressCountry": "SA"
-  },
-  "priceRange": "$$",
-  "areaServed": "جدة"
 }
 </script>
     <style>
@@ -325,7 +302,7 @@
 
     <!-- Riyadh Floating WhatsApp Button -->
     <div class="riyadh-float-whatsapp"
-        onclick="window.open('https://wa.me/966563806459?text=مرحباً، أريد الاستفسار عن نقل العفش بالرياض', '_blank')">
+        onclick="window.open('https://wa.me/966563806459?text=مرحباً، أريد الاستفسار عن نقل العفش بجدة', '_blank')">
         <i class="fab fa-whatsapp fa-2x text-white"></i>
     </div>
     <style>
@@ -394,7 +371,7 @@
                     <div
                         class="absolute inset-0 bg-gradient-to-r from-blue-500 to-orange-500 rounded-full blur-md opacity-60 group-hover:opacity-100 transition-opacity duration-500">
                     </div>
-                    <img src="../assets/img/logo.webp"
+                    <img width="128" height="127" src="../assets/img/logo.webp"
                         class="w-12 h-12 md:w-14 md:h-14 rounded-full relative z-10 border-2 border-white shadow-lg group-hover:scale-105 transition-transform duration-300"
                         alt="لوجو شركة المنطلق لنقل العفش في جدة" decoding="async">
                 </div>
@@ -407,7 +384,7 @@
 
             <!-- Desktop Menu - مطور بتأثيرات hover قوية -->
             <div class="hidden lg:flex space-x-1">
-                <a href="../index.html"
+                <a href="/"
                     class="nav-link relative px-4 py-2 font-semibold text-gray-700 hover:text-blue-600 transition-all duration-300 group">
                     الرئيسية
                     <span
@@ -419,25 +396,25 @@
                     <span
                         class="absolute bottom-0 right-0 w-0 h-0.5 bg-gradient-to-l from-blue-500 to-orange-500 group-hover:w-full transition-all duration-300 rounded-full"></span>
                 </a>
-                <a href="../services/"
+                <a href="/services/"
                     class="nav-link relative px-4 py-2 font-semibold text-gray-700 hover:text-blue-600 transition-all duration-300 group">
                     خدماتنا
                     <span
                         class="absolute bottom-0 right-0 w-0 h-0.5 bg-gradient-to-l from-blue-500 to-orange-500 group-hover:w-full transition-all duration-300 rounded-full"></span>
                 </a>
-                <a href="../blogs/"
+                <a href="/blogs/"
                     class="nav-link relative px-4 py-2 font-semibold text-gray-700 hover:text-blue-600 transition-all duration-300 group">
                     المقالات
                     <span
                         class="absolute bottom-0 right-0 w-0 h-0.5 bg-gradient-to-l from-blue-500 to-orange-500 group-hover:w-full transition-all duration-300 rounded-full"></span>
                 </a>
-                <a href="../areas/"
+                <a href="/areas/"
                     class="nav-link relative px-4 py-2 font-semibold text-gray-700 hover:text-blue-600 transition-all duration-300 group">
                     المناطق
                     <span
                         class="absolute bottom-0 right-0 w-0 h-0.5 bg-gradient-to-l from-blue-500 to-orange-500 group-hover:w-full transition-all duration-300 rounded-full"></span>
                 </a>
-                <a href="../contact/"
+                <a href="/contact/"
                     class="nav-link relative px-4 py-2 font-semibold text-gray-700 hover:text-blue-600 transition-all duration-300 group">
                     تواصل معنا
                     <span
@@ -504,7 +481,7 @@
                 </div>
 
                 <!-- روابط الموبايل -->
-                <a href="../index.html"
+                <a href="/"
                     class="nav-link-mobile font-semibold text-gray-700 hover:text-blue-600 hover:bg-blue-50 py-3 px-4 rounded-xl transition-all duration-300 flex items-center gap-3">
                     <i class="fas fa-home text-blue-400 w-5"></i>
                     الرئيسية
@@ -514,22 +491,22 @@
                     <i class="fas fa-info-circle text-blue-400 w-5"></i>
                     من نحن
                 </a>
-                <a href="../services/"
+                <a href="/services/"
                     class="nav-link-mobile font-semibold text-gray-700 hover:text-blue-600 hover:bg-blue-50 py-3 px-4 rounded-xl transition-all duration-300 flex items-center gap-3">
                     <i class="fas fa-cogs text-blue-400 w-5"></i>
                     خدماتنا
                 </a>
-                <a href="../blogs/"
+                <a href="/blogs/"
                     class="nav-link-mobile font-semibold text-gray-700 hover:text-blue-600 hover:bg-blue-50 py-3 px-4 rounded-xl transition-all duration-300 flex items-center gap-3">
                     <i class="fas fa-newspaper text-blue-400 w-5"></i>
                     المقالات
                 </a>
-                <a href="../areas/"
+                <a href="/areas/"
                     class="nav-link-mobile font-semibold text-gray-700 hover:text-blue-600 hover:bg-blue-50 py-3 px-4 rounded-xl transition-all duration-300 flex items-center gap-3">
                     <i class="fas fa-map-marker-alt text-blue-400 w-5"></i>
                     المناطق
                 </a>
-                <a href="../contact/"
+                <a href="/contact/"
                     class="nav-link-mobile font-semibold text-gray-700 hover:text-blue-600 hover:bg-blue-50 py-3 px-4 rounded-xl transition-all duration-300 flex items-center gap-3">
                     <i class="fas fa-envelope text-blue-400 w-5"></i>
                     تواصل معنا
@@ -873,7 +850,7 @@
                         <!-- الصورة الرئيسية -->
                         <div
                             class="relative rounded-2xl overflow-hidden shadow-xl transition-all duration-500 group-hover:shadow-2xl">
-                            <img src="../assets/img/about.webp"
+                            <img width="1408" height="768" src="../assets/img/about.webp"
                                 alt="فريق المنطلق لنقل العفش - عمال متخصصون ومعدات حديثة"
                                 class="w-full h-auto object-cover rounded-2xl transition-transform duration-700 group-hover:scale-105"
                                 loading="lazy" style="aspect-ratio: 4/3;" decoding="async">
