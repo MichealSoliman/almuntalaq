@@ -52,47 +52,7 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
 
-  <!-- Moving Company + Local Business Schema -->
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MovingCompany",
-  "@id": "https://almontalaqmoving.com/#movingcompany",
-  "name": "شركة المنطلق",
-  "url": "https://almontalaqmoving.com/",
-  "telephone": "+966563806459",
-  "image": "https://almontalaqmoving.com/assets/img/jeddah-to-makkah.webp",
-  "logo": "https://almontalaqmoving.com/assets/img/logo.png",
-  "description": "شركة المنطلق تقدم خدمات نقل عفش من جدة إلى مكة مع فك وتركيب وتغليف الأثاث ونقله بأمان باستخدام سيارات مجهزة وفريق عمل متخصص.",
-  "priceRange": "$$",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "جدة",
-    "addressRegion": "مكة المكرمة",
-    "addressCountry": "SA"
-  },
-  "areaServed": [
-    { "@type": "City", "name": "جدة" },
-    { "@type": "City", "name": "مكة المكرمة" }
-  ],
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-    ],
-    "opens": "00:00",
-    "closes": "23:59"
-  }
-}
-</script>
 
-  <!-- Service Schema -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -101,19 +61,22 @@
   "name": "نقل عفش من جدة إلى مكة",
   "description": "خدمة نقل عفش من جدة إلى مكة تشمل تجهيز الأثاث، الفك والتركيب، التغليف، التحميل، النقل والتفريغ مع تنظيم عملية التسليم في مكة.",
   "provider": {
-    "@type": "MovingCompany",
-    "name": "شركة المنطلق",
-    "telephone": "+966563806459"
+    "@id": "https://almontalaqmoving.com/#movingcompany"
   },
   "serviceType": "نقل العفش والأثاث بين المدن",
   "areaServed": [
-    { "@type": "City", "name": "جدة" },
-    { "@type": "City", "name": "مكة المكرمة" }
+    {
+      "@type": "City",
+      "name": "جدة"
+    },
+    {
+      "@type": "City",
+      "name": "مكة المكرمة"
+    }
   ]
 }
 </script>
 
-  <!-- WebPage Schema -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -125,7 +88,6 @@
 }
 </script>
 
-  <!-- Breadcrumb Schema -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
